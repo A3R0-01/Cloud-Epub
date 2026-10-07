@@ -1,0 +1,185 @@
+<!-- THROWAWAY PROTOTYPE: three reader image-viewer variants. No EPUB engine, account, or persistence backend. -->
+<div id="epub-image-reader">
+  <div class="viz-carousel viz-dotted-background" aria-label="Reader image viewer designs">
+    <section data-variant="Popup" aria-label="Popup image viewer">
+      <div class="reader-stage">
+        <div class="phone" data-viewer="popup">
+          <div class="reading-surface">
+            <header class="reader-header"><span class="book-label">THE STONE BRIDGE</span><div class="chapter-row"><span>Chapter 2</span><button type="button" class="type-button cursor-interaction" aria-label="Increase reading font size">Aa +</button></div></header>
+            <article class="book-text" aria-label="Book text">
+              <p>The path followed the river until a stone bridge came into view. Its arch rose gently above the water, joining the two banks.</p>
+              <div class="image-slot"><button type="button" class="image-button cursor-interaction"><i data-lucide="image" aria-hidden="true"></i><span>View illustration<span class="image-detail">The bridge over the river</span></span><i data-lucide="chevron-right" aria-hidden="true"></i></button></div>
+              <p>Beyond the bridge, the path continued into the hills. Mara paused to study the drawing before carrying on with the story.</p>
+            </article>
+            <footer class="reader-footer"><span>Chapter 2 · 12%</span><span class="reader-status" aria-live="polite">Reading</span></footer>
+          </div>
+          <div class="viewer-layer" hidden>
+            <section class="viewer-card" role="dialog" aria-modal="true" aria-label="Bridge illustration">
+              <div class="viewer-header"><span>Illustration</span><button type="button" class="close-viewer cursor-interaction" aria-label="Close illustration">Close <i data-lucide="x" aria-hidden="true"></i></button></div>
+              <div class="art-host"></div><p class="caption">The bridge over the river</p>
+            </section>
+          </div>
+        </div>
+        <div class="prototype-state" aria-live="polite">Popup · Reading · Chapter 2, same passage</div>
+      </div>
+    </section>
+    <section data-variant="Bottom sheet" aria-label="Bottom sheet image viewer" hidden>
+      <div class="reader-stage">
+        <div class="phone" data-viewer="sheet">
+          <div class="reading-surface">
+            <header class="reader-header"><span class="book-label">THE STONE BRIDGE</span><div class="chapter-row"><span>Chapter 2</span><button type="button" class="type-button cursor-interaction" aria-label="Increase reading font size">Aa +</button></div></header>
+            <article class="book-text" aria-label="Book text">
+              <p>The path followed the river until a stone bridge came into view. Its arch rose gently above the water, joining the two banks.</p>
+              <div class="image-slot"><button type="button" class="image-button cursor-interaction"><i data-lucide="image" aria-hidden="true"></i><span>View illustration<span class="image-detail">The bridge over the river</span></span><i data-lucide="chevron-up" aria-hidden="true"></i></button></div>
+              <p>Beyond the bridge, the path continued into the hills. Mara paused to study the drawing before carrying on with the story.</p>
+            </article>
+            <footer class="reader-footer"><span>Chapter 2 · 12%</span><span class="reader-status" aria-live="polite">Reading</span></footer>
+          </div>
+          <div class="viewer-layer" hidden>
+            <section class="viewer-card" role="dialog" aria-modal="true" aria-label="Bridge illustration">
+              <div class="sheet-handle" aria-hidden="true"></div><div class="viewer-header"><span>Illustration</span><button type="button" class="close-viewer cursor-interaction" aria-label="Close illustration">Close <i data-lucide="x" aria-hidden="true"></i></button></div>
+              <div class="art-host"></div><p class="caption">The bridge over the river</p>
+            </section>
+          </div>
+        </div>
+        <div class="prototype-state" aria-live="polite">Bottom sheet · Reading · Chapter 2, same passage</div>
+      </div>
+    </section>
+    <section data-variant="Full screen" aria-label="Full screen image viewer" hidden>
+      <div class="reader-stage">
+        <div class="phone" data-viewer="full">
+          <div class="reading-surface">
+            <header class="reader-header"><span class="book-label">THE STONE BRIDGE</span><div class="chapter-row"><span>Chapter 2</span><button type="button" class="type-button cursor-interaction" aria-label="Increase reading font size">Aa +</button></div></header>
+            <article class="book-text" aria-label="Book text">
+              <p>The path followed the river until a stone bridge came into view. Its arch rose gently above the water, joining the two banks.</p>
+              <div class="image-slot"><button type="button" class="image-button cursor-interaction"><i data-lucide="image" aria-hidden="true"></i><span>View illustration<span class="image-detail">The bridge over the river</span></span><i data-lucide="expand" aria-hidden="true"></i></button></div>
+              <p>Beyond the bridge, the path continued into the hills. Mara paused to study the drawing before carrying on with the story.</p>
+            </article>
+            <footer class="reader-footer"><span>Chapter 2 · 12%</span><span class="reader-status" aria-live="polite">Reading</span></footer>
+          </div>
+          <div class="viewer-layer" hidden>
+            <section class="viewer-card" role="dialog" aria-modal="true" aria-label="Bridge illustration">
+              <div class="viewer-header"><span>Illustration</span><button type="button" class="close-viewer cursor-interaction" aria-label="Close illustration">Close <i data-lucide="x" aria-hidden="true"></i></button></div>
+              <div class="art-host"></div><p class="caption">The bridge over the river</p>
+            </section>
+          </div>
+        </div>
+        <div class="prototype-state" aria-live="polite">Full screen · Reading · Chapter 2, same passage</div>
+      </div>
+    </section>
+  </div>
+  <template id="epub-bridge-art">
+    <div class="bridge-art" role="img" aria-label="Book illustration of an arched stone bridge above a blue river, with green hills on both banks.">
+      <div class="sun"></div><div class="hill hill-left"></div><div class="hill hill-right"></div><div class="river"></div><div class="bridge"><div class="bridge-arch"></div></div><div class="reflection"></div>
+    </div>
+  </template>
+</div>
+<style>
+  #epub-image-reader { color-scheme: light dark; }
+  #epub-image-reader .reader-stage { min-height: 630px; padding: 24px 12px 12px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  #epub-image-reader .phone {
+    --reader-paper: light-dark(#faf7f0, #212722);
+    --reader-ink: light-dark(#253a30, #e5ece7);
+    --reader-quiet: light-dark(#55635a, #afc0b3);
+    --reader-line: light-dark(#d6ddd1, #4c6051);
+    --reader-button: light-dark(#edf0e7, #344438);
+    --reader-popup: light-dark(#fffdf7, #29362c);
+    --reader-sky: light-dark(#cfdee1, #314650);
+    --reader-river: light-dark(#77a2b3, #487387);
+    --reader-hill: light-dark(#a1af91, #647a62);
+    --reader-stone: light-dark(#d4c4a7, #b1a68e);
+    --reader-sun: light-dark(#e8d5a4, #cabb89);
+    --reader-dim: light-dark(#10251fb3, #06130de0);
+    box-sizing: border-box; position: relative; width: min(100%, 350px); min-height: 548px;
+    border: 1px solid var(--reader-line); border-radius: 25px; background: var(--reader-paper); color: var(--reader-ink);
+    overflow: hidden; font: 400 15px/1.5 system-ui, sans-serif;
+  }
+  #epub-image-reader .reading-surface { min-height: 548px; display: flex; flex-direction: column; }
+  #epub-image-reader .reader-header { padding: 24px 24px 14px; border-bottom: 1px solid var(--reader-line); }
+  #epub-image-reader .book-label { font-size: 12px; letter-spacing: .08em; color: var(--reader-quiet); }
+  #epub-image-reader .chapter-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  #epub-image-reader .phone button { color: var(--reader-ink); background: var(--reader-button); border: 1px solid var(--reader-line); border-radius: 10px; font: 400 14px/1.4 system-ui, sans-serif; min-height: 44px; }
+  #epub-image-reader .type-button { padding: 7px 12px; }
+  #epub-image-reader .book-text { padding: 0 24px; font-family: Georgia, serif; font-size: 18px; line-height: 1.65; flex: 1; }
+  #epub-image-reader .book-text p { margin: 20px 0; }
+  #epub-image-reader .image-slot { border-block: 1px solid var(--reader-line); padding-block: 16px; margin-block: 22px; }
+  #epub-image-reader .image-button { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; padding: 14px 12px; }
+  #epub-image-reader .image-button > span { flex: 1; }
+  #epub-image-reader .image-detail { display: block; font-size: 12px; color: var(--reader-quiet); margin-top: 3px; }
+  #epub-image-reader .reader-footer { font-size: 12px; color: var(--reader-quiet); padding: 14px 24px 20px; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+  #epub-image-reader .viewer-layer { position: absolute; inset: 0; background: var(--reader-dim); display: flex; align-items: center; justify-content: center; padding: 20px; z-index: 2; }
+  #epub-image-reader [hidden] { display: none !important; }
+  #epub-image-reader .viewer-card { background: var(--reader-popup); width: 100%; border-radius: 18px; padding: 16px; box-sizing: border-box; color: var(--reader-ink); }
+  #epub-image-reader .viewer-header { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 16px; }
+  #epub-image-reader .close-viewer { display: flex; align-items: center; gap: 6px; padding: 8px 10px; }
+  #epub-image-reader .caption { margin: 14px 0 2px; text-align: center; font-size: 13px; color: var(--reader-quiet); }
+  #epub-image-reader .phone[data-viewer="sheet"] .viewer-layer { align-items: end; padding: 0; }
+  #epub-image-reader .phone[data-viewer="sheet"] .viewer-card { border-radius: 24px 24px 0 0; padding: 12px 22px 28px; }
+  #epub-image-reader .sheet-handle { width: 36px; height: 4px; border-radius: 3px; margin: 0 auto 14px; background: var(--reader-line); }
+  #epub-image-reader .phone[data-viewer="full"] .viewer-layer { padding: 0; }
+  #epub-image-reader .phone[data-viewer="full"] .viewer-card { height: 100%; border-radius: 0; display: flex; flex-direction: column; justify-content: center; padding: 24px; }
+  #epub-image-reader .phone[data-viewer="full"] .viewer-header { position: absolute; top: 24px; left: 24px; right: 24px; }
+  #epub-image-reader .bridge-art { width: 100%; aspect-ratio: 1.15; position: relative; overflow: hidden; border-radius: 8px; background: var(--reader-sky); }
+  #epub-image-reader .sun { position: absolute; width: 18%; aspect-ratio: 1; border-radius: 50%; top: 12%; right: 16%; background: var(--reader-sun); }
+  #epub-image-reader .hill { position: absolute; width: 90%; height: 65%; border-radius: 50% 50% 0 0; top: 40%; background: var(--reader-hill); }
+  #epub-image-reader .hill-left { left: -35%; transform: rotate(8deg); }
+  #epub-image-reader .hill-right { right: -40%; transform: rotate(-12deg); }
+  #epub-image-reader .river { position: absolute; inset: 69% 0 0; background: var(--reader-river); }
+  #epub-image-reader .bridge { position: absolute; left: 11%; right: 11%; height: 35%; top: 43%; border-radius: 50% 50% 0 0; background: var(--reader-stone); border-top: 6px solid var(--reader-paper); }
+  #epub-image-reader .bridge-arch { position: absolute; left: 25%; right: 25%; bottom: -1%; height: 73%; border-radius: 50% 50% 0 0; background: var(--reader-river); }
+  #epub-image-reader .reflection { position: absolute; top: 87%; left: 29%; right: 29%; border-block: 2px solid var(--reader-paper); height: 6px; opacity: .45; }
+  #epub-image-reader .prototype-state { color: light-dark(#40554a, #cedbd3); font: 400 12px/1.5 system-ui, sans-serif; text-align: center; }
+  @media (max-width: 380px) { #epub-image-reader .reader-stage { min-height: 720px; } #epub-image-reader .book-text { padding-inline: 20px; } }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('epub-image-reader');
+  const illustration = root.querySelector('#epub-bridge-art');
+  const saved = window.openai?.widgetState?.modelContent?.readerImageChoices;
+  const choices = saved && typeof saved === 'object' ? saved : {};
+  root.querySelectorAll('.phone').forEach(phone => {
+    const name = phone.closest('[data-variant]').dataset.variant;
+    const state = { open: false, fontSize: 18, showCaption: true, ...choices[name] };
+    state.open = false;
+    state.fontSize = Math.max(18, Math.min(21, Number(state.fontSize) || 18));
+    const paper = phone.querySelector('.reading-surface');
+    const layer = phone.querySelector('.viewer-layer');
+    const opener = phone.querySelector('.image-button');
+    const close = phone.querySelector('.close-viewer');
+    const status = phone.parentElement.querySelector('.prototype-state');
+    phone.querySelector('.art-host').append(illustration.content.cloneNode(true));
+    function render() {
+      layer.hidden = !state.open;
+      paper.inert = state.open;
+      phone.querySelector('.caption').hidden = !state.showCaption;
+      phone.querySelector('.book-text').style.fontSize = state.fontSize + 'px';
+      phone.querySelector('.type-button').textContent = state.fontSize > 18 ? 'Aa −' : 'Aa +';
+      status.textContent = name + ' · ' + (state.open ? 'Illustration open' : 'Reading') + ' · Chapter 2, same passage';
+    }
+    function saveChoices() {
+      choices[name] = { fontSize: state.fontSize, showCaption: state.showCaption };
+      if (window.openai?.setWidgetState) window.openai.setWidgetState({ modelContent: { readerImageChoices: choices } }).catch(() => {});
+    }
+    opener.addEventListener('click', () => { state.open = true; render(); close.focus(); });
+    close.addEventListener('click', () => { state.open = false; render(); opener.focus(); });
+    phone.addEventListener('keydown', event => {
+      if (!state.open) return;
+      if (event.key === 'Escape') { state.open = false; render(); opener.focus(); }
+      if (event.key === 'Tab') { event.preventDefault(); close.focus(); }
+    });
+    phone.querySelector('.type-button').addEventListener('click', () => { state.fontSize = state.fontSize > 18 ? 18 : 21; render(); saveChoices(); });
+    render();
+    if (globalThis.Tweak) {
+      const tweak = new Tweak({ container: phone, onChange: () => { render(); saveChoices(); } });
+      tweak.addToggle(state, 'showCaption', { label: 'Viewer caption' });
+    }
+    window.addEventListener('openai:set_globals', event => {
+      const restored = event.detail?.globals?.widgetState?.modelContent?.readerImageChoices?.[name];
+      if (!restored) return;
+      state.showCaption = restored.showCaption !== false;
+      state.fontSize = Math.max(18, Math.min(21, Number(restored.fontSize) || 18));
+      render();
+    });
+  });
+})();
+</script>
