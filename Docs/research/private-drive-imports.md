@@ -1,6 +1,6 @@
 # Private Google Drive imports and the cloud-provider boundary
 
-Research for [issue #4](https://github.com/A3R0-01/Cloud-Epub/issues/4), checked 7 October 2026. This is a researched proposal, not a chosen implementation or a tested Android integration.
+Research for [Research private Google Drive imports and the cloud-provider boundary](https://github.com/A3R0-01/Cloud-Epub/issues/4), checked 7 October 2026. This is a researched proposal, not a chosen implementation or a tested Android integration.
 
 ## Answer
 
