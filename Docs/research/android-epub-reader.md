@@ -1,6 +1,6 @@
 # Android EPUB rendering, word anchors, and image replacement
 
-Research date: 7 October 2026. Resolves the investigation in [issue #2](https://github.com/A3R0-01/Cloud-Epub/issues/2), under [map #1](https://github.com/A3R0-01/Cloud-Epub/issues/1). This is evidence and a proposed feasibility spike, not an engine selection or an accepted architecture decision. No Android app was built or EPUB fixture executed during this investigation.
+Research date: 7 October 2026. Resolves [Research Android EPUB rendering, word anchors, and image replacement](https://github.com/A3R0-01/Cloud-Epub/issues/2), under [Find the build-ready specification for Cloud EPUB Android and backend](https://github.com/A3R0-01/Cloud-Epub/issues/1). This is evidence and a proposed feasibility spike, not an engine selection or an accepted architecture decision. No Android app was built or EPUB fixture executed during this investigation.
 
 ## Findings that affect the decision
 
