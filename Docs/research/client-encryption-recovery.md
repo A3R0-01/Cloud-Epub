@@ -1,6 +1,6 @@
 # Client-side encryption, username authentication, and recovery
 
-Research for [issue #3](https://github.com/A3R0-01/Cloud-Epub/issues/3), part of [map #1](https://github.com/A3R0-01/Cloud-Epub/issues/1). Checked 7 October 2026. This resolves the research question; it does **not** select the final security design or claim an implementation audit.
+Research for [Research client-side encryption, username authentication, and recovery codes](https://github.com/A3R0-01/Cloud-Epub/issues/3), part of [Find the build-ready specification for Cloud EPUB Android and backend](https://github.com/A3R0-01/Cloud-Epub/issues/1). Checked 7 October 2026. This resolves the research question; it does **not** select the final security design or claim an implementation audit.
 
 ## Confirmed product boundary
 
