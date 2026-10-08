@@ -6,8 +6,8 @@ Throwaway comparison for **Decide reader layout, chapter navigation, and typogra
 node Docs/prototypes/serve-reader.prototype.cjs
 ```
 
-Open http://127.0.0.1:8766/?variant=A and use the bottom switcher to compare A (bottom bar), B (top bar), and C (floating cluster). The HTML file also works directly in a browser.
+Open http://127.0.0.1:8766/?variant=A&review=1 to review the accepted bottom toolbar with smaller centered icons and no visible text labels. Omit `review=1` to compare A (bottom bar), B (top bar), and C (floating cluster) using the bottom switcher. The HTML file also works directly in a browser.
 
 Scroll chapters vertically. On touch screens, horizontal swipes change chapters; desktop demo buttons simulate those swipes. Try the four reader controls, separate bookmark actions, word selection, image popup, and Android Back simulation. Reach typography through Library → App Settings. State is in memory and resets on reload.
 
-HTML fixture only: no EPUB pagination, engine validation, real dictionary, clipboard copying, cloud sync, or persistent bookmarks. Word selection uses browser selection; it does not validate Android long-press or multilingual segmentation. The simulated Android Back, chapter landing behavior, scrollbar, colors, icons, image caption/alt presentation, and layout variants await user review. No production implementation is included.
+HTML fixture only: no EPUB pagination, engine validation, real dictionary, clipboard copying, cloud sync, or persistent bookmarks. Word selection uses browser selection; it does not validate Android long-press or multilingual segmentation. The linked-image action is simulated and opens no external page. The user accepted layout A, chapter jumps to beginnings, an indicator-only scrollbar, the light/dark palette, icon-only controls, image eligibility/captions/alt treatment, and selection/Back behavior. Final opening, footer, chapter-boundary, and popup-dismissal details await review. No production implementation is included.
