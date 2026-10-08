@@ -3,16 +3,21 @@
   <section data-variant="Shelf" aria-label="Library shelf"></section>
 </div>
 <style>
-#epub-library-preview .phone{--paper:light-dark(#faf9f5,#20221f);--ink:light-dark(#252c26,#f1f2ec);--soft:light-dark(#e9ede5,#343c34);--line:light-dark(#d5dcd1,#495448);--accent:light-dark(#315943,#b8d9b8);--accentInk:light-dark(#ffffff,#172b1d);--secondaryInk:light-dark(#57614f,#c4ccbc);font:16px/1.45 system-ui,sans-serif;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:24px;width:min(100%,390px);min-height:670px;margin:24px auto 12px;padding:20px 16px;box-sizing:border-box;position:relative;overflow:hidden}
+#epub-library-preview .phone{--paper:light-dark(#faf9f5,#20221f);--ink:light-dark(#252c26,#f1f2ec);--soft:light-dark(#e9ede5,#343c34);--line:light-dark(#d5dcd1,#495448);--accent:light-dark(#315943,#b8d9b8);--accentInk:light-dark(#ffffff,#172b1d);--secondaryInk:light-dark(#57614f,#c4ccbc);font:16px/1.45 system-ui,sans-serif;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:24px;width:min(100%,390px);min-height:740px;margin:24px auto 12px;padding:20px 16px 16px;box-sizing:border-box;position:relative;overflow:hidden;display:flex;flex-direction:column}
 #epub-library-preview section{min-height:720px;padding:0 10px}
 #epub-library-preview .phone *{box-sizing:border-box}
 #epub-library-preview .appbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:20px}
 #epub-library-preview h2{font-size:23px;font-weight:500;line-height:1.3;margin:0}
 #epub-library-preview h3{font-size:18px;font-weight:500;margin:0 0 16px;overflow-wrap:anywhere}
 #epub-library-preview button{font:inherit;color:inherit;background:transparent;border:0;border-radius:10px;min-height:44px;padding:8px 12px}
-#epub-library-preview .tabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--line)}
-#epub-library-preview .tabs button{flex:1;padding:10px 4px;border-radius:10px 10px 0 0}
-#epub-library-preview .tabs button[aria-pressed=true]{color:var(--accent);background:var(--soft);border-bottom:3px solid var(--accent)}
+#epub-library-preview .phone{height:740px}
+#epub-library-preview .content{flex:1;min-height:0;overflow-y:auto}
+#epub-library-preview .appbar,#epub-library-preview .heading,#epub-library-preview .tools,#epub-library-preview .tabs{flex-shrink:0}
+#epub-library-preview .tabs{display:flex;gap:12px;align-self:center;align-items:center;justify-content:center;margin-top:22px;padding:6px;background:var(--soft);border-radius:18px}
+#epub-library-preview .tabs button{flex:none;width:48px;height:48px;padding:12px;display:grid;place-items:center;border-radius:12px}
+#epub-library-preview .tabs button[aria-pressed=true]{color:var(--accent);background:var(--paper)}
+#epub-library-preview .settings-button{width:44px;height:44px;padding:10px;display:grid;place-items:center}
+#epub-library-preview .tabs svg,#epub-library-preview .settings-button svg{width:24px;height:24px}
 #epub-library-preview .tools{display:flex;gap:8px;margin-bottom:14px}
 #epub-library-preview input,#epub-library-preview select{font:inherit;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;min-height:44px;min-width:0}
 #epub-library-preview .tools input{width:100%;flex:1}
@@ -68,12 +73,13 @@
     const restored=(saved.views || []).find(s=>s.name===variant.dataset.variant);
     const state={name:variant.dataset.variant,tab:restored?.tab || 'All',group:restored?.group || '',sort:restored?.sort || 'title',query:restored?.query || '',books:initialBooks.map(b=>({...b,authors:[...b.authors]})),collections:[{name:'Weekend reads',ids:[1,2]},{name:'To explore',ids:[]}]};
     screens.push(state);
-    variant.innerHTML=`<div class="phone" aria-label="${escape(state.name)} library design"><header class="appbar"><h2>Cloud EPUB</h2><span class="count">Preview</span></header><nav class="tabs" aria-label="Library tabs">${['All','Collections','Authors'].map(t=>`<button class="cursor-interaction" data-tab="${t}" aria-pressed="${t===state.tab}">${t}</button>`).join('')}</nav><div class="heading"></div><div class="tools"><input aria-label="Search library" placeholder="Search books" value="${escape(state.query)}"><select aria-label="Sort books"><option value="title">Title A–Z</option><option value="title-desc">Title Z–A</option><option value="year-desc">Newest year</option><option value="year">Oldest year</option></select></div><main class="content"></main><div class="sheet" hidden></div></div>`;
+    const tabIcons={All:'book-open',Collections:'library-big',Authors:'user-round'};
+    variant.innerHTML=`<div class="phone" aria-label="${escape(state.name)} library design"><header class="appbar"><h2>Cloud EPUB</h2><button class="settings-button cursor-interaction" data-settings aria-label="Settings" data-tooltip="Settings"><i data-lucide="settings" aria-hidden="true"></i></button></header><div class="heading"></div><div class="tools"><input aria-label="Search library" placeholder="Search books" value="${escape(state.query)}"><select aria-label="Sort books"><option value="title">Title A–Z</option><option value="title-desc">Title Z–A</option><option value="year-desc">Newest year</option><option value="year">Oldest year</option></select></div><main class="content"></main><nav class="tabs" aria-label="Library tabs">${['All','Collections','Authors'].map(t=>`<button class="cursor-interaction" data-tab="${t}" aria-label="${t}" data-tooltip="${t}" aria-pressed="${t===state.tab}"><i data-lucide="${tabIcons[t]}" aria-hidden="true"></i></button>`).join('')}</nav><div class="sheet" hidden></div></div>`;
     const phone=variant.querySelector('.phone'),content=phone.querySelector('.content'),sheet=phone.querySelector('.sheet'),query=phone.querySelector('input'),sort=phone.querySelector('select');
     sort.value=state.sort;
     function render(){
       phone.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.tab===state.tab));
-      phone.querySelector('.heading').innerHTML=state.group?`<button class="cursor-interaction" data-back>← Back</button><h3>${escape(state.group)}</h3>`:'';
+      phone.querySelector('.heading').innerHTML=state.group?`<button class="cursor-interaction" data-back>← Back</button><h3>${escape(state.group)}</h3>`:`<h3>${state.tab==='All'?'All books':state.tab}</h3>`;
       query.placeholder=state.group || state.tab==='All'?'Search books':`Search ${state.tab.toLowerCase()}`;
       sort.hidden=state.tab!=='All' && !state.group;
       const words=state.query.toLocaleLowerCase('en').trim().split(/\s+/).filter(Boolean);
@@ -95,6 +101,8 @@
     function details(book){show(`<h3>${escape(book.title)}</h3><dl><dt>Authors</dt><dd>${escape(book.authors.join(', ') || 'Unknown author')}</dd><dt>Release date</dt><dd>${escape(book.date || 'Unknown')}</dd><dt>On this device</dt><dd>${book.downloaded?'Downloaded':'Not downloaded'}</dd><dt>Collections</dt><dd>${escape(state.collections.filter(c=>c.ids.includes(book.id)).map(c=>c.name).join(', ') || 'None')}</dd></dl><button class="primary cursor-interaction" data-edit="${book.id}">Edit author / release date</button>`);}
     phone.addEventListener('click',event=>{
       const button=event.target.closest('button');if(!button)return;
+      if(button.hasAttribute('data-settings'))show(`<h3>Settings</h3><h4>Account</h4><button class="action cursor-interaction" data-settings-section="Account information">Account information</button><button class="action cursor-interaction" data-settings-section="Password and recovery">Password and recovery</button><button class="action cursor-interaction" data-settings-section="Recovery package">Recovery package</button><button class="action cursor-interaction" data-settings-section="Devices">Devices</button><button class="action cursor-interaction" data-settings-section="Cloud account status">Cloud account status</button><button class="action cursor-interaction" data-settings-section="Sign out">Sign out</button>`);
+      if(button.dataset.settingsSection)show(`<h3>${escape(button.dataset.settingsSection)}</h3><p class="notice">Account controls preview</p>`);
       if(button.dataset.tab){state.tab=button.dataset.tab;state.group='';state.query='';query.value='';sheet.hidden=true;render();remember();}
       if(button.hasAttribute('data-back')){state.group='';state.query='';query.value='';render();remember();}
       if(button.dataset.group){state.group=button.dataset.group;state.query='';query.value='';render();remember();}
