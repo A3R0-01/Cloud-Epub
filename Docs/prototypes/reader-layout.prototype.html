@@ -18,6 +18,7 @@
 body.review .switcher:not(.margins),body.margin-study .switcher:not(.margins){display:none}
 .margins{display:none}
 body.margin-study .margins{display:flex;gap:4px}
+body.final-review .margins{display:none}
 .margins button{padding:0 13px;font-size:12px}
 .margins button[aria-pressed=true]{background:#ffffff25}
 .phone[data-margin=balanced] .reader{right:0;padding:12px 18px}
@@ -66,7 +67,7 @@ body.margin-study .margins{display:flex;gap:4px}
  <p class="footnote">Android Back is simulated here. It closes the top layer first, then returns from the reader to Library. Typography is accessible through Library → App Settings.</p>
  <div id="notice" class="notice" role="status" aria-live="polite"></div><div id="state" class="state"></div>
  <p id="marginDescription" class="footnote"></p>
- <p class="footnote">Fixture only: no EPUB engine, cloud storage, real dictionary or persistence. Accepted: icon-only bottom toolbar; continuous chapters; chapter jumps to beginnings without wrapping; chapter name with revealed controls; progress indicator appears during scrolling and hides three seconds after scrolling stops. Opening a book starts with controls hidden. Production remembers theme across restarts; this in-memory fixture resets on reload. Image popup closes only through Close or Android Back. Reading margins await review.</p>
+ <p class="footnote">Accepted reader design, captured as a throwaway fixture. Original reading margins are retained; Compact and Balanced were rejected. Controls start hidden; tap the reading area to reveal them. The scrollbar appears during scrolling and hides three seconds after scrolling stops. Production must remember theme across restarts; this in-memory fixture resets on reload. No EPUB-engine or native Android validation is claimed.</p>
 </aside>
 </main>
 <div class="switcher" aria-label="Prototype variant"><button id="variantPrev" aria-label="Previous prototype variant">←</button><span id="variantName"></span><button id="variantNext" aria-label="Next prototype variant">→</button></div>
@@ -137,6 +138,7 @@ moveChapter(0);switchVariant();
 if(new URLSearchParams(location.search).get('review')==='1')document.body.classList.add('review');
 const marginParam=new URLSearchParams(location.search).get('margins');
 if(['compact','balanced','original'].includes(marginParam)){document.body.classList.add('margin-study');changeMargins(marginParam);}else $('phone').dataset.margin='original';
+if(new URLSearchParams(location.search).get('final')==='1'){document.body.classList.add('final-review');$('marginDescription').textContent='Accepted: original reading margins. Earlier margin proposals and layout variants are retained only as a captured comparison.';}
 showControls(false);
 </script>
 </html>
