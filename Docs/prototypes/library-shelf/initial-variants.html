@@ -1,0 +1,122 @@
+<!-- Throwaway planning prototype: compare List, Shelf, and Large covers; cover/title-only tiles. No EPUB, download, or synchronization validation. -->
+<div id="epub-library-preview" class="viz-carousel viz-dotted-background" aria-label="Library tile designs">
+  <section data-variant="List" aria-label="Single-column library list"></section>
+  <section data-variant="Shelf" aria-label="Two-column library shelf" hidden></section>
+  <section data-variant="Large covers" aria-label="Single-column large-cover library" hidden></section>
+</div>
+<style>
+#epub-library-preview .phone{--paper:light-dark(#faf9f5,#20221f);--ink:light-dark(#252c26,#f1f2ec);--soft:light-dark(#e9ede5,#343c34);--line:light-dark(#d5dcd1,#495448);--accent:light-dark(#315943,#b8d9b8);--accentInk:light-dark(#ffffff,#172b1d);--secondaryInk:light-dark(#57614f,#c4ccbc);font:16px/1.45 system-ui,sans-serif;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:24px;width:min(100%,390px);min-height:670px;margin:24px auto 12px;padding:20px 16px;box-sizing:border-box;position:relative;overflow:hidden}
+#epub-library-preview section{min-height:720px;padding:0 10px}
+#epub-library-preview .phone *{box-sizing:border-box}
+#epub-library-preview .appbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:20px}
+#epub-library-preview h2{font-size:23px;font-weight:500;line-height:1.3;margin:0}
+#epub-library-preview h3{font-size:18px;font-weight:500;margin:0 0 16px;overflow-wrap:anywhere}
+#epub-library-preview button{font:inherit;color:inherit;background:transparent;border:0;border-radius:10px;min-height:44px;padding:8px 12px}
+#epub-library-preview .tabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+#epub-library-preview .tabs button{flex:1;padding:10px 4px;border-radius:10px 10px 0 0}
+#epub-library-preview .tabs button[aria-pressed=true]{color:var(--accent);background:var(--soft);border-bottom:3px solid var(--accent)}
+#epub-library-preview .tools{display:flex;gap:8px;margin-bottom:14px}
+#epub-library-preview input,#epub-library-preview select{font:inherit;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px;min-height:44px;min-width:0}
+#epub-library-preview .tools input{width:100%;flex:1}
+#epub-library-preview .tools select{width:118px}
+#epub-library-preview .books{display:grid;gap:12px}
+#epub-library-preview .book{position:relative;min-width:0;display:grid;grid-template-columns:72px minmax(0,1fr);gap:12px;align-items:start;padding:10px 10px 48px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+#epub-library-preview .cover{height:100px;width:72px;border-radius:4px;padding:0;overflow:hidden;display:grid;place-items:center;position:relative;background:var(--soft);color:var(--accent)}
+#epub-library-preview .cover::before{content:'';position:absolute;inset:16% 15%;border:1px solid currentColor;transform:rotate(-8deg)}
+#epub-library-preview .cover::after{content:'';position:absolute;inset:25% 25%;border:1px solid currentColor;transform:rotate(8deg)}
+#epub-library-preview .cover i{z-index:1}
+#epub-library-preview .book-title{display:block;width:100%;text-align:left;padding:8px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500}
+#epub-library-preview .options{position:absolute;bottom:4px;right:4px;width:44px;height:44px;padding:10px}
+#epub-library-preview [data-variant=Shelf] .books{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#epub-library-preview [data-variant=Shelf] .book{display:block;padding:10px 10px 46px}
+#epub-library-preview [data-variant=Shelf] .cover{width:100%;height:156px}
+#epub-library-preview [data-variant=Shelf] .book-title{margin-top:8px}
+#epub-library-preview [data-variant="Large covers"] .books{gap:20px}
+#epub-library-preview [data-variant="Large covers"] .book{display:block;padding:12px 12px 46px}
+#epub-library-preview [data-variant="Large covers"] .cover{width:100%;height:170px}
+#epub-library-preview [data-variant="Large covers"] .book-title{margin-top:10px}
+#epub-library-preview .group{display:flex;justify-content:space-between;align-items:center;gap:12px;width:100%;border-bottom:1px solid var(--line);text-align:left;border-radius:0;padding:16px 4px}
+#epub-library-preview .group span:first-child{overflow-wrap:anywhere;min-width:0}
+#epub-library-preview .count{white-space:nowrap;color:var(--secondaryInk);font-size:14px}
+#epub-library-preview .sheet{position:absolute;inset:0;background:var(--paper);z-index:3;padding:24px 18px;overflow:auto;border-radius:23px}
+#epub-library-preview .sheet[hidden]{display:none}
+#epub-library-preview .sheet label{display:block;margin:14px 0 6px}
+#epub-library-preview .sheet input{width:100%}
+#epub-library-preview .sheet dl{margin:20px 0}
+#epub-library-preview .sheet dt{color:var(--secondaryInk);margin-top:16px}
+#epub-library-preview .sheet dd{margin:4px 0;overflow-wrap:anywhere}
+#epub-library-preview .sheet button.action{width:100%;text-align:left;border-bottom:1px solid var(--line);border-radius:0}
+#epub-library-preview .primary{background:var(--accent);color:var(--accentInk);margin-top:20px;width:100%}
+#epub-library-preview .notice{font-size:14px;color:var(--secondaryInk);margin-top:18px}
+#epub-library-preview .suggestion{width:100%;text-align:left;background:var(--soft);margin-top:6px}
+#epub-library-preview .checks label{display:flex;align-items:center;gap:10px}
+#epub-library-preview .checks input{width:20px;min-height:20px}
+#epub-library-preview .empty{padding:28px 0;color:var(--secondaryInk)}
+</style>
+<script>
+(() => {
+  const root=document.getElementById('epub-library-preview');
+  const initialBooks=[
+    {id:1,title:'The Clockmaker and the Library at the End of the World',authors:['Elson Madara'],date:'2024',downloaded:true},
+    {id:2,title:'A Map of Quiet Places',authors:['Elson Madara','Maya Reed'],date:'2022-06-14',downloaded:false},
+    {id:3,title:'Notes from the Orchard',authors:['Maya Reed'],date:'',downloaded:true}
+  ];
+  const saved=window.openai?.widgetState?.privateContent || {};
+  const screens=[];
+  const escape=text=>String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  function remember(){if(window.openai?.setWidgetState)window.openai.setWidgetState({modelContent:{prototype:'library tiles',views:screens.map(s=>({design:s.name,tab:s.tab,opened:s.group}))},privateContent:{views:screens.map(s=>({name:s.name,tab:s.tab,group:s.group,sort:s.sort,query:s.query}))}}).catch(()=>{});}
+  for(const variant of root.children){
+    const restored=(saved.views || []).find(s=>s.name===variant.dataset.variant);
+    const state={name:variant.dataset.variant,tab:restored?.tab || 'All',group:restored?.group || '',sort:restored?.sort || 'title',query:restored?.query || '',books:initialBooks.map(b=>({...b,authors:[...b.authors]})),collections:[{name:'Weekend reads',ids:[1,2]},{name:'To explore',ids:[]}]};
+    screens.push(state);
+    variant.innerHTML=`<div class="phone" aria-label="${escape(state.name)} library design"><header class="appbar"><h2>Cloud EPUB</h2><span class="count">Preview</span></header><nav class="tabs" aria-label="Library tabs">${['All','Collections','Authors'].map(t=>`<button class="cursor-interaction" data-tab="${t}" aria-pressed="${t===state.tab}">${t}</button>`).join('')}</nav><div class="heading"></div><div class="tools"><input aria-label="Search library" placeholder="Search books" value="${escape(state.query)}"><select aria-label="Sort books"><option value="title">Title A–Z</option><option value="title-desc">Title Z–A</option><option value="year-desc">Newest year</option><option value="year">Oldest year</option></select></div><main class="content"></main><div class="sheet" hidden></div></div>`;
+    const phone=variant.querySelector('.phone'),content=phone.querySelector('.content'),sheet=phone.querySelector('.sheet'),query=phone.querySelector('input'),sort=phone.querySelector('select');
+    sort.value=state.sort;
+    function render(){
+      phone.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.tab===state.tab));
+      phone.querySelector('.heading').innerHTML=state.group?`<button class="cursor-interaction" data-back>← Back</button><h3>${escape(state.group)}</h3>`:'';
+      query.placeholder=state.group || state.tab==='All'?'Search books':`Search ${state.tab.toLowerCase()}`;
+      sort.hidden=state.tab!=='All' && !state.group;
+      const words=state.query.toLocaleLowerCase('en').trim().split(/\s+/).filter(Boolean);
+      if(state.tab!=='All' && !state.group){
+        const groups=state.tab==='Collections'?state.collections.map(c=>({name:c.name,count:c.ids.length})):[...new Set(state.books.flatMap(b=>b.authors.length?b.authors:['Unknown author']))].map(name=>({name,count:state.books.filter(b=>name==='Unknown author'?!b.authors.length:b.authors.includes(name)).length}));
+        content.innerHTML=(state.tab==='Collections'?'<button class="primary cursor-interaction" data-create>Add Collection</button>':'')+groups.filter(g=>words.every(w=>g.name.toLowerCase().includes(w))).sort((a,b)=>a.name.localeCompare(b.name,'en')).map(g=>`<button class="group cursor-interaction" data-group="${escape(g.name)}"><span>${escape(g.name)}</span><span class="count">${g.count} ${g.count===1?'book':'books'} ›</span></button>`).join('');
+        return;
+      }
+      let books=state.books.filter(b=>!state.group || (state.tab==='Collections'?state.collections.find(c=>c.name===state.group)?.ids.includes(b.id):state.group==='Unknown author'?!b.authors.length:b.authors.includes(state.group))).filter(b=>words.every(w=>(b.title+' '+b.authors.join(' ')).toLowerCase().includes(w)));
+      books.sort((a,b)=>{const tie=a.title.localeCompare(b.title,'en',{sensitivity:'base'}) || a.id-b.id;if(state.sort.startsWith('year')){if(!a.date || !b.date)return !a.date && !b.date?tie:!a.date?1:-1;return (Number(a.date.slice(0,4))-Number(b.date.slice(0,4)))*(state.sort==='year-desc'?-1:1) || tie;}return state.sort==='title-desc'?-a.title.localeCompare(b.title,'en',{sensitivity:'base'}) || a.id-b.id:tie;});
+      content.innerHTML=books.length?`<div class="books">${books.map(b=>`<article class="book"><button class="cover cursor-interaction" data-open="${b.id}" aria-label="Open ${escape(b.title)}"><i data-lucide="book-open" aria-hidden="true"></i></button><button class="book-title cursor-interaction" data-details="${b.id}" data-tooltip="${escape(b.title)}" aria-label="Details for ${escape(b.title)}">${escape(b.title)}</button><button class="options cursor-interaction" data-options="${b.id}" aria-label="Options for ${escape(b.title)}"><i data-lucide="ellipsis-vertical" aria-hidden="true"></i></button></article>`).join('')}</div>`:'<p class="empty">No books found.</p>';
+      if(globalThis.lucide)lucide.createIcons({attrs:{width:22,height:22}});
+    }
+    function show(markup){sheet.innerHTML='<button class="cursor-interaction" data-close>← Library</button>'+markup;sheet.hidden=false;sheet.querySelector('[data-close]').focus();}
+    function details(book){show(`<h3>${escape(book.title)}</h3><dl><dt>Authors</dt><dd>${escape(book.authors.join(', ') || 'Unknown author')}</dd><dt>Release date</dt><dd>${escape(book.date || 'Unknown')}</dd><dt>On this device</dt><dd>${book.downloaded?'Downloaded':'Not downloaded'}</dd><dt>Collections</dt><dd>${escape(state.collections.filter(c=>c.ids.includes(book.id)).map(c=>c.name).join(', ') || 'None')}</dd></dl><button class="primary cursor-interaction" data-edit="${book.id}">Edit author / release date</button>`);}
+    phone.addEventListener('click',event=>{
+      const button=event.target.closest('button');if(!button)return;
+      if(button.dataset.tab){state.tab=button.dataset.tab;state.group='';state.query='';query.value='';sheet.hidden=true;render();remember();}
+      if(button.hasAttribute('data-back')){state.group='';state.query='';query.value='';render();remember();}
+      if(button.dataset.group){state.group=button.dataset.group;state.query='';query.value='';render();remember();}
+      if(button.hasAttribute('data-close')){sheet.hidden=true;phone.querySelector('.tabs button').focus();}
+      const id=Number(button.dataset.details || button.dataset.options || button.dataset.open || button.dataset.edit || button.dataset.download || button.dataset.membership);
+      const book=state.books.find(b=>b.id===id);
+      if(button.dataset.details)details(book);
+      if(button.dataset.options)show(`<h3>${escape(book.title)}</h3><button class="action cursor-interaction" data-details="${id}">View details</button><button class="action cursor-interaction" data-edit="${id}">Edit author / release date</button><button class="action cursor-interaction" data-membership="${id}">Collection membership</button>${book.downloaded?'':`<button class="action cursor-interaction" data-download="${id}">Download</button>`}`);
+      if(button.dataset.open || button.dataset.download)show(`<h3>${escape(book.title)}</h3><p>${book.downloaded?'Resume reading':'Download and open'}</p><p class="notice">${book.downloaded?'Reader destination preview':'Download interaction preview; no file is transferred'}</p>`);
+      if(button.dataset.edit){show(`<h3>Edit book details</h3><label>Author</label><input class="author-input" aria-label="Author" value="${escape(book.authors[0] || '')}"><div class="suggestions"></div><p class="notice">${book.authors.length>1?'Other author retained: '+escape(book.authors.slice(1).join(', ')):''}</p><label>Release date or year</label><input class="date-input" aria-label="Release date or year" placeholder="2024 or 2024-06-14" value="${escape(book.date)}"><button class="primary cursor-interaction" data-save="${id}">Save</button>`);}
+      if(button.dataset.suggest){sheet.querySelector('.author-input').value=button.dataset.suggest;sheet.querySelector('.suggestions').innerHTML='';}
+      if(button.dataset.save){const selected=state.books.find(b=>b.id===Number(button.dataset.save)),author=sheet.querySelector('.author-input').value.trim();selected.authors=author?[author,...selected.authors.slice(1)]:selected.authors.slice(1);selected.date=sheet.querySelector('.date-input').value.trim();render();details(selected);remember();}
+      if(button.dataset.membership){show(`<h3>Collections</h3><div class="checks">${state.collections.map((c,i)=>`<label><input type="checkbox" data-member="${id}" data-index="${i}" ${c.ids.includes(id)?'checked':''}>${escape(c.name)}</label>`).join('')}</div>`);}
+      if(button.hasAttribute('data-create'))show(`<h3>Add Collection</h3><label>Collection name</label><input class="collection-name" aria-label="Collection name"><div class="checks">${state.books.map(b=>`<label><input type="checkbox" data-pick="${b.id}">${escape(b.title)}</label>`).join('')}</div><button class="primary cursor-interaction" data-create-save>Create Collection</button><p class="notice" role="alert"></p>`);
+      if(button.hasAttribute('data-create-save')){const name=sheet.querySelector('.collection-name').value.trim();if(!name || state.collections.some(c=>c.name.toLowerCase()===name.toLowerCase())){sheet.querySelector('[role=alert]').textContent='Enter a unique Collection name.';return;}state.collections.push({name,ids:[...sheet.querySelectorAll('[data-pick]:checked')].map(i=>Number(i.dataset.pick))});sheet.hidden=true;render();remember();}
+    });
+    phone.addEventListener('input',event=>{
+      if(event.target===query){state.query=query.value;render();remember();}
+      if(event.target.classList.contains('author-input')){const value=event.target.value.trim().replace(/\s+/g,' ').toLowerCase(),names=[...new Set(state.books.flatMap(b=>b.authors))];sheet.querySelector('.suggestions').innerHTML=value?names.filter(n=>n.toLowerCase().includes(value)).map(n=>`<button class="suggestion cursor-interaction" data-suggest="${escape(n)}">Use ${escape(n)}</button>`).join('')+`<button class="suggestion cursor-interaction" data-suggest="${escape(event.target.value.trim())}">Create new author “${escape(event.target.value.trim())}”</button>`:'';}
+    });
+    phone.addEventListener('change',event=>{if(event.target===sort){state.sort=sort.value;render();remember();}if(event.target.dataset.member){const collection=state.collections[Number(event.target.dataset.index)],id=Number(event.target.dataset.member);collection.ids=event.target.checked?[...new Set([...collection.ids,id])]:collection.ids.filter(i=>i!==id);render();remember();}});
+    state.restore=view=>{state.tab=view.tab;state.group=view.group || '';state.query=view.query || '';state.sort=view.sort || 'title';query.value=state.query;sort.value=state.sort;render();};
+    render();
+    if(globalThis.Tweak){const design={coverHeight:state.name==='List'?100:state.name==='Shelf'?156:170};const tweak=new Tweak({container:phone,onChange:()=>{phone.querySelectorAll('.cover').forEach(c=>c.style.height=design.coverHeight+'px');}});tweak.addSlider(design,'coverHeight',{label:'Cover height',min:80,max:220,step:10,unit:'px'});}
+  }
+  window.addEventListener('openai:set_globals',event=>{const views=event.detail?.globals?.widgetState?.privateContent?.views;if(!views)return;for(const view of views){const state=screens.find(s=>s.name===view.name);if(state && ['All','Collections','Authors'].includes(view.tab))state.restore(view);}});
+})();
+</script>
