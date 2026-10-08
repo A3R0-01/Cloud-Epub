@@ -13,9 +13,9 @@
 #epub-library-preview .phone{height:740px;margin:0 auto}
 #epub-library-preview .content{flex:1;min-height:0;overflow-y:auto}
 #epub-library-preview .appbar,#epub-library-preview .heading,#epub-library-preview .tools,#epub-library-preview .tabs{flex-shrink:0}
-#epub-library-preview .tabs{display:flex;gap:12px;align-self:center;align-items:center;justify-content:center;margin-top:22px;padding:6px;background:var(--soft);border-radius:18px}
-#epub-library-preview .tabs button{flex:none;width:48px;height:48px;padding:12px;display:grid;place-items:center;border-radius:12px}
-#epub-library-preview .tabs button[aria-pressed=true]{color:var(--accent);background:var(--paper)}
+#epub-library-preview .tabs{display:flex;gap:0;align-self:stretch;align-items:center;margin:0 0 20px;padding:0;border-bottom:1px solid var(--line)}
+#epub-library-preview .tabs button{flex:1;min-width:0;height:52px;padding:12px;display:grid;place-items:center;border-radius:10px 10px 0 0;border-bottom:3px solid transparent}
+#epub-library-preview .tabs button[aria-pressed=true]{color:var(--accent);background:var(--soft);border-bottom-color:var(--accent)}
 #epub-library-preview .settings-button{width:44px;height:44px;padding:10px;display:grid;place-items:center}
 #epub-library-preview .tabs svg,#epub-library-preview .settings-button svg{width:24px;height:24px}
 #epub-library-preview .tools{display:flex;gap:8px;margin-bottom:14px}
@@ -73,7 +73,7 @@
     const state={name:variant.dataset.variant,tab:restored?.tab || 'All',group:restored?.group || '',sort:restored?.sort || 'title',query:restored?.query || '',books:initialBooks.map(b=>({...b,authors:[...b.authors]})),collections:[{name:'Weekend reads',ids:[1,2]},{name:'To explore',ids:[]}]};
     screens.push(state);
     const tabIcons={All:'book-open',Collections:'library-big',Authors:'user-round'};
-    variant.innerHTML=`<div class="phone" aria-label="${escape(state.name)} library design"><header class="appbar"><h2>Cloud EPUB</h2><button class="settings-button cursor-interaction" data-settings aria-label="Settings" data-tooltip="Settings"><i data-lucide="settings" aria-hidden="true"></i></button></header><div class="heading"></div><div class="tools"><input aria-label="Search library" placeholder="Search books" value="${escape(state.query)}"><select aria-label="Sort books"><option value="title">Title A–Z</option><option value="title-desc">Title Z–A</option><option value="year-desc">Newest year</option><option value="year">Oldest year</option></select></div><main class="content"></main><nav class="tabs" aria-label="Library tabs">${['All','Collections','Authors'].map(t=>`<button class="cursor-interaction" data-tab="${t}" aria-label="${t}" data-tooltip="${t}" aria-pressed="${t===state.tab}"><i data-lucide="${tabIcons[t]}" aria-hidden="true"></i></button>`).join('')}</nav><div class="sheet" hidden></div></div>`;
+    variant.innerHTML=`<div class="phone" aria-label="${escape(state.name)} library design"><header class="appbar"><h2>Cloud EPUB</h2><button class="settings-button cursor-interaction" data-settings aria-label="Settings" data-tooltip="Settings"><i data-lucide="settings" aria-hidden="true"></i></button></header><nav class="tabs" aria-label="Library tabs">${['All','Collections','Authors'].map(t=>`<button class="cursor-interaction" data-tab="${t}" aria-label="${t}" data-tooltip="${t}" aria-pressed="${t===state.tab}"><i data-lucide="${tabIcons[t]}" aria-hidden="true"></i></button>`).join('')}</nav><div class="heading"></div><div class="tools"><input aria-label="Search library" placeholder="Search books" value="${escape(state.query)}"><select aria-label="Sort books"><option value="title">Title A–Z</option><option value="title-desc">Title Z–A</option><option value="year-desc">Newest year</option><option value="year">Oldest year</option></select></div><main class="content"></main><div class="sheet" hidden></div></div>`;
     const phone=variant.querySelector('.phone'),content=phone.querySelector('.content'),sheet=phone.querySelector('.sheet'),query=phone.querySelector('input'),sort=phone.querySelector('select');
     sort.value=state.sort;
     function render(){
