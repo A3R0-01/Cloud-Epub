@@ -126,7 +126,18 @@
     phone.addEventListener('change',event=>{if(event.target===sort){state.sort=sort.value;render();remember();}if(event.target.dataset.member){const collection=state.collections[Number(event.target.dataset.index)],id=Number(event.target.dataset.member);collection.ids=event.target.checked?[...new Set([...collection.ids,id])]:collection.ids.filter(i=>i!==id);render();remember();}});
     state.restore=view=>{state.tab=view.tab;state.group=view.group || '';state.query=view.query || '';state.sort=view.sort || 'title';query.value=state.query;sort.value=state.sort;render();};
     render();
-    if(globalThis.Tweak){const design={coverHeight:156};const tweak=new Tweak({container:phone,onChange:()=>{phone.querySelectorAll('.cover').forEach(c=>c.style.height=design.coverHeight+'px');}});tweak.addSlider(design,'coverHeight',{label:'Cover height',min:100,max:220,step:10,unit:'px'});}
+    if(globalThis.Tweak){
+      const design={coverHeight:156,collectionIcon:'library-big',authorIcon:'user-round'};
+      const tweak=new Tweak({container:phone,onChange:()=>{
+        phone.querySelectorAll('.cover').forEach(c=>c.style.height=design.coverHeight+'px');
+        phone.querySelector('[data-tab="Collections"]').innerHTML=`<i data-lucide="${design.collectionIcon}" aria-hidden="true"></i>`;
+        phone.querySelector('[data-tab="Authors"]').innerHTML=`<i data-lucide="${design.authorIcon}" aria-hidden="true"></i>`;
+        if(globalThis.lucide)lucide.createIcons({attrs:{width:24,height:24}});
+      }});
+      tweak.addSlider(design,'coverHeight',{label:'Cover height',min:100,max:220,step:10,unit:'px'});
+      tweak.addSelect(design,'collectionIcon',{label:'Collections icon',options:[{label:'Grouped books',value:'library-big'},{label:'Folders',value:'folders'},{label:'Layers',value:'layers'}]});
+      tweak.addSelect(design,'authorIcon',{label:'Authors icon',options:[{label:'Person',value:'user-round'},{label:'People',value:'users-round'},{label:'Contact',value:'contact-round'}]});
+    }
   }
   window.addEventListener('openai:set_globals',event=>{const views=event.detail?.globals?.widgetState?.privateContent?.views;if(!views)return;for(const view of views){const state=screens.find(s=>s.name===view.name);if(state && ['All','Collections','Authors'].includes(view.tab))state.restore(view);}});
 })();

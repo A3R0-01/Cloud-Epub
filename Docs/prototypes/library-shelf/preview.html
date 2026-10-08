@@ -1908,7 +1908,18 @@ html&gt;body{padding:0}&lt;/style&gt;
     phone.addEventListener(&#x27;change&#x27;,event=&gt;{if(event.target===sort){state.sort=sort.value;render();remember();}if(event.target.dataset.member){const collection=state.collections[Number(event.target.dataset.index)],id=Number(event.target.dataset.member);collection.ids=event.target.checked?[...new Set([...collection.ids,id])]:collection.ids.filter(i=&gt;i!==id);render();remember();}});
     state.restore=view=&gt;{state.tab=view.tab;state.group=view.group || &#x27;&#x27;;state.query=view.query || &#x27;&#x27;;state.sort=view.sort || &#x27;title&#x27;;query.value=state.query;sort.value=state.sort;render();};
     render();
-    if(globalThis.Tweak){const design={coverHeight:156};const tweak=new Tweak({container:phone,onChange:()=&gt;{phone.querySelectorAll(&#x27;.cover&#x27;).forEach(c=&gt;c.style.height=design.coverHeight+&#x27;px&#x27;);}});tweak.addSlider(design,&#x27;coverHeight&#x27;,{label:&#x27;Cover height&#x27;,min:100,max:220,step:10,unit:&#x27;px&#x27;});}
+    if(globalThis.Tweak){
+      const design={coverHeight:156,collectionIcon:&#x27;library-big&#x27;,authorIcon:&#x27;user-round&#x27;};
+      const tweak=new Tweak({container:phone,onChange:()=&gt;{
+        phone.querySelectorAll(&#x27;.cover&#x27;).forEach(c=&gt;c.style.height=design.coverHeight+&#x27;px&#x27;);
+        phone.querySelector(&#x27;[data-tab=&quot;Collections&quot;]&#x27;).innerHTML=`&lt;i data-lucide=&quot;${design.collectionIcon}&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;`;
+        phone.querySelector(&#x27;[data-tab=&quot;Authors&quot;]&#x27;).innerHTML=`&lt;i data-lucide=&quot;${design.authorIcon}&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;`;
+        if(globalThis.lucide)lucide.createIcons({attrs:{width:24,height:24}});
+      }});
+      tweak.addSlider(design,&#x27;coverHeight&#x27;,{label:&#x27;Cover height&#x27;,min:100,max:220,step:10,unit:&#x27;px&#x27;});
+      tweak.addSelect(design,&#x27;collectionIcon&#x27;,{label:&#x27;Collections icon&#x27;,options:[{label:&#x27;Grouped books&#x27;,value:&#x27;library-big&#x27;},{label:&#x27;Folders&#x27;,value:&#x27;folders&#x27;},{label:&#x27;Layers&#x27;,value:&#x27;layers&#x27;}]});
+      tweak.addSelect(design,&#x27;authorIcon&#x27;,{label:&#x27;Authors icon&#x27;,options:[{label:&#x27;Person&#x27;,value:&#x27;user-round&#x27;},{label:&#x27;People&#x27;,value:&#x27;users-round&#x27;},{label:&#x27;Contact&#x27;,value:&#x27;contact-round&#x27;}]});
+    }
   }
   window.addEventListener(&#x27;openai:set_globals&#x27;,event=&gt;{const views=event.detail?.globals?.widgetState?.privateContent?.views;if(!views)return;for(const view of views){const state=screens.find(s=&gt;s.name===view.name);if(state &amp;&amp; [&#x27;All&#x27;,&#x27;Collections&#x27;,&#x27;Authors&#x27;].includes(view.tab))state.restore(view);}});
 })();
