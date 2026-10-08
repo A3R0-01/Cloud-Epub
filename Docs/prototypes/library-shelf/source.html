@@ -29,7 +29,7 @@
 #epub-library-preview .tools select{width:118px}
 #epub-library-preview .books{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 #epub-library-preview .book{position:relative;min-width:0;display:block;padding:10px 10px 46px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
-#epub-library-preview .cover{height:156px;width:100%;border-radius:4px;padding:0;overflow:hidden;display:grid;place-items:center;position:relative;background:var(--soft);color:var(--accent)}
+#epub-library-preview .cover{height:128px;width:100%;border-radius:4px;padding:0;overflow:hidden;display:grid;place-items:center;position:relative;background:var(--soft);color:var(--accent)}
 #epub-library-preview .cover-art{width:100%;height:100%;display:grid;place-items:center;position:relative;background:light-dark(#dce7d8,#3b5142);color:light-dark(#244731,#dfecdf);border:1px solid var(--line);border-radius:4px;overflow:hidden}
 #epub-library-preview .cover-art[data-art="2"]{background:light-dark(#e1dbcb,#514d3b);color:light-dark(#554329,#eee7d6)}
 #epub-library-preview .cover-art[data-art="3"]{background:light-dark(#d7e2ea,#384c5b);color:light-dark(#28485d,#dbeaf2)}
@@ -48,7 +48,7 @@
 #epub-library-preview .floating-add{position:absolute;right:24px;bottom:24px;z-index:2;width:56px;height:56px;padding:16px;display:grid;place-items:center;border-radius:18px;background:var(--accent);color:var(--accentInk);box-shadow:0 3px 10px light-dark(#25382733,#00000066)}
 #epub-library-preview .floating-add[hidden]{display:none}
 #epub-library-preview .floating-add svg{width:24px;height:24px}
-#epub-library-preview .phone[data-has-add="true"] .shelf-area{margin-bottom:76px}
+#epub-library-preview .phone[data-has-add="true"] .content{padding-bottom:88px}
 #epub-library-preview .sheet{position:absolute;inset:0;background:var(--paper);z-index:3;padding:24px 18px;overflow:auto;border-radius:23px}
 #epub-library-preview .sheet[hidden]{display:none}
 #epub-library-preview .sheet label{display:block;margin:14px 0 6px}
@@ -155,7 +155,7 @@
     state.restore=view=>{state.tab=view.tab;state.group=view.group || '';state.query=view.query || '';state.sort=view.sort || 'title';query.value=state.query;sort.value=state.sort;render();};
     render();
     if(globalThis.Tweak){
-      const design={coverHeight:156,collectionIcon:'library-big',authorIcon:'user-round'};
+      const design={coverHeight:128,collectionIcon:'library-big',authorIcon:'user-round'};
       const tweak=new Tweak({container:phone,onChange:()=>{
         phone.querySelectorAll('.cover').forEach(c=>c.style.height=design.coverHeight+'px');
         phone.querySelector('[data-tab="Collections"]').innerHTML=`<i data-lucide="${design.collectionIcon}" aria-hidden="true"></i>`;
