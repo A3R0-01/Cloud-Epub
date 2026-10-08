@@ -13,8 +13,8 @@
 #epub-library-preview .phone{height:740px;margin:0 auto}
 #epub-library-preview .content{flex:1;min-height:0;overflow-y:auto}
 #epub-library-preview .appbar,#epub-library-preview .heading,#epub-library-preview .tools,#epub-library-preview .tabs{flex-shrink:0}
-#epub-library-preview .tabs{display:flex;gap:0;align-self:stretch;align-items:center;margin:0 0 20px;padding:0;border-bottom:1px solid var(--line)}
-#epub-library-preview .tabs button{flex:1;min-width:0;height:52px;padding:12px;display:grid;place-items:center;border-radius:10px 10px 0 0;border-bottom:3px solid transparent}
+#epub-library-preview .tabs{display:flex;gap:0;align-self:stretch;align-items:center;margin:0 0 12px;padding:0;border-bottom:1px solid var(--line)}
+#epub-library-preview .tabs button{flex:1;min-width:0;height:44px;padding:8px;display:grid;place-items:center;border-radius:10px 10px 0 0;border-bottom:3px solid transparent}
 #epub-library-preview .tabs button[aria-pressed=true]{color:var(--accent);background:var(--soft);border-bottom-color:var(--accent)}
 #epub-library-preview .settings-button{width:44px;height:44px;padding:10px;display:grid;place-items:center}
 #epub-library-preview .tabs svg,#epub-library-preview .settings-button svg{width:24px;height:24px}
@@ -40,7 +40,10 @@
 #epub-library-preview .fan .cover-art:only-of-type{transform:none}
 #epub-library-preview .group-count{position:absolute;bottom:7px;left:10px;color:var(--secondaryInk);font-size:14px}
 #epub-library-preview .empty-cover{font-size:64px;font-weight:500;color:var(--secondaryInk);background:var(--soft);width:100%;height:100%;display:grid;place-items:center;border-radius:4px}
-#epub-library-preview .add-collection{margin:0 0 14px}
+#epub-library-preview .floating-add{position:absolute;right:24px;bottom:24px;z-index:2;width:56px;height:56px;padding:16px;display:grid;place-items:center;border-radius:18px;background:var(--accent);color:var(--accentInk);box-shadow:0 3px 10px light-dark(#25382733,#00000066)}
+#epub-library-preview .floating-add[hidden]{display:none}
+#epub-library-preview .floating-add svg{width:24px;height:24px}
+#epub-library-preview .phone[data-has-add="true"] .content{padding-bottom:88px}
 #epub-library-preview .sheet{position:absolute;inset:0;background:var(--paper);z-index:3;padding:24px 18px;overflow:auto;border-radius:23px}
 #epub-library-preview .sheet[hidden]{display:none}
 #epub-library-preview .sheet label{display:block;margin:14px 0 6px}
@@ -73,18 +76,23 @@
     const state={name:variant.dataset.variant,tab:restored?.tab || 'All',group:restored?.group || '',sort:restored?.sort || 'title',query:restored?.query || '',books:initialBooks.map(b=>({...b,authors:[...b.authors]})),collections:[{name:'Weekend reads',ids:[1,2]},{name:'To explore',ids:[]}]};
     screens.push(state);
     const tabIcons={All:'book-open',Collections:'library-big',Authors:'user-round'};
-    variant.innerHTML=`<div class="phone" aria-label="${escape(state.name)} library design"><header class="appbar"><h2>Cloud EPUB</h2><button class="settings-button cursor-interaction" data-settings aria-label="Settings" data-tooltip="Settings"><i data-lucide="settings" aria-hidden="true"></i></button></header><nav class="tabs" aria-label="Library tabs">${['All','Collections','Authors'].map(t=>`<button class="cursor-interaction" data-tab="${t}" aria-label="${t}" data-tooltip="${t}" aria-pressed="${t===state.tab}"><i data-lucide="${tabIcons[t]}" aria-hidden="true"></i></button>`).join('')}</nav><div class="heading"></div><div class="tools"><input aria-label="Search library" placeholder="Search books" value="${escape(state.query)}"><select aria-label="Sort books"><option value="title">Title A–Z</option><option value="title-desc">Title Z–A</option><option value="year-desc">Newest year</option><option value="year">Oldest year</option></select></div><main class="content"></main><div class="sheet" hidden></div></div>`;
-    const phone=variant.querySelector('.phone'),content=phone.querySelector('.content'),sheet=phone.querySelector('.sheet'),query=phone.querySelector('input'),sort=phone.querySelector('select');
+    variant.innerHTML=`<div class="phone" aria-label="${escape(state.name)} library design"><header class="appbar"><h2>Cloud EPUB</h2><button class="settings-button cursor-interaction" data-settings aria-label="Settings" data-tooltip="Settings"><i data-lucide="settings" aria-hidden="true"></i></button></header><nav class="tabs" aria-label="Library tabs">${['All','Collections','Authors'].map(t=>`<button class="cursor-interaction" data-tab="${t}" aria-label="${t}" data-tooltip="${t}" aria-pressed="${t===state.tab}"><i data-lucide="${tabIcons[t]}" aria-hidden="true"></i></button>`).join('')}</nav><div class="heading"></div><div class="tools"><input aria-label="Search library" placeholder="Search books" value="${escape(state.query)}"><select aria-label="Sort books"><option value="title">Title A–Z</option><option value="title-desc">Title Z–A</option><option value="year-desc">Newest year</option><option value="year">Oldest year</option></select></div><main class="content"></main><button class="floating-add cursor-interaction" data-add aria-label="Add book" data-tooltip="Add book"><i data-lucide="plus" aria-hidden="true"></i></button><div class="sheet" hidden></div></div>`;
+    const phone=variant.querySelector('.phone'),content=phone.querySelector('.content'),sheet=phone.querySelector('.sheet'),query=phone.querySelector('input'),sort=phone.querySelector('select'),add=phone.querySelector('[data-add]');
     sort.value=state.sort;
     function render(){
       phone.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.tab===state.tab));
       phone.querySelector('.heading').innerHTML=state.group?`<button class="cursor-interaction" data-back>← Back</button><h3>${escape(state.group)}</h3>`:`<h3>${state.tab==='All'?'All books':state.tab}</h3>`;
       query.placeholder=state.group || state.tab==='All'?'Search books':`Search ${state.tab.toLowerCase()}`;
       sort.hidden=state.tab!=='All' && !state.group;
+      add.hidden=!!state.group || state.tab==='Authors';
+      phone.dataset.hasAdd=String(!add.hidden);
+      add.setAttribute('aria-label',state.tab==='Collections'?'Add Collection':'Add book');
+      add.setAttribute('data-tooltip',state.tab==='Collections'?'Add Collection':'Add book');
+      add.toggleAttribute('data-create',state.tab==='Collections' && !state.group);
       const words=state.query.toLocaleLowerCase('en').trim().split(/\s+/).filter(Boolean);
       if(state.tab!=='All' && !state.group){
         const groups=state.tab==='Collections'?state.collections.map(c=>({name:c.name,books:state.books.filter(b=>c.ids.includes(b.id))})):[...new Set(state.books.flatMap(b=>b.authors.length?b.authors:['Unknown author']))].map(name=>({name,books:state.books.filter(b=>name==='Unknown author'?!b.authors.length:b.authors.includes(name))}));
-        content.innerHTML=(state.tab==='Collections'?'<button class="primary add-collection cursor-interaction" data-create>Add Collection</button>':'')+`<div class="books">`+groups.filter(g=>words.every(w=>g.name.toLowerCase().includes(w))).sort((a,b)=>a.name.localeCompare(b.name,'en')).map(g=>{
+        content.innerHTML=`<div class="books">`+groups.filter(g=>words.every(w=>g.name.toLowerCase().includes(w))).sort((a,b)=>a.name.localeCompare(b.name,'en')).map(g=>{
           const covers=g.books.slice().sort((a,b)=>a.title.localeCompare(b.title,'en') || a.id-b.id).slice(0,3);
           return `<article class="book group-tile"><button class="cover fan cursor-interaction" data-group="${escape(g.name)}" aria-label="Open ${escape(g.name)}, ${g.books.length} books">${covers.length?covers.map((b,i)=>`<span class="cover-art" data-art="${b.id}" style="--angle:${covers.length===1?0:(i-(covers.length-1)/2)*24}deg" aria-hidden="true"><i data-lucide="book-open"></i></span>`).join(''):'<span class="empty-cover" aria-hidden="true">?</span>'}</button><button class="book-title cursor-interaction" data-group="${escape(g.name)}" data-tooltip="${escape(g.name)}">${escape(g.name)}</button><span class="group-count">${g.books.length} ${g.books.length===1?'book':'books'}</span>${state.tab==='Collections'?`<button class="options cursor-interaction" data-collection-options="${escape(g.name)}" aria-label="Options for ${escape(g.name)}"><i data-lucide="ellipsis-vertical" aria-hidden="true"></i></button>`:''}</article>`;
         }).join('')+`</div>`;
@@ -100,6 +108,8 @@
     function details(book){show(`<h3>${escape(book.title)}</h3><dl><dt>Authors</dt><dd>${escape(book.authors.join(', ') || 'Unknown author')}</dd><dt>Release date</dt><dd>${escape(book.date || 'Unknown')}</dd><dt>On this device</dt><dd>${book.downloaded?'Downloaded':'Not downloaded'}</dd><dt>Collections</dt><dd>${escape(state.collections.filter(c=>c.ids.includes(book.id)).map(c=>c.name).join(', ') || 'None')}</dd></dl><button class="primary cursor-interaction" data-edit="${book.id}">Edit author / release date</button>`);}
     phone.addEventListener('click',event=>{
       const button=event.target.closest('button');if(!button)return;
+      if(button.hasAttribute('data-add') && state.tab==='All')show(`<h3>Add a book</h3><button class="action cursor-interaction" data-import-source="Device">From device</button><button class="action cursor-interaction" data-import-source="Google Drive">From Google Drive</button>`);
+      if(button.dataset.importSource)show(`<h3>Import from ${escape(button.dataset.importSource)}</h3><p class="notice">EPUB selection preview</p>`);
       if(button.hasAttribute('data-settings'))show(`<h3>Settings</h3><h4>Account</h4><button class="action cursor-interaction" data-settings-section="Account information">Account information</button><button class="action cursor-interaction" data-settings-section="Password and recovery">Password and recovery</button><button class="action cursor-interaction" data-settings-section="Recovery package">Recovery package</button><button class="action cursor-interaction" data-settings-section="Devices">Devices</button><button class="action cursor-interaction" data-settings-section="Cloud account status">Cloud account status</button><button class="action cursor-interaction" data-settings-section="Sign out">Sign out</button>`);
       if(button.dataset.settingsSection)show(`<h3>${escape(button.dataset.settingsSection)}</h3><p class="notice">Account controls preview</p>`);
       if(button.dataset.tab){state.tab=button.dataset.tab;state.group='';state.query='';query.value='';sheet.hidden=true;render();remember();}
