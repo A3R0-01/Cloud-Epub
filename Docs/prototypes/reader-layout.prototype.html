@@ -29,6 +29,10 @@ body.final-review .margins{display:none}
 .progress{opacity:0;transition:opacity .15s;pointer-events:none}
 .phone.scrolling .progress{opacity:1}
 .hidden-controls .progress-text{visibility:hidden}
+.bookmarks{display:grid;grid-template-columns:96px minmax(0,1fr) 96px;gap:0}
+.bookmarks .title{min-width:0;text-align:center}
+.bookmarks>button{justify-self:start;width:48px}
+.header-actions{display:flex;width:96px}
 </style>
 <svg style="display:none" xmlns="http://www.w3.org/2000/svg"><defs>
 <symbol id="prev" viewBox="0 0 24 24"><path d="M5 5v14M19 5l-10 7 10 7z"/></symbol>
@@ -39,12 +43,13 @@ body.final-review .margins{display:none}
 <symbol id="bookmark" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></symbol>
 <symbol id="bookmarks" viewBox="0 0 24 24"><path d="M5 5h11v16l-5.5-4L5 21zM9 2h10v15"/></symbol>
 <symbol id="image" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="18" rx="2"/><circle cx="8" cy="8" r="2"/><path d="m2 18 6-6 4 4 4-6 6 8"/></symbol>
+<symbol id="back" viewBox="0 0 24 24"><path d="M19 12H5m7-7-7 7 7 7"/></symbol>
 </defs></svg>
 <main>
 <div id="phone" class="phone" data-variant="A">
  <div class="status"><span>9:41</span><span>Cloud EPUB · Offline</span></div>
  <section id="readingScreen" class="screen">
-  <header class="bookmarks"><span class="title">The Lantern Coast</span><button id="saveRegular" aria-label="Save Regular bookmark" title="Save Regular bookmark"><svg class="icon"><use href="#bookmark"/></svg></button><button id="openBookmarks" aria-label="Open bookmarks" title="Open bookmarks"><svg class="icon"><use href="#bookmarks"/></svg></button></header>
+  <header class="bookmarks"><button id="readerBack" aria-label="Back to Library" title="Back to Library"><svg class="icon" aria-hidden="true"><use href="#back"/></svg></button><span class="title" title="The Lantern Coast">The Lantern Coast</span><div class="header-actions"><button id="saveRegular" aria-label="Save Regular bookmark" title="Save Regular bookmark"><svg class="icon" aria-hidden="true"><use href="#bookmark"/></svg></button><button id="openBookmarks" aria-label="Open bookmarks" title="Open bookmarks"><svg class="icon" aria-hidden="true"><use href="#bookmarks"/></svg></button></div></header>
   <article id="reader" class="reader" aria-label="Chapter text" tabindex="0"></article>
   <div class="progress" aria-hidden="true"><span id="thumb"></span></div>
   <div class="progress-text"><span id="chapterLabel"></span></div>
@@ -115,6 +120,7 @@ $('saveRegular').onclick=()=>saveBookmark('Regular',firstVisible());$('openBookm
 $('toggleControls').onclick=()=>showControls(!controls);
 $('androidBack').onclick=()=>{if(overlay)closeOverlay();else if(selected)clearSelection();else if(screen==='reading')setScreen('library');else if(screen==='settings')setScreen('library');else announce('Already at Library.');updateState();};
 $('resume').onclick=()=>setScreen('reading');$('settings').onclick=()=>setScreen('settings');$('settingsBack').onclick=()=>setScreen('library');
+$('readerBack').onclick=()=>setScreen('library');
 for(const id of ['font','fontSize'])$(id).oninput=()=>{$('phone').style.setProperty('--font',$('font').value);$('phone').style.setProperty('--size',$('fontSize').value+'px');$('sizeLabel').textContent=$('fontSize').value+' px';updateState();};
 $('variantPrev').onclick=()=>switchVariant(-1);$('variantNext').onclick=()=>switchVariant(1);
 for(const button of document.querySelectorAll('button[data-margin]'))button.onclick=()=>changeMargins(button.dataset.margin);
