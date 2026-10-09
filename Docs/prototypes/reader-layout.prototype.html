@@ -13,6 +13,7 @@
 .phone[data-variant=A]:not(.hidden-controls) .progress{bottom:114px}
 .phone[data-variant=A] .toolbar{left:50%;right:auto;width:208px;transform:translateX(-50%);justify-content:center;gap:4px}
 .toolbar button{height:48px;padding:0}
+.phone[data-variant=A] .toolbar,.phone[data-variant=A] .toolbar button,.bookmarks,.bookmarks button{background:transparent}
 .phone[data-variant=A] .toolbar button{width:48px;flex:none}
 .toolbar .icon{width:clamp(16px,4.5vw,19px);height:clamp(16px,4.5vw,19px)}
 body.review .switcher:not(.margins),body.margin-study .switcher:not(.margins){display:none}
@@ -44,7 +45,7 @@ body.final-review .margins{display:none}
 .image-fullscreen .panel{height:100%;max-height:none;border-radius:0;padding:0;display:flex;flex-direction:column;overflow:hidden}
 .image-fullscreen .panel-head{position:absolute;top:0;left:0;right:0;z-index:2;padding:4px;justify-content:space-between}
 .image-fullscreen .panel-head h2{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.image-fullscreen .panel-head button{background:var(--paper)}
+.image-fullscreen .panel-head,.image-fullscreen .panel-head button{background:transparent}
 .image-fullscreen .image-exit{display:grid;place-items:center}
 .image-fullscreen .image-stage{flex:1;height:auto;min-height:0;margin:0;touch-action:none;user-select:none;scrollbar-width:none;cursor:grab}
 .image-fullscreen .image-stage::-webkit-scrollbar{display:none}
