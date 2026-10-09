@@ -12,7 +12,7 @@ The user chose Original after comparing margins. Earlier proposals remain captur
 
 Scroll chapters vertically. On touch screens, horizontal swipes change chapters; desktop demo buttons simulate those swipes. Try the four reader controls, separate bookmark actions, word selection, image popup, and Android Back simulation. Reach typography through Library → App Settings. State is in memory and resets on reload.
 
-The bottom controls use a shorter 40 px toolbar row and a 12 px chapter-name line 4 px above the screen bottom. The row retains 48 px button targets centered within it. The reserved bottom area is reduced from 104 to 76 px, providing 28 px more reading height while keeping text clear of the controls.
+The bottom controls use a shorter 40 px toolbar row and a centered chapter name in 12 px type on a 14 px line, 4 px above the screen bottom. The row retains 48 px button targets centered within it. The reserved bottom area is reduced from 104 to 76 px, providing 28 px more reading height while keeping text clear of the controls.
 
 The revealed header centers the book title on the reading screen, with Back to Library on the left and the two bookmark controls on the right. Back preserves the current passage for Continue reading. Long titles truncate visually while retaining the full title text.
 
