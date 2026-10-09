@@ -11,8 +11,8 @@
 <style>
 .phone[data-variant=A]:not(.hidden-controls) .reader{bottom:76px}
 .phone[data-variant=A]:not(.hidden-controls) .progress{bottom:86px}
-.phone[data-variant=A] .toolbar{left:50%;right:auto;bottom:20px;height:40px;width:208px;transform:translateX(-50%);justify-content:center;gap:4px}
-.phone[data-variant=A] .progress-text{bottom:4px;justify-content:center;text-align:center;font-size:12px;line-height:14px}
+.phone[data-variant=A] .toolbar{left:50%;right:auto;bottom:28px;height:40px;width:208px;transform:translateX(-50%);justify-content:center;gap:4px}
+.phone[data-variant=A] .progress-text{bottom:12px;justify-content:center;text-align:center;font-size:12px;line-height:14px}
 .toolbar button{height:48px;padding:0}
 .phone[data-variant=A] .toolbar,.phone[data-variant=A] .toolbar button,.bookmarks,.bookmarks button{background:transparent}
 .phone[data-variant=A] .toolbar button{width:48px;flex:none}
@@ -30,7 +30,9 @@ body.final-review .margins{display:none}
 .phone:not([data-margin=original]).hidden-controls .progress{top:35px;bottom:26px}
 .progress{opacity:0;transition:opacity .15s;pointer-events:none}
 .phone.scrolling .progress{opacity:1}
-.hidden-controls .progress-text{visibility:hidden}
+.bookmarks,.toolbar,.progress-text{transition:opacity .2s ease}
+.hidden-controls .progress-text{opacity:0}
+
 .bookmarks{display:grid;grid-template-columns:96px minmax(0,1fr) 96px;gap:0}
 .bookmarks .title{min-width:0;text-align:center}
 .bookmarks>button{justify-self:start;width:48px}
@@ -122,7 +124,7 @@ const reader=$('reader');
 function announce(message){$('notice').textContent=message;updateState();}
 function firstVisible(){if(screen!=='reading')return readingAnchor||`${chapter}-0`;const top=reader.getBoundingClientRect().top;const node=[...reader.querySelectorAll('[data-word],[data-anchor]')].find(w=>w.getBoundingClientRect().bottom>top+2);return node?.dataset.word||node?.dataset.anchor||`${chapter}-0`;}
 function updateState(){const ratio=reader.scrollTop/Math.max(1,reader.scrollHeight-reader.clientHeight);$('thumb').style.top=`${ratio*88}%`;$('chapterLabel').textContent=chapterTitles[chapter];$('state').textContent=`Screen: ${screen}\nChapter: ${chapter+1} / 3\nFirst visible word: ${firstVisible()}\nControls: ${controls?'visible':'hidden'}\nTheme: ${$('phone').classList.contains('dark')?'dark':'light'}\nFont: ${$('font').value}, ${$('fontSize').value} px\nMargins: ${$('phone').dataset.margin||'original'}\nImage zoom: ${imageZoom}x\nBookmarks: ${marks.length}\nOverlay: ${overlay||'none'}`;}
-function showControls(value){controls=value;$('phone').classList.toggle('hidden-controls',!value);$('phone').querySelector('.toolbar').inert=!value;$('phone').querySelector('.bookmarks').inert=!value;updateState();}
+function showControls(value){controls=value;$('phone').classList.toggle('hidden-controls',!value);$('phone').querySelector('.toolbar').inert=!value;$('phone').querySelector('.bookmarks').inert=!value;$('phone').querySelector('.progress-text').setAttribute('aria-hidden',String(!value));updateState();}
 function clearSelection(){selected=null;$('wordMenu').hidden=true;window.getSelection()?.removeAllRanges();}
 function moveChapter(next){if(next<0||next>2)return;clearSelection();scrollFromUser=false;chapter=next;reader.innerHTML=bookChapters[chapter];reader.scrollTop=0;if(chapter===2)reader.querySelector('.chapter-end').textContent='End of book';$('previous').disabled=chapter===0;$('nextChapter').disabled=chapter===2;updateState();}
 function restore(anchor){scrollFromUser=false;const word=reader.querySelector(`[data-word="${anchor}"],[data-anchor="${anchor}"]`);if(word)reader.scrollTop+=word.getBoundingClientRect().top-reader.getBoundingClientRect().top-8;updateState();}
