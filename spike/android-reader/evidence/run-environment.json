@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-16",
+  "engine": "Readium Kotlin 3.4.0 Fragment",
+  "toolchain": {
+    "agp": "9.3.1",
+    "kotlin": "2.4.20",
+    "buildTools": "36.0.0",
+    "compileSdk": "37.0",
+    "gradle": "9.7.0",
+    "desugaring": "2.1.5",
+    "java": "JBR 25.0.3"
+  },
+  "fixtureSha256": "57a3bdad153ef14c2389e003abddb06a2c58fea01328e1d5cda6e9d21e273203",
+  "localApkSha256": "7bec3669c76bc2387f78770b44ce2469548e8e774759e53ee7781c747e473326",
+  "offlineAssembleVerified": true,
+  "primary": {
+    "focusedTotal": 26,
+    "density": 420,
+    "api": 35,
+    "webview": "124.0.6367.219",
+    "extendedPassed": 19,
+    "resolution": "1080x1920",
+    "extendedTotal": 22,
+    "focusedPassed": 26
+  },
+  "secondary": {
+    "webview": "83.0.4103.120",
+    "talkback": "2021-04-23",
+    "activationIntoPopup": true,
+    "api": 30,
+    "serviceBoundVerified": true,
+    "activationAfterReturn": false
+  },
+  "emulator": "37.2.12 WHPX",
+  "candidateAdopted": false
+}

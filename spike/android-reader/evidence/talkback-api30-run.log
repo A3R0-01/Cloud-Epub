@@ -1,0 +1,174 @@
+/sdcard/talkback-popup.png: 1 file pulled, 0 skipped. 21.0 MB/s (103308 bytes in 0.005s)
+/sdcard/talkback-return.png: 1 file pulled, 0 skipped. 37.4 MB/s (123002 bytes in 0.003s)
+{
+  "screenReaderAssertionsValid": true,
+  "nativeTalkBackActivationOpenedPopup": true,
+  "backPreservedReader": true,
+  "talkBackActivationReturnedToOpeningControl": false,
+  "before": {
+    "href": "EPUB/two.xhtml",
+    "controls": false,
+    "dark": false,
+    "fontSize": 100,
+    "viewer": "reading",
+    "readerBounds": [
+      0,
+      63,
+      1080,
+      1794
+    ],
+    "previousEnabled": true,
+    "nextEnabled": true,
+    "reader": {
+      "href": "/EPUB/two.xhtml",
+      "scrollY": 0,
+      "height": 746,
+      "viewport": 660,
+      "originalLength": 196,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 6,
+      "buttons": 5,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "selected": null,
+      "highlight": false
+    }
+  },
+  "opened": {
+    "href": "EPUB/two.xhtml",
+    "controls": false,
+    "dark": false,
+    "fontSize": 100,
+    "viewer": "popup",
+    "viewerDetails": {
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Map with river, north marker, and three named stations",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    },
+    "readerBounds": [
+      0,
+      63,
+      1080,
+      1794
+    ],
+    "previousEnabled": true,
+    "nextEnabled": true,
+    "reader": {
+      "href": "/EPUB/two.xhtml",
+      "scrollY": 0,
+      "height": 746,
+      "viewport": 660,
+      "originalLength": 196,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 6,
+      "buttons": 5,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "selected": null,
+      "highlight": false
+    }
+  },
+  "returned": {
+    "href": "EPUB/two.xhtml",
+    "controls": false,
+    "dark": false,
+    "fontSize": 100,
+    "viewer": "reading",
+    "readerBounds": [
+      0,
+      63,
+      1080,
+      1794
+    ],
+    "previousEnabled": true,
+    "nextEnabled": true,
+    "reader": {
+      "href": "/EPUB/two.xhtml",
+      "scrollY": 0,
+      "height": 746,
+      "viewport": 660,
+      "originalLength": 196,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 6,
+      "buttons": 5,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "selected": null,
+      "highlight": false
+    }
+  },
+  "activatedAfterReturn": {
+    "href": "EPUB/two.xhtml",
+    "controls": false,
+    "dark": false,
+    "fontSize": 100,
+    "viewer": "reading",
+    "readerBounds": [
+      0,
+      63,
+      1080,
+      1794
+    ],
+    "previousEnabled": true,
+    "nextEnabled": true,
+    "reader": {
+      "href": "/EPUB/two.xhtml",
+      "scrollY": 0,
+      "height": 746,
+      "viewport": 660,
+      "originalLength": 196,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 6,
+      "buttons": 5,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "selected": null,
+      "highlight": false
+    }
+  }
+}

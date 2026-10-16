@@ -18,17 +18,22 @@ import android.widget.*
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.FragmentContainerView
 import androidx.lifecycle.lifecycleScope
 import java.io.File
 import java.security.MessageDigest
 import java.util.zip.ZipFile
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeout
 import org.json.JSONObject
 import org.json.JSONTokener
 import org.readium.r2.navigator.epub.*
 import org.readium.r2.navigator.input.InputListener
+import org.readium.r2.navigator.input.DragEvent
 import org.readium.r2.navigator.input.TapEvent
 import org.readium.r2.navigator.preferences.FontFamily
 import org.readium.r2.navigator.preferences.Theme
@@ -63,6 +68,7 @@ class MainActivity : AppCompatActivity() {
     private var dark = false
     private var currentHref = ""
     private var fixtureHash = ""
+    private var readerReady = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // This disposable harness rebuilds the reader from its saved original-content destination.
@@ -75,10 +81,16 @@ class MainActivity : AppCompatActivity() {
         fixtureHash = MessageDigest.getInstance("SHA-256").digest(fixture.readBytes()).joinToString("") { "%02x".format(it) }
         column = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
         setContentView(column)
+        ViewCompat.setOnApplyWindowInsetsListener(column) { view, insets ->
+            val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout())
+            view.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+            insets
+        }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
+                if (!readerReady) { journal("back", "before-reader-ready"); finish(); return }
                 lifecycleScope.launch {
-                    if (selectionActive) { js("(getSelection().removeAllRanges(), null)"); journal("back", "selection") }
+                    if (selectionActive) { navigator.clearSelection(); journal("back", "selection") }
                     else { saveProgress(); journal("back", "library-placeholder"); finish() }
                 }
             }
@@ -89,17 +101,18 @@ class MainActivity : AppCompatActivity() {
                 val retriever = AssetRetriever(contentResolver, http)
                 val asset = retriever.retrieve(fixture).getOrNull() ?: error("Cannot retrieve fixture")
                 val adapter = assets.open("reader-spike.js").bufferedReader().use { it.readText() }
-                val opener = PublicationOpener(DefaultPublicationParser(this@MainActivity, assetRetriever = retriever, httpClient = http))
+                val opener = PublicationOpener(DefaultPublicationParser(this@MainActivity, assetRetriever = retriever, httpClient = http, pdfFactory = null))
                 publication = opener.open(asset, allowUserInteraction = false, onCreatePublication = {
                     container = TransformingContainer(container) { url, resource ->
                         if (!url.toString().endsWith(".xhtml")) resource else resource.map { bytes ->
                             val original = bytes.toString(Charsets.UTF_8)
-                            Try.success(original.replace("</head>", "<script type=\"text/javascript\"><![CDATA[$adapter]]></script></head>").toByteArray())
+                            Try.success(original.replace("</head>", "<script type=\"text/javascript\">//<![CDATA[\n$adapter\n//]]></script></head>").toByteArray())
                         }
                     }
                 }).getOrNull() ?: error("Cannot open fixture")
-                val saved = preferences.getString("progress", null)?.let(::JSONObject)
+                val saved = preferences.getString("progress", null)?.let(::JSONObject)?.takeIf { it.optString("fixtureSha256") == fixtureHash }
                 pendingRestore = saved
+                currentHref = saved?.getJSONObject("locator")?.getString("href") ?: publication.readingOrder.first().href.toString()
                 val factory = EpubNavigatorFactory(publication).createFragmentFactory(
                     initialLocator = saved?.optJSONObject("locator")?.let { Locator.fromJSON(it) },
                     initialPreferences = readerPreferences(),
@@ -107,7 +120,7 @@ class MainActivity : AppCompatActivity() {
                         override fun onPageLoaded() { lifecycleScope.launch { pageLoaded() } }
                     },
                     configuration = EpubNavigatorFragment.Configuration {
-                        disablePageTurnsWhileScrolling = false
+                        disablePageTurnsWhileScrolling = true
                         selectionActionModeCallback = object : ActionMode.Callback {
                             override fun onCreateActionMode(mode: ActionMode, menu: Menu): Boolean {
                                 menu.clear()
@@ -146,6 +159,17 @@ class MainActivity : AppCompatActivity() {
                 navigator = factory.instantiate(classLoader, EpubNavigatorFragment::class.java.name) as EpubNavigatorFragment
                 supportFragmentManager.beginTransaction().add(container.id, navigator, "reader").commitNow()
                 navigator.addInputListener(object : InputListener {
+                    override fun onDrag(event: DragEvent): Boolean {
+                        if (selectionActive || viewer != null) return true
+                        val horizontal = kotlin.math.abs(event.offset.x)
+                        if (horizontal > dp(48) && horizontal > kotlin.math.abs(event.offset.y) * 1.5f) {
+                            if (event.type == DragEvent.Type.End) {
+                                navigateChapter(chapterIndex() + if (event.offset.x < 0) 1 else -1)
+                            }
+                            return true
+                        }
+                        return false
+                    }
                     override fun onTap(event: TapEvent): Boolean {
                         lifecycleScope.launch {
                             if (selectionActive) js("(getSelection().removeAllRanges(), null)") else showControls(!controls)
@@ -154,17 +178,14 @@ class MainActivity : AppCompatActivity() {
                     }
                 })
                 lifecycleScope.launch { navigator.currentLocator.collect { locator ->
-                    currentHref = locator.href.toString()
-                    val index = chapterIndex()
-                    previous.isEnabled = index > 0
-                    next.isEnabled = index < publication.readingOrder.lastIndex
-                    chapterName.text = publication.readingOrder.getOrNull(index)?.title ?: currentHref
+                    updateChapterControls()
                     journal("locator", locator.toJSON())
                 } }
                 journal("environment", JSONObject().put("fixtureSha256", fixtureHash).put("engine", "Readium 3.4.0")
                     .put("api", android.os.Build.VERSION.SDK_INT).put("webview", if (android.os.Build.VERSION.SDK_INT >= 26) WebView.getCurrentWebViewPackage()?.versionName else "not queried")
                     .put("density", resources.displayMetrics.density).put("fontScale", resources.configuration.fontScale))
-            } catch (error: Throwable) { journal("fatal", Log.getStackTraceString(error)) }
+            } catch (cancelled: CancellationException) { throw cancelled }
+            catch (error: Throwable) { journal("fatal", Log.getStackTraceString(error)) }
         }
     }
 
@@ -223,10 +244,20 @@ class MainActivity : AppCompatActivity() {
 
     private fun chapterIndex() = publication.readingOrder.indexOfFirst { currentHref.substringBefore('#').endsWith(it.href.toString().substringBefore('#')) }.coerceAtLeast(0)
 
+    private fun updateChapterControls() {
+        val index = chapterIndex()
+        previous.isEnabled = index > 0
+        next.isEnabled = index < publication.readingOrder.lastIndex
+        chapterName.text = publication.tableOfContents.firstOrNull { it.href.toString() == currentHref }?.title
+            ?: publication.readingOrder.getOrNull(index)?.title ?: currentHref
+    }
+
     private fun navigateChapter(index: Int) {
         if (viewer != null || selectionActive || index !in publication.readingOrder.indices) return
         pendingRestore = null
+        currentHref = publication.readingOrder[index].href.toString()
         navigator.go(publication.readingOrder[index], animated = false)
+        updateChapterControls()
         journal("chapter-action", index)
     }
 
@@ -236,8 +267,12 @@ class MainActivity : AppCompatActivity() {
         return if (decoded is String) JSONTokener(decoded).nextValue() else decoded
     }
 
-    private suspend fun destination(anchor: JSONObject) = JSONObject().put("schema", 1).put("fixtureSha256", fixtureHash)
-        .put("locator", navigator.currentLocator.value.toJSON()).put("anchor", anchor)
+    private suspend fun destination(anchor: JSONObject): JSONObject {
+        val href = (js("location.pathname") as String).removePrefix("/")
+        val link = publication.readingOrder.first { it.href.toString() == href }
+        return JSONObject().put("schema", 1).put("fixtureSha256", fixtureHash)
+            .put("locator", publication.locatorFromLink(link)!!.toJSON()).put("anchor", anchor)
+    }
 
     private fun saveBookmark(type: String, anchor: JSONObject) { lifecycleScope.launch {
         val saved = destination(anchor)
@@ -262,6 +297,10 @@ class MainActivity : AppCompatActivity() {
 
     private suspend fun pageLoaded() {
         delay(200)
+        val rendered = js("spike.state()") as? JSONObject ?: return
+        readerReady = true
+        currentHref = rendered.getString("href").removePrefix("/")
+        updateChapterControls()
         val saved = pendingRestore
         if (saved != null && currentHref == saved.getJSONObject("locator").getString("href")) {
             pendingRestore = null
@@ -284,7 +323,10 @@ class MainActivity : AppCompatActivity() {
                         journal("image-stage", stage)
                         if (stage == "reading") {
                             viewer = null
-                            lifecycleScope.launch { js("spike.controls.get(${data.getInt("index")}).focus()") }
+                            lifecycleScope.launch {
+                                js("(()=>{const b=spike.controls.get(${data.getInt("index")});b.focus();return document.activeElement===b;})()")
+                                    .also { journal("dom-focus-return", it) }
+                            }
                         }
                     }.also { it.show() }
                 }
@@ -297,6 +339,7 @@ class MainActivity : AppCompatActivity() {
         super.onNewIntent(intent)
         lifecycleScope.launch {
             try {
+                withTimeout(20000) { while (!readerReady) delay(50) }
                 val data = intent.getStringExtra("data")?.let { String(Base64.decode(it, Base64.NO_WRAP)) } ?: ""
                 val result: Any? = when (intent.getStringExtra("command")) {
                     "eval" -> js(data)
@@ -316,12 +359,18 @@ class MainActivity : AppCompatActivity() {
                     "full-screen" -> { viewer?.fullScreen(); null }
                     "exit-full-screen" -> { viewer?.exitFullScreen(); null }
                     "close-image" -> { viewer?.dismiss(); null }
-                    "state" -> JSONObject().put("href", currentHref).put("controls", controls).put("dark", dark)
-                        .put("fontSize", fontSize).put("viewer", viewer?.stage ?: "reading").put("reader", js("spike.state()"))
+                    "state" -> {
+                        val bounds = android.graphics.Rect()
+                        navigator.publicationView.getGlobalVisibleRect(bounds)
+                        JSONObject().put("href", currentHref).put("controls", controls).put("dark", dark)
+                            .put("fontSize", fontSize).put("viewer", viewer?.stage ?: "reading").put("viewerDetails", viewer?.debugState())
+                            .put("readerBounds", org.json.JSONArray(listOf(bounds.left, bounds.top, bounds.right, bounds.bottom)))
+                            .put("previousEnabled", previous.isEnabled).put("nextEnabled", next.isEnabled).put("reader", js("spike.state()"))
+                    }
                     else -> error("Unknown spike command")
                 }
                 journal("command-result", JSONObject().put("id", intent.getStringExtra("id")).put("result", result ?: JSONObject.NULL))
-            } catch (error: Throwable) { journal("command-error", Log.getStackTraceString(error)) }
+            } catch (error: Throwable) { journal("command-error", JSONObject().put("id", intent.getStringExtra("id")).put("error", Log.getStackTraceString(error))) }
         }
     }
 

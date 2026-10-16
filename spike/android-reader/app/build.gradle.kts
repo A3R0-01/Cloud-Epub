@@ -1,7 +1,7 @@
 plugins { id("com.android.application") }
 android {
     namespace = "dev.cloudepub.spike"
-    compileSdk = 37
+    compileSdk { version = release(37) { minorApiLevel = 0 } }
     defaultConfig {
         applicationId = "dev.cloudepub.spike"
         minSdk = 24

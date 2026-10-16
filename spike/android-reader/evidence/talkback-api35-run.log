@@ -1,0 +1,4 @@
+{
+  "screenReaderAssertionsValid": false,
+  "reason": "TalkBack is not a bound service; ordinary taps cannot be scored as screen-reader activation."
+}

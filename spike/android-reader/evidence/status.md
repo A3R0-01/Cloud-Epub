@@ -1,5 +1,7 @@
 # Environment and evidence status
 
+**Superseded setup checkpoint:** SDK downloads, APK compilation and Android execution have since succeeded. Read [the current runtime results](results.md). The remainder of this file preserves the initial setup investigation and is not the current status.
+
 16 October 2026. **Incomplete: no Android runtime evidence and no successful APK build.** This is a checkpoint for resuming the task, not a resolution comment or feasibility conclusion.
 
 ## Observed local checks

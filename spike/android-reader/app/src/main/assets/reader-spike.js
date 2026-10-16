@@ -21,6 +21,9 @@
       #spike-indicator { position: fixed; right: 3px; top: 40%; border-right: 2px solid currentColor; height: 35px; pointer-events: none; opacity: 0; }
       ::highlight(spike-arrival) { background-color: #f6cc65; color: #111; }`;
     document.head.appendChild(style);
+    // Readium's user-style selectors outrank the sample body rule above.
+    document.body.style.setProperty('margin', '0', 'important');
+    document.body.style.setProperty('padding', '10px 31px 24px', 'important');
     images.forEach((image, index) => {
       if (image.getAttribute('role') === 'presentation' || image.getAttribute('alt') === '') {
         image.style.display = 'none';

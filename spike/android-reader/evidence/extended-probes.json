@@ -1,0 +1,957 @@
+[
+  {
+    "name": "Native tap opens meaningful-image popup",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 150,
+      "viewer": "popup",
+      "viewerDetails": {
+        "zoomed": false,
+        "imageBounds": [
+          0.75,
+          0,
+          992.25,
+          661
+        ],
+        "width": 993,
+        "height": 661,
+        "description": "Map with river, north marker, and three named stations",
+        "accessibilityActions": [
+          {
+            "id": 4
+          },
+          {
+            "id": 8
+          },
+          {
+            "id": 1
+          },
+          {
+            "id": 64
+          },
+          {
+            "id": 131072
+          },
+          {
+            "id": 256
+          },
+          {
+            "id": 512
+          },
+          {
+            "id": 16908342
+          },
+          {
+            "id": 16908289,
+            "label": "Zoom image in"
+          }
+        ],
+        "stage": "popup",
+        "metadataVisible": true,
+        "fullScreenActionVisible": true,
+        "exitActionVisible": false
+      },
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 0,
+        "height": 746,
+        "viewport": 660,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 6,
+        "buttons": 5,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "selected": null,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Full screen fits the whole image without visible metadata",
+    "pass": true,
+    "observed": {
+      "zoomed": false,
+      "imageBounds": [
+        0,
+        537,
+        1080,
+        1257
+      ],
+      "width": 1080,
+      "height": 1794,
+      "description": "Map with river, north marker, and three named stations",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "full-screen",
+      "metadataVisible": false,
+      "fullScreenActionVisible": false,
+      "exitActionVisible": true
+    }
+  },
+  {
+    "name": "Native double tap zooms in",
+    "pass": true,
+    "observed": {
+      "zoomed": true,
+      "imageBounds": [
+        -810,
+        -3,
+        1890,
+        1797
+      ],
+      "width": 1080,
+      "height": 1794,
+      "description": "Map with river, north marker, and three named stations",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Fit whole image"
+        },
+        {
+          "id": 16908290,
+          "label": "Pan left"
+        },
+        {
+          "id": 16908291,
+          "label": "Pan right"
+        },
+        {
+          "id": 16908292,
+          "label": "Pan up"
+        },
+        {
+          "id": 16908293,
+          "label": "Pan down"
+        }
+      ],
+      "stage": "full-screen",
+      "metadataVisible": false,
+      "fullScreenActionVisible": false,
+      "exitActionVisible": true
+    }
+  },
+  {
+    "name": "Native drag pans the zoomed image",
+    "pass": true,
+    "observed": {
+      "zoomed": true,
+      "imageBounds": [
+        -605.6006,
+        0,
+        2094.3994,
+        1800
+      ],
+      "width": 1080,
+      "height": 1794,
+      "description": "Map with river, north marker, and three named stations",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Fit whole image"
+        },
+        {
+          "id": 16908290,
+          "label": "Pan left"
+        },
+        {
+          "id": 16908291,
+          "label": "Pan right"
+        },
+        {
+          "id": 16908292,
+          "label": "Pan up"
+        },
+        {
+          "id": 16908293,
+          "label": "Pan down"
+        }
+      ],
+      "stage": "full-screen",
+      "metadataVisible": false,
+      "fullScreenActionVisible": false,
+      "exitActionVisible": true
+    }
+  },
+  {
+    "name": "Second native double tap returns to whole-image fit",
+    "pass": true,
+    "observed": {
+      "zoomed": false,
+      "imageBounds": [
+        0,
+        537,
+        1080,
+        1257
+      ],
+      "width": 1080,
+      "height": 1794,
+      "description": "Map with river, north marker, and three named stations",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "full-screen",
+      "metadataVisible": false,
+      "fullScreenActionVisible": false,
+      "exitActionVisible": true
+    }
+  },
+  {
+    "name": "Native Exit full screen returns to popup",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 150,
+      "viewer": "popup",
+      "viewerDetails": {
+        "zoomed": false,
+        "imageBounds": [
+          0.75,
+          0,
+          992.25,
+          661
+        ],
+        "width": 993,
+        "height": 661,
+        "description": "Map with river, north marker, and three named stations",
+        "accessibilityActions": [
+          {
+            "id": 4
+          },
+          {
+            "id": 8
+          },
+          {
+            "id": 1
+          },
+          {
+            "id": 64
+          },
+          {
+            "id": 131072
+          },
+          {
+            "id": 256
+          },
+          {
+            "id": 512
+          },
+          {
+            "id": 16908342
+          },
+          {
+            "id": 16908289,
+            "label": "Zoom image in"
+          }
+        ],
+        "stage": "popup",
+        "metadataVisible": true,
+        "fullScreenActionVisible": true,
+        "exitActionVisible": false
+      },
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 0,
+        "height": 746,
+        "viewport": 660,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 6,
+        "buttons": 5,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "selected": null,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Native Close from popup preserves underlying viewport",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 150,
+      "viewer": "reading",
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 0,
+        "height": 746,
+        "viewport": 660,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 6,
+        "buttons": 5,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "selected": null,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Original image 2 maps to native viewer",
+    "pass": true,
+    "observed": {
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Energy equals mass times the speed of light squared",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Original image 3 maps to native viewer",
+    "pass": true,
+    "observed": {
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Linked map",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Original image 4 maps to native viewer",
+    "pass": true,
+    "observed": {
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Image without an original description",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Original image 5 maps to native viewer",
+    "pass": true,
+    "observed": {
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Reading-flow cover",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 16908289,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Generated viewer label is rejected as a Precise target",
+    "pass": true,
+    "observed": {
+      "error": "Generated content is not a Precise bookmark target"
+    }
+  },
+  {
+    "name": "Native long press selects the complete hyphenated word",
+    "pass": false,
+    "observed": {
+      "kind": "text",
+      "start": {
+        "node": 1,
+        "offset": 9
+      },
+      "end": {
+        "node": 1,
+        "offset": 13
+      },
+      "quote": "well"
+    }
+  },
+  {
+    "name": "Native selection blocks chapter swipes",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 100,
+      "viewer": "reading",
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 131.04762268066406,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "selected": {
+          "kind": "text",
+          "start": {
+            "node": 1,
+            "offset": 9
+          },
+          "end": {
+            "node": 1,
+            "offset": 13
+          },
+          "quote": "well"
+        },
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "First native outside-text tap clears selection only",
+    "pass": false,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 100,
+      "viewer": "reading",
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 131.04762268066406,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "selected": {
+          "kind": "text",
+          "start": {
+            "node": 1,
+            "offset": 9
+          },
+          "end": {
+            "node": 1,
+            "offset": 13
+          },
+          "quote": "well"
+        },
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Second native tap shows reader controls",
+    "pass": false,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 100,
+      "viewer": "reading",
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 131.04762268066406,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "selected": {
+          "kind": "text",
+          "start": {
+            "node": 1,
+            "offset": 9
+          },
+          "end": {
+            "node": 1,
+            "offset": 13
+          },
+          "quote": "well"
+        },
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Named native icon targets are at least 48dp at density 420",
+    "pass": true,
+    "observed": [
+      {
+        "name": "Back to Library",
+        "width": 126,
+        "height": 126
+      },
+      {
+        "name": "Regular bookmark",
+        "width": 146,
+        "height": 126
+      },
+      {
+        "name": "Bookmarks",
+        "width": 146,
+        "height": 126
+      },
+      {
+        "name": "Previous chapter",
+        "width": 146,
+        "height": 134
+      },
+      {
+        "name": "Chapters",
+        "width": 146,
+        "height": 134
+      },
+      {
+        "name": "Next chapter",
+        "width": 146,
+        "height": 134
+      },
+      {
+        "name": "Toggle light/dark theme",
+        "width": 146,
+        "height": 134
+      }
+    ]
+  },
+  {
+    "name": "Native theme toggle changes theme",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": true,
+      "dark": true,
+      "fontSize": 100,
+      "viewer": "reading",
+      "readerBounds": [
+        0,
+        189,
+        1080,
+        1617
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 131.04762268066406,
+        "height": 9095,
+        "viewport": 544,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "selected": null,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Theme persists through force-stop and restart",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": false,
+      "dark": true,
+      "fontSize": 100,
+      "viewer": "reading",
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 131.04762268066406,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "selected": null,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Original destination remains visible after system font/display scaling",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 0
+        },
+        "end": {
+          "node": 1,
+          "offset": 1
+        },
+        "quote": "“"
+      },
+      "top": 10,
+      "bottom": 29,
+      "visible": true,
+      "scrollY": 130.6666717529297,
+      "innerWidth": 360,
+      "innerHeight": 568
+    }
+  },
+  {
+    "name": "Native user scrolling shows the progress indicator",
+    "pass": true,
+    "observed": {
+      "href": "/EPUB/one.xhtml",
+      "scrollY": 332.5714416503906,
+      "height": 9095,
+      "viewport": 660,
+      "originalLength": 16591,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 0,
+      "buttons": 0,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "1",
+      "selected": null,
+      "highlight": false
+    }
+  },
+  {
+    "name": "Progress indicator hides after user scrolling stops",
+    "pass": true,
+    "observed": {
+      "href": "/EPUB/one.xhtml",
+      "scrollY": 332.5714416503906,
+      "height": 9095,
+      "viewport": 660,
+      "originalLength": 16591,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 0,
+      "buttons": 0,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "0",
+      "selected": null,
+      "highlight": false
+    }
+  }
+]

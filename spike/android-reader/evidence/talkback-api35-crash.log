@@ -1,0 +1,37 @@
+--------- beginning of crash
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: FATAL EXCEPTION: main
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: Process: com.android.talkback, PID: 5078
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: java.lang.RuntimeException: Unable to start receiver com.google.android.accessibility.talkback.BootReceiver: java.lang.NullPointerException: Attempt to invoke virtual method 'void com.google.android.accessibility.talkback.Pipeline.onBoot(boolean)' on a null object reference
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at android.app.ActivityThread.handleReceiver(ActivityThread.java:4781)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleReceiver(Unknown Source:0)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2436)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void com.google.android.accessibility.talkback.Pipeline.onBoot(boolean)' on a null object reference
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at com.google.android.accessibility.talkback.TalkBackService.onUnlockedBootCompleted(TalkBackService.java:2340)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at com.google.android.accessibility.talkback.BootReceiver.onReceive(BootReceiver.java:51)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	at android.app.ActivityThread.handleReceiver(ActivityThread.java:4772)
+10-16 16:48:13.684  5078  5078 E AndroidRuntime: 	... 9 more
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: FATAL EXCEPTION: main
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: Process: com.android.talkback, PID: 5110
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: java.lang.RuntimeException: Unable to start receiver com.google.android.accessibility.talkback.BootReceiver: java.lang.NullPointerException: Attempt to invoke virtual method 'void com.google.android.accessibility.talkback.Pipeline.onBoot(boolean)' on a null object reference
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at android.app.ActivityThread.handleReceiver(ActivityThread.java:4781)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at android.app.ActivityThread.-$$Nest$mhandleReceiver(Unknown Source:0)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2436)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:107)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:232)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:317)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:8705)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:580)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:886)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'void com.google.android.accessibility.talkback.Pipeline.onBoot(boolean)' on a null object reference
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at com.google.android.accessibility.talkback.TalkBackService.onUnlockedBootCompleted(TalkBackService.java:2340)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at com.google.android.accessibility.talkback.BootReceiver.onReceive(BootReceiver.java:51)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	at android.app.ActivityThread.handleReceiver(ActivityThread.java:4772)
+10-16 16:48:14.870  5110  5110 E AndroidRuntime: 	... 9 more

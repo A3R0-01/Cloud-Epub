@@ -19,6 +19,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import org.json.JSONObject
+import org.json.JSONArray
 
 /** Native overlay retaining the mounted Readium view and its dimensions underneath. */
 class ImageViewer(context: Context, bitmap: Bitmap, private val data: JSONObject, private val changed: (String) -> Unit) : Dialog(context) {
@@ -72,6 +73,9 @@ class ImageViewer(context: Context, bitmap: Bitmap, private val data: JSONObject
 
     fun fullScreen() { stage = "full-screen"; applyStage(); changed(stage); exit.requestFocus() }
     fun exitFullScreen() { stage = "popup"; applyStage(); changed(stage); full.requestFocus() }
+
+    fun debugState() = image.inspect().put("stage", stage).put("metadataVisible", metadata.visibility == View.VISIBLE)
+        .put("fullScreenActionVisible", full.visibility == View.VISIBLE).put("exitActionVisible", exit.visibility == View.VISIBLE)
 
     private fun applyStage() {
         val expanded = stage == "full-screen"
@@ -140,5 +144,14 @@ private class InspectableImage(context: Context, private val bitmap: Bitmap) : I
         0x01020004 -> { pan(0f, 100f); true }
         0x01020005 -> { pan(0f, -100f); true }
         else -> super.performAccessibilityAction(action, arguments)
+    }
+    fun inspect(): JSONObject {
+        val bounds = RectF(0f, 0f, bitmap.width.toFloat(), bitmap.height.toFloat())
+        transform.mapRect(bounds)
+        val info = createAccessibilityNodeInfo()
+        val actions = JSONArray(info.actionList.map { JSONObject().put("id", it.id).put("label", it.label) })
+        return JSONObject().put("zoomed", zoomed).put("imageBounds", JSONArray(listOf(bounds.left, bounds.top, bounds.right, bounds.bottom)))
+            .put("width", width - paddingLeft - paddingRight).put("height", height - paddingTop - paddingBottom)
+            .put("description", contentDescription).put("accessibilityActions", actions)
     }
 }

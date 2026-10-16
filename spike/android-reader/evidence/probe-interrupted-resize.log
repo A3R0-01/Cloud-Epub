@@ -1,0 +1,18 @@
+Reader opens with hidden controls: True
+Injected margins survive Readium CSS: True
+Native vertical scroll at bottom does not advance: False
+Native horizontal next chapter lands at beginning: False
+Native horizontal previous chapter lands at beginning: False
+Programmatic exact duplicate occurrence survives font reflow: True
+Precise arrival highlight exists briefly: True
+Programmatic original-range round trip: don’t: True
+Programmatic original-range round trip: well-being: True
+Programmatic original-range round trip: café: True
+Programmatic original-range round trip: café: True
+Programmatic original-range round trip: lantern: True
+Programmatic original-range round trip: soft­hyphen: True
+Programmatic original-range round trip: non breaking: True
+Programmatic original-range round trip: ofﬁce: True
+Programmatic original-range round trip: well-being: True
+Six original images become five meaningful-image buttons: False
+Generated labels excluded from original text: True
