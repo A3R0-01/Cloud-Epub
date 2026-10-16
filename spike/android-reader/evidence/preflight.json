@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-16",
+  "processor": {
+    "Name": "AMD Ryzen 5 5600H with Radeon Graphics         ",
+    "VirtualizationFirmwareEnabled": true
+  },
+  "computer": {
+    "HypervisorPresent": true,
+    "TotalPhysicalMemory": 16483872768
+  },
+  "adbVersion": [
+    "Android Debug Bridge version 1.0.41",
+    "Version 37.0.1-15733141",
+    "Running on Windows 10.0.26200"
+  ],
+  "adbDevices": [
+    "List of devices attached",
+    ""
+  ],
+  "sdkPackages": [
+    {
+      "sourceProperties": [
+        "Pkg.Revision=22.0",
+        "Pkg.Path=cmdline-tools;22.0",
+        "Pkg.Desc=Android SDK Command-line Tools"
+      ],
+      "package": "cmdline-tools/latest"
+    },
+    {
+      "sourceProperties": [
+        "Pkg.UserSrc=false",
+        "Pkg.Revision=37.0.1"
+      ],
+      "package": "platform-tools"
+    },
+    {
+      "sourceProperties": [
+        "Pkg.Desc=Android SDK Platform 17",
+        "Pkg.UserSrc=false",
+        "Platform.Version=17",
+        "Platform.CodeName=",
+        "Pkg.Revision=2",
+        "AndroidVersion.ApiLevel=37.0",
+        "AndroidVersion.CodeName=",
+        "AndroidVersion.ExtensionLevel=22",
+        "AndroidVersion.IsBaseSdk=true",
+        "AndroidVersion.PreviewSdkInt=0",
+        "AndroidVersion.BetaVersion=",
+        "Layoutlib.Api=15",
+        "Layoutlib.Revision=1",
+        "Platform.MinToolsRev=22"
+      ],
+      "package": "platforms/android-37.0"
+    },
+    {
+      "sourceProperties": [
+        "Pkg.UserSrc=false",
+        "Pkg.Revision=37.0.0"
+      ],
+      "package": "build-tools/37.0.0"
+    }
+  ],
+  "nativeRuntime": "NOT RUN: emulator and system-image downloads incomplete",
+  "apk": "NOT BUILT: dependency retrieval incomplete; both build attempts stopped"
+}

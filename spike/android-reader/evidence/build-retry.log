@@ -1,0 +1,55 @@
+Initialized native services in: <experiment-tools>\gradle-home\native
+Initialized jansi services in: <experiment-tools>\gradle-home\native
+Removing 0 daemon stop events from registry
+Previous Daemon (24272) stopped at Fri Oct 16 15:52:44 SAST 2026 stop command received
+Starting a Gradle Daemon, 1 stopped Daemon could not be reused, use --status for details
+Starting process 'Gradle build daemon'. Working directory: <experiment-tools>\gradle-home\daemon\9.7.0 Command: <studio-jbr>\bin\java.exe --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.xml/javax.xml.namespace=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --enable-native-access=ALL-UNNAMED -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=GB -Duser.language=en -Duser.variant -cp <experiment-tools>\tools\gradle-9.7.0\lib\gradle-daemon-server-9.7.0.jar -javaagent:<experiment-tools>\tools\gradle-9.7.0\lib\agents\gradle-instrumentation-agent-9.7.0.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 9.7.0
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 1.137 secs.
+The client will now receive all logging from the daemon (pid: 18436). The daemon log file: <experiment-tools>\gradle-home\daemon\9.7.0\daemon-18436.out.log
+Starting build in new daemon [memory: 2 GiB]
+Using 2 worker leases.
+Operational build model parameters: {cachingModelBuilding=false, configurationCache=false, configurationCacheDisabledReason=null, configurationCacheParallelLoad=false, configurationCacheParallelStore=false, configureOnDemand=false, invalidateCoupledProjects=false, isolatedProjects=false, isolatedProjectsDiagnostics=false, isolatedProjectsDangerouslyIgnoreProblems=false, modelAsProjectDependency=false, modelBuilding=false, parallelModelBuilding=false, parallelProjectConfiguration=false, parallelProjectExecution=false, vintage=true}
+Received JVM installation metadata from '<studio-jbr>': {JAVA_HOME=<studio-jbr>, JAVA_VERSION=25.0.3, JAVA_VENDOR=JetBrains s.r.o., RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=25.0.3+-15898627-b508.16, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=25.0.3+-15898627-b508.16, VM_VENDOR=JetBrains s.r.o., OS_ARCH=amd64}
+Watching the file system is configured to be enabled if available
+Now considering [<spike-worktree>\spike\android-reader] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file '<spike-worktree>\spike\android-reader\settings.gradle.kts'.
+Projects loaded. Root project using build file '<spike-worktree>\spike\android-reader\build.gradle.kts'.
+Included projects: [root project 'CloudEpubReaderSpike', project ':app']
+
+> Configure project :
+Evaluating root project 'CloudEpubReaderSpike' using build file '<spike-worktree>\spike\android-reader\build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '9.3.1', apply: false]
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle-api/9.3.1/gradle-api-9.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download3371909367492892792bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/9.3.1/gradle-9.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download2665354218192060172bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/aaptcompiler/9.3.1/aaptcompiler-9.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download6280205646955545464bin
+Downloading https://dl.google.com/dl/android/maven2/androidx/databinding/databinding-compiler-common/9.3.1/databinding-compiler-common-9.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download2783809532580034223bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/jetifier/jetifier-processor/1.0.0-beta10/jetifier-processor-1.0.0-beta10.jar to <experiment-tools>\gradle-home\.tmp\gradle_download6649536864989462312bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/jetifier/jetifier-core/1.0.0-beta10/jetifier-core-1.0.0-beta10.jar to <experiment-tools>\gradle-home\.tmp\gradle_download2473934448937750721bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/builder/9.3.1/builder-9.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download1711222329777377504bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/lint/lint-model/32.3.1/lint-model-32.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download18310074869905443155bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/builder-model/9.3.1/builder-model-9.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download9372681434855822126bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/lint/lint-model/32.3.1/lint-model-32.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download7314438816813399865bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/builder-model/9.3.1/builder-model-9.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download9726669555335540300bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/build/manifest-merger/32.3.1/manifest-merger-32.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download1017822170633730653bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/sdk-common/32.3.1/sdk-common-32.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download14051548963612432793bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/sdklib/32.3.1/sdklib-32.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download9488682289810137418bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/repository/32.3.1/repository-32.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download15938105567073535190bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/analytics-library/tracker/32.3.1/tracker-32.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download3521853458685241578bin
+Downloading https://dl.google.com/dl/android/maven2/com/android/tools/analytics-library/shared/32.3.1/shared-32.3.1.jar to <experiment-tools>\gradle-home\.tmp\gradle_download13327705720421513010bin
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Gradle build daemon has been stopped: stop command received
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+CHECKPOINT: This attempt was stopped during dependency retrieval. No compilation or APK result was obtained.

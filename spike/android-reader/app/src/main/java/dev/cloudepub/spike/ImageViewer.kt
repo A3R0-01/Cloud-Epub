@@ -1,0 +1,144 @@
+package dev.cloudepub.spike
+
+import android.app.Dialog
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.Matrix
+import android.graphics.RectF
+import android.os.Bundle
+import android.view.GestureDetector
+import android.view.Gravity
+import android.view.MotionEvent
+import android.view.View
+import android.view.WindowManager
+import android.view.accessibility.AccessibilityNodeInfo
+import android.widget.FrameLayout
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.TextView
+import org.json.JSONObject
+
+/** Native overlay retaining the mounted Readium view and its dimensions underneath. */
+class ImageViewer(context: Context, bitmap: Bitmap, private val data: JSONObject, private val changed: (String) -> Unit) : Dialog(context) {
+    var stage = "popup"
+        private set
+    private lateinit var root: FrameLayout
+    private lateinit var metadata: LinearLayout
+    private lateinit var image: InspectableImage
+    private lateinit var full: ImageButton
+    private lateinit var exit: ImageButton
+    private val source = bitmap
+    private fun dp(value: Int) = (value * context.resources.displayMetrics.density).toInt()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setCanceledOnTouchOutside(false)
+        root = FrameLayout(context).apply { setBackgroundColor(Color.WHITE) }
+        image = InspectableImage(context, source).apply {
+            contentDescription = data.optString("alt").ifBlank { "Image without an original description" }
+            importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_YES
+            isFocusable = true
+        }
+        root.addView(image, FrameLayout.LayoutParams(-1, -1))
+        metadata = LinearLayout(context).apply {
+            orientation = LinearLayout.VERTICAL; setPadding(dp(16), dp(8), dp(16), dp(8)); setBackgroundColor(Color.WHITE)
+        }
+        for (text in listOf(data.optString("caption"), data.optString("alt"))) {
+            if (text.isNotBlank()) metadata.addView(TextView(context).apply { this.text = text; setTextIsSelectable(true) })
+        }
+        if (data.optString("link").isNotBlank()) metadata.addView(TextView(context).apply {
+            text = "Open image link: ${data.getString("link")}"
+            contentDescription = text; isFocusable = true
+            // Deliberately reports the link without navigating the fixture or external browser.
+            setOnClickListener { changed("link-action:${data.getString("link")}") }
+        })
+        root.addView(metadata, FrameLayout.LayoutParams(-1, -2, Gravity.BOTTOM))
+        val actions = LinearLayout(context).apply { gravity = Gravity.END }
+        fun action(name: String, icon: Int, run: () -> Unit) = ImageButton(context).apply {
+            contentDescription = name; setImageResource(icon); setBackgroundColor(Color.TRANSPARENT)
+            layoutParams = LinearLayout.LayoutParams(dp(48), dp(48)); setOnClickListener { run() }
+        }
+        full = action("Full screen", android.R.drawable.ic_menu_view) { fullScreen() }
+        exit = action("Exit full screen", android.R.drawable.ic_menu_revert) { exitFullScreen() }
+        actions.addView(full); actions.addView(exit)
+        actions.addView(action("Close image", android.R.drawable.ic_menu_close_clear_cancel) { dismiss() })
+        root.addView(actions, FrameLayout.LayoutParams(-1, dp(48), Gravity.TOP))
+        setContentView(root)
+        setOnShowListener { applyStage(); full.requestFocus(); changed("popup") }
+        setOnDismissListener { changed("reading") }
+    }
+
+    fun fullScreen() { stage = "full-screen"; applyStage(); changed(stage); exit.requestFocus() }
+    fun exitFullScreen() { stage = "popup"; applyStage(); changed(stage); full.requestFocus() }
+
+    private fun applyStage() {
+        val expanded = stage == "full-screen"
+        metadata.visibility = if (expanded) View.GONE else View.VISIBLE
+        full.visibility = if (expanded) View.GONE else View.VISIBLE
+        exit.visibility = if (expanded) View.VISIBLE else View.GONE
+        window?.setBackgroundDrawableResource(android.R.color.transparent)
+        window?.setLayout(if (expanded) -1 else (context.resources.displayMetrics.widthPixels * .92).toInt(), if (expanded) -1 else dp(420))
+        window?.setDimAmount(.25f)
+        window?.setFlags(if (expanded) WindowManager.LayoutParams.FLAG_FULLSCREEN else 0, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        root.setBackgroundColor(if (expanded) Color.BLACK else Color.WHITE)
+        image.setPadding(0, if (expanded) 0 else dp(48), 0, if (expanded) 0 else dp(120))
+        image.post { image.fit() }
+    }
+
+    @Deprecated("This debug harness explicitly disables predictive Back")
+    override fun onBackPressed() { if (stage == "full-screen") exitFullScreen() else dismiss() }
+}
+
+private class InspectableImage(context: Context, private val bitmap: Bitmap) : ImageView(context) {
+    private val transform = Matrix()
+    private var zoomed = false
+    private val gestures = GestureDetector(context, object : GestureDetector.SimpleOnGestureListener() {
+        override fun onDown(event: MotionEvent) = true
+        override fun onDoubleTap(event: MotionEvent): Boolean { toggleZoom(); return true }
+        override fun onScroll(first: MotionEvent?, current: MotionEvent, dx: Float, dy: Float): Boolean {
+            if (!zoomed) return false
+            pan(-dx, -dy); return true
+        }
+    })
+    init { scaleType = ScaleType.MATRIX; setImageBitmap(bitmap) }
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) { super.onSizeChanged(w, h, oldw, oldh); fit() }
+    fun fit() {
+        zoomed = false
+        transform.setRectToRect(RectF(0f, 0f, bitmap.width.toFloat(), bitmap.height.toFloat()),
+            RectF(0f, 0f, (width - paddingLeft - paddingRight).toFloat(), (height - paddingTop - paddingBottom).toFloat()), Matrix.ScaleToFit.CENTER)
+        imageMatrix = transform
+        if (android.os.Build.VERSION.SDK_INT >= 30) stateDescription = "Whole image fitted"
+    }
+    private fun toggleZoom() {
+        if (zoomed) fit() else {
+            transform.postScale(2.5f, 2.5f, width / 2f, height / 2f)
+            imageMatrix = transform; zoomed = true
+            if (android.os.Build.VERSION.SDK_INT >= 30) stateDescription = "Image zoomed"
+        }
+    }
+    private fun pan(dx: Float, dy: Float) {
+        transform.postTranslate(dx, dy)
+        val bounds = RectF(0f, 0f, bitmap.width.toFloat(), bitmap.height.toFloat()); transform.mapRect(bounds)
+        val availableWidth = (width - paddingLeft - paddingRight).toFloat()
+        val availableHeight = (height - paddingTop - paddingBottom).toFloat()
+        val correctionX = if (bounds.width() <= availableWidth) (availableWidth - bounds.width()) / 2 - bounds.left else when { bounds.left > 0 -> -bounds.left; bounds.right < availableWidth -> availableWidth - bounds.right; else -> 0f }
+        val correctionY = if (bounds.height() <= availableHeight) (availableHeight - bounds.height()) / 2 - bounds.top else when { bounds.top > 0 -> -bounds.top; bounds.bottom < availableHeight -> availableHeight - bounds.bottom; else -> 0f }
+        transform.postTranslate(correctionX, correctionY); imageMatrix = transform
+    }
+    override fun onTouchEvent(event: MotionEvent): Boolean { gestures.onTouchEvent(event); return true }
+    override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
+        super.onInitializeAccessibilityNodeInfo(info)
+        info.addAction(AccessibilityNodeInfo.AccessibilityAction(0x01020001, if (zoomed) "Fit whole image" else "Zoom image in"))
+        if (zoomed) for ((id, name) in listOf(0x01020002 to "Pan left", 0x01020003 to "Pan right", 0x01020004 to "Pan up", 0x01020005 to "Pan down")) info.addAction(AccessibilityNodeInfo.AccessibilityAction(id, name))
+    }
+    override fun performAccessibilityAction(action: Int, arguments: Bundle?): Boolean = when (action) {
+        0x01020001 -> { toggleZoom(); true }
+        0x01020002 -> { pan(100f, 0f); true }
+        0x01020003 -> { pan(-100f, 0f); true }
+        0x01020004 -> { pan(0f, 100f); true }
+        0x01020005 -> { pan(0f, -100f); true }
+        else -> super.performAccessibilityAction(action, arguments)
+    }
+}
