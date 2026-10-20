@@ -1,0 +1,11 @@
+
+Algorithm : SHA256
+Hash      : 30D5A6CE3DAAC8FC06EEF086BF5768BA59062D689736A545C8E0BB40B444E86C
+Path      : D:\Apps\Android\cloud-epub-spike\tools\talkback-229212fdf5842191d0a93fc95d9ca1423b346866\build\outputs\apk\phone\debug\talkback-229212fdf5842191d0a93fc95d9ca1423b346866-phone-debug.apk
+
+
+package: name='com.android.talkback' versionCode='' versionName='TfPu_release_16_2-2026_10_20_1256' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+sdkVersion:'26'
+targetSdkVersion:'30'
+uses-permission: name='android.permission.USE_FINGERPRINT'
+uses-permission: name='android.permission.READ_PHONE_STATE'

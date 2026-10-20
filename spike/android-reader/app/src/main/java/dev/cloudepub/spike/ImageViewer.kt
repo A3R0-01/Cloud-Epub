@@ -11,7 +11,6 @@ import android.view.GestureDetector
 import android.view.Gravity
 import android.view.MotionEvent
 import android.view.View
-import android.view.WindowManager
 import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.FrameLayout
 import android.widget.ImageButton
@@ -52,7 +51,7 @@ class ImageViewer(context: Context, bitmap: Bitmap, private val data: JSONObject
         if (data.optString("link").isNotBlank()) metadata.addView(TextView(context).apply {
             text = "Open image link: ${data.getString("link")}"
             contentDescription = text; isFocusable = true
-            // Deliberately reports the link without navigating the fixture or external browser.
+            // The host resolves the explicit link separately from image activation.
             setOnClickListener { changed("link-action:${data.getString("link")}") }
         })
         root.addView(metadata, FrameLayout.LayoutParams(-1, -2, Gravity.BOTTOM))
@@ -75,6 +74,7 @@ class ImageViewer(context: Context, bitmap: Bitmap, private val data: JSONObject
     fun exitFullScreen() { stage = "popup"; applyStage(); changed(stage); full.requestFocus() }
 
     fun debugState() = image.inspect().put("stage", stage).put("metadataVisible", metadata.visibility == View.VISIBLE)
+        .put("resolvedSrc", data.optString("resolvedSrc"))
         .put("fullScreenActionVisible", full.visibility == View.VISIBLE).put("exitActionVisible", exit.visibility == View.VISIBLE)
 
     private fun applyStage() {
@@ -85,7 +85,7 @@ class ImageViewer(context: Context, bitmap: Bitmap, private val data: JSONObject
         window?.setBackgroundDrawableResource(android.R.color.transparent)
         window?.setLayout(if (expanded) -1 else (context.resources.displayMetrics.widthPixels * .92).toInt(), if (expanded) -1 else dp(420))
         window?.setDimAmount(.25f)
-        window?.setFlags(if (expanded) WindowManager.LayoutParams.FLAG_FULLSCREEN else 0, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        // Fill the reader window without hiding shared system bars and resizing its WebView.
         root.setBackgroundColor(if (expanded) Color.BLACK else Color.WHITE)
         image.setPadding(0, if (expanded) 0 else dp(48), 0, if (expanded) 0 else dp(120))
         image.post { image.fit() }
@@ -134,15 +134,15 @@ private class InspectableImage(context: Context, private val bitmap: Bitmap) : I
     override fun onTouchEvent(event: MotionEvent): Boolean { gestures.onTouchEvent(event); return true }
     override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(info)
-        info.addAction(AccessibilityNodeInfo.AccessibilityAction(0x01020001, if (zoomed) "Fit whole image" else "Zoom image in"))
-        if (zoomed) for ((id, name) in listOf(0x01020002 to "Pan left", 0x01020003 to "Pan right", 0x01020004 to "Pan up", 0x01020005 to "Pan down")) info.addAction(AccessibilityNodeInfo.AccessibilityAction(id, name))
+        info.addAction(AccessibilityNodeInfo.AccessibilityAction(R.id.spike_zoom_image, if (zoomed) "Fit whole image" else "Zoom image in"))
+        if (zoomed) for ((id, name) in listOf(R.id.spike_pan_left to "Pan left", R.id.spike_pan_right to "Pan right", R.id.spike_pan_up to "Pan up", R.id.spike_pan_down to "Pan down")) info.addAction(AccessibilityNodeInfo.AccessibilityAction(id, name))
     }
     override fun performAccessibilityAction(action: Int, arguments: Bundle?): Boolean = when (action) {
-        0x01020001 -> { toggleZoom(); true }
-        0x01020002 -> { pan(100f, 0f); true }
-        0x01020003 -> { pan(-100f, 0f); true }
-        0x01020004 -> { pan(0f, 100f); true }
-        0x01020005 -> { pan(0f, -100f); true }
+        R.id.spike_zoom_image -> { toggleZoom(); true }
+        R.id.spike_pan_left -> { pan(100f, 0f); true }
+        R.id.spike_pan_right -> { pan(-100f, 0f); true }
+        R.id.spike_pan_up -> { pan(0f, 100f); true }
+        R.id.spike_pan_down -> { pan(0f, -100f); true }
         else -> super.performAccessibilityAction(action, arguments)
     }
     fun inspect(): JSONObject {
@@ -150,7 +150,8 @@ private class InspectableImage(context: Context, private val bitmap: Bitmap) : I
         transform.mapRect(bounds)
         val info = createAccessibilityNodeInfo()
         val actions = JSONArray(info.actionList.map { JSONObject().put("id", it.id).put("label", it.label) })
-        return JSONObject().put("zoomed", zoomed).put("imageBounds", JSONArray(listOf(bounds.left, bounds.top, bounds.right, bounds.bottom)))
+        return JSONObject().put("sourceWidth", bitmap.width).put("sourceHeight", bitmap.height).put("centerPixel", bitmap.getPixel(bitmap.width / 2, bitmap.height / 2))
+            .put("zoomed", zoomed).put("imageBounds", JSONArray(listOf(bounds.left, bounds.top, bounds.right, bounds.bottom)))
             .put("width", width - paddingLeft - paddingRight).put("height", height - paddingTop - paddingBottom)
             .put("description", contentDescription).put("accessibilityActions", actions)
     }

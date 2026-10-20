@@ -1,0 +1,24 @@
+C:\Users\erlso\.codex\worktrees\android-reader-feasibility\Cloud-Epub\spike\android-reader/raw-touch.sh: 1 file pushed, 0 skipped. 0.3 MB/s (746 bytes in 0.002s)
+C:\Users\erlso\.codex\worktrees\android-reader-feasibility\Cloud-Epub\spike\android-reader/screenreader-key.sh: 1 file pushed, 0 skipped. 2.1 MB/s (726 bytes in 0.000s)
+Real touch exploration focuses the image control without opening it: True
+Screen-reader keyboard activation opens the exact original image: True
+Back restores actual accessibility focus to the same original-image control: True
+Screen-reader popup return preserves reading position: True
+Activation after return reopens the original image without another exploration gesture: True
+Screen-reader Close action returns to reading: True
+Screen-reader Full screen action hides visible metadata: True
+/sdcard/cloud-epub-action.png: 1 file pulled, 0 skipped. 10.4 MB/s (66464 bytes in 0.006s)
+Screen-reader Actions menu executes Zoom image in: True
+/sdcard/cloud-epub-action.png: 1 file pulled, 0 skipped. 7.1 MB/s (105605 bytes in 0.014s)
+Screen-reader Actions menu executes Pan left: True
+/sdcard/cloud-epub-action.png: 1 file pulled, 0 skipped. 13.7 MB/s (111687 bytes in 0.008s)
+Screen-reader Actions menu executes Pan right: True
+/sdcard/cloud-epub-action.png: 1 file pulled, 0 skipped. 7.0 MB/s (105629 bytes in 0.014s)
+Screen-reader Actions menu executes Pan up: True
+/sdcard/cloud-epub-action.png: 1 file pulled, 0 skipped. 9.3 MB/s (104920 bytes in 0.011s)
+Screen-reader Actions menu executes Pan down: True
+/sdcard/cloud-epub-action.png: 1 file pulled, 0 skipped. 6.8 MB/s (106564 bytes in 0.015s)
+Screen-reader Actions menu restores whole-image fit: True
+Back exits full screen to the popup with the service active: True
+Second Back restores the reading passage and original-image accessibility focus: True
+Screen-reader service remains bound throughout the run: True

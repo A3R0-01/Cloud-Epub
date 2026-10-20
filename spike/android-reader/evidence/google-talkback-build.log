@@ -1,0 +1,885 @@
+
+> Configure project :
+WARNING: The option setting 'android.jetifier.ignorelist=proguard.jar' is experimental.
+
+> Task :preBuild UP-TO-DATE
+> Task :prePhoneDebugBuild UP-TO-DATE
+> Task :mergePhoneDebugNativeDebugMetadata NO-SOURCE
+> Task :braillebrltty:createBrlttyKeyTablesZip UP-TO-DATE
+> Task :braillebrltty:preBuild UP-TO-DATE
+> Task :braillebrltty:prePhoneDebugBuild UP-TO-DATE
+> Task :braillebrltty:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :braillecommon:preBuild UP-TO-DATE
+> Task :braillecommon:prePhoneDebugBuild UP-TO-DATE
+> Task :braillecommon:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :brailledisplay:preBuild UP-TO-DATE
+> Task :brailledisplay:prePhoneDebugBuild UP-TO-DATE
+> Task :brailledisplay:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :brailledisplayanalytics:preBuild UP-TO-DATE
+> Task :brailledisplayanalytics:prePhoneDebugBuild UP-TO-DATE
+> Task :brailledisplayanalytics:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :brailleime:preBuild UP-TO-DATE
+> Task :brailleime:prePhoneDebugBuild UP-TO-DATE
+> Task :brailleime:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :brailleimeanalytics:preBuild UP-TO-DATE
+> Task :brailleimeanalytics:prePhoneDebugBuild UP-TO-DATE
+> Task :brailleimeanalytics:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :generatePhoneDebugBuildConfig
+> Task :brailleinterfaces:preBuild UP-TO-DATE
+> Task :brailleinterfaces:prePhoneDebugBuild UP-TO-DATE
+> Task :brailleinterfaces:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :brailletranslate:createTranslationTablesZip UP-TO-DATE
+> Task :brailletranslate:preBuild UP-TO-DATE
+> Task :brailletranslate:prePhoneDebugBuild UP-TO-DATE
+> Task :brailletranslate:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :materialflags:preBuild UP-TO-DATE
+> Task :materialflags:prePhoneDebugBuild UP-TO-DATE
+> Task :materialflags:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :materialpreference:preBuild UP-TO-DATE
+> Task :materialpreference:prePhoneDebugBuild UP-TO-DATE
+> Task :materialpreference:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :materialpreferencecompose:preBuild UP-TO-DATE
+> Task :materialpreferencecompose:prePhoneDebugBuild UP-TO-DATE
+> Task :materialpreferencecompose:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :talkback:preBuild UP-TO-DATE
+> Task :talkback:prePhoneDebugBuild UP-TO-DATE
+> Task :talkback:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :utils:preBuild UP-TO-DATE
+> Task :utils:prePhoneDebugBuild UP-TO-DATE
+> Task :utils:writePhoneDebugAarMetadata UP-TO-DATE
+> Task :braillebrltty:generatePhoneDebugResValues UP-TO-DATE
+> Task :braillebrltty:generatePhoneDebugResources UP-TO-DATE
+> Task :javaPreCompilePhoneDebug UP-TO-DATE
+> Task :braillebrltty:packagePhoneDebugResources UP-TO-DATE
+> Task :braillecommon:generatePhoneDebugResValues UP-TO-DATE
+> Task :braillecommon:generatePhoneDebugResources UP-TO-DATE
+> Task :braillecommon:packagePhoneDebugResources UP-TO-DATE
+> Task :brailledisplay:generatePhoneDebugResValues UP-TO-DATE
+> Task :brailledisplay:generatePhoneDebugResources UP-TO-DATE
+> Task :brailledisplay:packagePhoneDebugResources UP-TO-DATE
+> Task :brailledisplayanalytics:generatePhoneDebugResValues UP-TO-DATE
+> Task :brailledisplayanalytics:generatePhoneDebugResources UP-TO-DATE
+> Task :brailledisplayanalytics:packagePhoneDebugResources UP-TO-DATE
+> Task :brailleime:generatePhoneDebugResValues UP-TO-DATE
+> Task :brailleime:generatePhoneDebugResources UP-TO-DATE
+> Task :brailleime:packagePhoneDebugResources UP-TO-DATE
+> Task :brailleimeanalytics:generatePhoneDebugResValues UP-TO-DATE
+> Task :brailleimeanalytics:generatePhoneDebugResources UP-TO-DATE
+> Task :brailleimeanalytics:packagePhoneDebugResources UP-TO-DATE
+> Task :brailleinterfaces:generatePhoneDebugResValues UP-TO-DATE
+> Task :brailleinterfaces:generatePhoneDebugResources UP-TO-DATE
+> Task :brailleinterfaces:packagePhoneDebugResources UP-TO-DATE
+> Task :brailletranslate:generatePhoneDebugResValues UP-TO-DATE
+> Task :brailletranslate:generatePhoneDebugResources UP-TO-DATE
+> Task :brailletranslate:packagePhoneDebugResources UP-TO-DATE
+> Task :materialflags:generatePhoneDebugResValues UP-TO-DATE
+> Task :materialflags:generatePhoneDebugResources UP-TO-DATE
+> Task :materialflags:packagePhoneDebugResources UP-TO-DATE
+> Task :materialpreference:generatePhoneDebugResValues UP-TO-DATE
+> Task :materialpreference:generatePhoneDebugResources UP-TO-DATE
+> Task :materialpreference:packagePhoneDebugResources UP-TO-DATE
+> Task :materialpreferencecompose:generatePhoneDebugResValues UP-TO-DATE
+> Task :materialpreferencecompose:generatePhoneDebugResources UP-TO-DATE
+> Task :materialpreferencecompose:packagePhoneDebugResources UP-TO-DATE
+> Task :talkback:generatePhoneDebugResValues UP-TO-DATE
+> Task :talkback:generatePhoneDebugResources UP-TO-DATE
+> Task :talkback:packagePhoneDebugResources UP-TO-DATE
+> Task :utils:generatePhoneDebugResValues UP-TO-DATE
+> Task :utils:generatePhoneDebugResources UP-TO-DATE
+> Task :utils:packagePhoneDebugResources UP-TO-DATE
+> Task :braillebrltty:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :braillebrltty:processPhoneDebugManifest UP-TO-DATE
+> Task :braillecommon:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :braillecommon:processPhoneDebugManifest UP-TO-DATE
+> Task :brailledisplay:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :brailledisplay:processPhoneDebugManifest UP-TO-DATE
+> Task :brailledisplayanalytics:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :brailledisplayanalytics:processPhoneDebugManifest UP-TO-DATE
+> Task :brailleime:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :brailleime:processPhoneDebugManifest UP-TO-DATE
+> Task :brailleimeanalytics:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :brailleimeanalytics:processPhoneDebugManifest UP-TO-DATE
+> Task :brailleinterfaces:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :brailleinterfaces:processPhoneDebugManifest UP-TO-DATE
+> Task :brailletranslate:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :brailletranslate:processPhoneDebugManifest UP-TO-DATE
+> Task :materialflags:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :materialflags:processPhoneDebugManifest UP-TO-DATE
+> Task :materialpreference:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :materialpreference:processPhoneDebugManifest UP-TO-DATE
+> Task :materialpreferencecompose:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :materialpreferencecompose:processPhoneDebugManifest UP-TO-DATE
+> Task :talkback:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :talkback:processPhoneDebugManifest UP-TO-DATE
+> Task :utils:extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :utils:processPhoneDebugManifest UP-TO-DATE
+> Task :braillebrltty:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :braillebrltty:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :braillecommon:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :brailleinterfaces:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :utils:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :checkPhoneDebugAarMetadata UP-TO-DATE
+> Task :generatePhoneDebugResValues UP-TO-DATE
+> Task :mapPhoneDebugSourceSetPaths UP-TO-DATE
+> Task :utils:generatePhoneDebugRFile UP-TO-DATE
+> Task :generatePhoneDebugResources UP-TO-DATE
+> Task :mergePhoneDebugResources UP-TO-DATE
+> Task :createPhoneDebugCompatibleScreenManifests
+> Task :extractDeepLinksPhoneDebug UP-TO-DATE
+> Task :brailleinterfaces:generatePhoneDebugRFile UP-TO-DATE
+> Task :brailletranslate:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :brailletranslate:generatePhoneDebugRFile UP-TO-DATE
+> Task :braillecommon:generatePhoneDebugRFile UP-TO-DATE
+> Task :braillebrltty:generatePhoneDebugRFile UP-TO-DATE
+> Task :braillecommon:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :brailledisplay:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :brailledisplay:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :brailledisplayanalytics:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :brailledisplayanalytics:generatePhoneDebugRFile UP-TO-DATE
+> Task :processPhoneDebugMainManifest
+> Task :processPhoneDebugManifest
+> Task :brailledisplay:generatePhoneDebugRFile UP-TO-DATE
+> Task :brailledisplayanalytics:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :brailleime:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :brailleime:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :brailleimeanalytics:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :processPhoneDebugManifestForPackage
+> Task :brailleinterfaces:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :brailletranslate:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :materialflags:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :materialflags:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :brailleimeanalytics:generatePhoneDebugRFile UP-TO-DATE
+> Task :materialflags:generatePhoneDebugRFile UP-TO-DATE
+> Task :brailleimeanalytics:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :materialpreference:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :materialpreference:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :brailleime:generatePhoneDebugRFile UP-TO-DATE
+> Task :materialpreferencecompose:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :talkback:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :talkback:parsePhoneDebugLocalResources UP-TO-DATE
+> Task :utils:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :proguard:compileJava UP-TO-DATE
+> Task :proguard:processResources NO-SOURCE
+> Task :proguard:classes UP-TO-DATE
+> Task :proguard:jar UP-TO-DATE
+> Task :braillebrltty:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :braillebrltty:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :braillecommon:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :braillecommon:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :brailleinterfaces:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :brailleinterfaces:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :utils:checkKotlinGradlePluginConfigurationErrors
+> Task :utils:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :materialpreferencecompose:generatePhoneDebugRFile UP-TO-DATE
+> Task :materialpreference:generatePhoneDebugRFile UP-TO-DATE
+> Task :materialpreferencecompose:compilePhoneDebugLibraryResources UP-TO-DATE
+> Task :talkback:generatePhoneDebugRFile UP-TO-DATE
+> Task :processPhoneDebugResources
+> Task :utils:javaPreCompilePhoneDebug
+> Task :brailletranslate:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :brailletranslate:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :brailledisplay:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :brailledisplay:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :brailledisplayanalytics:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :brailledisplayanalytics:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :brailleime:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :brailleime:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :brailleimeanalytics:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :brailleimeanalytics:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :materialflags:checkKotlinGradlePluginConfigurationErrors
+> Task :materialflags:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :materialflags:compilePhoneDebugKotlin NO-SOURCE
+> Task :materialflags:javaPreCompilePhoneDebug UP-TO-DATE
+> Task :materialflags:compilePhoneDebugJavaWithJavac UP-TO-DATE
+> Task :materialflags:bundleLibCompileToJarPhoneDebug UP-TO-DATE
+> Task :materialpreference:checkKotlinGradlePluginConfigurationErrors
+> Task :materialpreference:generatePhoneDebugBuildConfig UP-TO-DATE
+> Task :materialpreferencecompose:checkKotlinGradlePluginConfigurationErrors
+> Task :materialpreferencecompose:generatePhoneDebugBuildConfig UP-TO-DATE
+
+> Task :utils:compilePhoneDebugKotlin
+w: file:///D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/utils/src/main/java/com/google/android/accessibility/utils/coordinate/MagnificationCoordinateConfig.kt:55:39 'getter for scale: Float' is deprecated. Deprecated in Java
+w: file:///D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/utils/src/main/java/com/google/android/accessibility/utils/coordinate/MagnificationCoordinateConfig.kt:62:45 'getter for centerX: Float' is deprecated. Deprecated in Java
+w: file:///D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/utils/src/main/java/com/google/android/accessibility/utils/coordinate/MagnificationCoordinateConfig.kt:62:73 'getter for centerY: Float' is deprecated. Deprecated in Java
+w: file:///D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/utils/src/main/java/com/google/android/accessibility/utils/coordinate/Util.kt:19:35 'getter for defaultDisplay: Display!' is deprecated. Deprecated in Java
+w: file:///D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/utils/src/main/java/com/google/android/accessibility/utils/coordinate/Util.kt:21:15 'getMetrics(DisplayMetrics!): Unit' is deprecated. Deprecated in Java
+
+> Task :materialpreferencecompose:compilePhoneDebugKotlin
+> Task :materialpreferencecompose:javaPreCompilePhoneDebug
+> Task :materialpreferencecompose:compilePhoneDebugJavaWithJavac
+> Task :materialpreferencecompose:bundleLibCompileToJarPhoneDebug
+> Task :materialpreference:javaPreCompilePhoneDebug
+> Task :talkback:checkKotlinGradlePluginConfigurationErrors
+> Task :talkback:generatePhoneDebugBuildConfig
+> Task :talkback:javaPreCompilePhoneDebug
+> Task :mergePhoneDebugShaders
+> Task :compilePhoneDebugShaders NO-SOURCE
+> Task :generatePhoneDebugAssets UP-TO-DATE
+> Task :braillebrltty:mergePhoneDebugShaders
+> Task :braillebrltty:compilePhoneDebugShaders NO-SOURCE
+> Task :braillebrltty:generatePhoneDebugAssets UP-TO-DATE
+> Task :braillebrltty:mergePhoneDebugAssets
+> Task :braillecommon:mergePhoneDebugShaders
+> Task :braillecommon:compilePhoneDebugShaders NO-SOURCE
+> Task :braillecommon:generatePhoneDebugAssets UP-TO-DATE
+> Task :braillecommon:mergePhoneDebugAssets
+> Task :brailledisplay:mergePhoneDebugShaders
+> Task :brailledisplay:compilePhoneDebugShaders NO-SOURCE
+> Task :brailledisplay:generatePhoneDebugAssets UP-TO-DATE
+> Task :brailledisplay:mergePhoneDebugAssets
+> Task :brailledisplayanalytics:mergePhoneDebugShaders
+> Task :brailledisplayanalytics:compilePhoneDebugShaders NO-SOURCE
+> Task :brailledisplayanalytics:generatePhoneDebugAssets UP-TO-DATE
+> Task :brailledisplayanalytics:mergePhoneDebugAssets
+> Task :brailleime:mergePhoneDebugShaders
+> Task :brailleime:compilePhoneDebugShaders NO-SOURCE
+> Task :brailleime:generatePhoneDebugAssets UP-TO-DATE
+> Task :brailleime:mergePhoneDebugAssets
+> Task :brailleimeanalytics:mergePhoneDebugShaders
+> Task :brailleimeanalytics:compilePhoneDebugShaders NO-SOURCE
+> Task :brailleimeanalytics:generatePhoneDebugAssets UP-TO-DATE
+> Task :brailleimeanalytics:mergePhoneDebugAssets
+> Task :brailleinterfaces:mergePhoneDebugShaders
+> Task :brailleinterfaces:compilePhoneDebugShaders NO-SOURCE
+> Task :brailleinterfaces:generatePhoneDebugAssets UP-TO-DATE
+> Task :brailleinterfaces:mergePhoneDebugAssets
+> Task :brailletranslate:mergePhoneDebugShaders
+> Task :brailletranslate:compilePhoneDebugShaders NO-SOURCE
+> Task :brailletranslate:generatePhoneDebugAssets UP-TO-DATE
+> Task :brailletranslate:mergePhoneDebugAssets
+> Task :materialflags:mergePhoneDebugShaders
+> Task :materialflags:compilePhoneDebugShaders NO-SOURCE
+> Task :materialflags:generatePhoneDebugAssets UP-TO-DATE
+> Task :materialflags:mergePhoneDebugAssets
+> Task :materialpreference:mergePhoneDebugShaders
+> Task :materialpreference:compilePhoneDebugShaders NO-SOURCE
+> Task :materialpreference:generatePhoneDebugAssets UP-TO-DATE
+> Task :materialpreference:mergePhoneDebugAssets
+> Task :materialpreferencecompose:mergePhoneDebugShaders
+> Task :materialpreferencecompose:compilePhoneDebugShaders NO-SOURCE
+> Task :materialpreferencecompose:generatePhoneDebugAssets UP-TO-DATE
+> Task :materialpreferencecompose:mergePhoneDebugAssets
+> Task :talkback:mergePhoneDebugShaders
+> Task :talkback:compilePhoneDebugShaders NO-SOURCE
+> Task :talkback:generatePhoneDebugAssets UP-TO-DATE
+> Task :talkback:mergePhoneDebugAssets
+
+> Task :utils:compilePhoneDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: D:\Apps\Android\cloud-epub-spike\tools\talkback-229212fdf5842191d0a93fc95d9ca1423b346866\utils\src\main\java\com\google\android\accessibility\utils\ArrayUtils.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+> Task :utils:bundleLibCompileToJarPhoneDebug
+> Task :checkPhoneDebugDuplicateClasses
+> Task :materialpreference:compilePhoneDebugKotlin NO-SOURCE
+> Task :brailleinterfaces:compilePhoneDebugJavaWithJavac
+> Task :brailleinterfaces:bundleLibCompileToJarPhoneDebug
+
+> Task :materialpreference:compilePhoneDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :materialpreference:bundleLibCompileToJarPhoneDebug
+> Task :utils:mergePhoneDebugShaders
+> Task :utils:compilePhoneDebugShaders NO-SOURCE
+> Task :utils:generatePhoneDebugAssets UP-TO-DATE
+> Task :utils:mergePhoneDebugAssets
+> Task :mergePhoneDebugAssets
+> Task :compressPhoneDebugAssets
+> Task :desugarPhoneDebugFileDependencies
+> Task :brailletranslate:compilePhoneDebugJavaWithJavac
+> Task :brailletranslate:bundleLibCompileToJarPhoneDebug
+
+> Task :braillecommon:compilePhoneDebugJavaWithJavac
+Note: D:\Apps\Android\cloud-epub-spike\tools\talkback-229212fdf5842191d0a93fc95d9ca1423b346866\braille\common\src\phone\java\com\google\android\accessibility\braille\common\FeedbackManager.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :mergeExtDexPhoneDebug
+> Task :braillecommon:bundleLibCompileToJarPhoneDebug
+> Task :brailledisplayanalytics:compilePhoneDebugJavaWithJavac
+> Task :brailledisplayanalytics:bundleLibCompileToJarPhoneDebug
+
+> Task :braillebrltty:compilePhoneDebugJavaWithJavac
+Note: D:\Apps\Android\cloud-epub-spike\tools\talkback-229212fdf5842191d0a93fc95d9ca1423b346866\braille\brltty\src\phone\java\com\google\android\accessibility\braille\brltty\BluetoothConnection.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :brailleimeanalytics:compilePhoneDebugJavaWithJavac
+> Task :brailleimeanalytics:bundleLibCompileToJarPhoneDebug
+> Task :braillebrltty:bundleLibCompileToJarPhoneDebug
+
+> Task :brailleime:compilePhoneDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :brailledisplay:compilePhoneDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :brailleime:bundleLibCompileToJarPhoneDebug
+> Task :brailleime:bundleLibRuntimeToDirPhoneDebug
+> Task :brailledisplay:bundleLibCompileToJarPhoneDebug
+> Task :brailledisplay:bundleLibRuntimeToDirPhoneDebug
+> Task :brailleimeanalytics:bundleLibRuntimeToDirPhoneDebug
+> Task :braillebrltty:bundleLibRuntimeToDirPhoneDebug
+> Task :brailledisplayanalytics:bundleLibRuntimeToDirPhoneDebug
+> Task :braillecommon:bundleLibRuntimeToDirPhoneDebug
+
+> Task :talkback:compilePhoneDebugKotlin
+w: file:///D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/talkback/src/main/java/com/google/android/accessibility/talkback/actor/gemini/ui/ImageQnAChatController.kt:55:39 Enum argument can be null in Java, but exhaustive when contains no null branch
+
+> Task :brailletranslate:bundleLibRuntimeToDirPhoneDebug
+> Task :brailleinterfaces:bundleLibRuntimeToDirPhoneDebug
+> Task :materialpreference:bundleLibRuntimeToDirPhoneDebug
+
+> Task :talkback:compilePhoneDebugJavaWithJavac
+D:\Apps\Android\cloud-epub-spike\tools\talkback-229212fdf5842191d0a93fc95d9ca1423b346866\talkback\src\main\java\com\google\android\accessibility\talkback\Feedback.java:2459: warning: [AutoValueMutable] An @AutoValue property that is a primitive array returns the original array, which can therefore be modified by the caller. If this is OK, you can suppress this warning with @SuppressWarnings("mutable"). Otherwise, you should replace the property with an immutable type, perhaps a simple wrapper around the original array.
+    public abstract byte[] imageBytes();
+                           ^
+
+> Task :utils:bundleLibRuntimeToDirPhoneDebug
+
+> Task :talkback:compilePhoneDebugJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+1 warning
+
+> Task :materialpreferencecompose:bundleLibRuntimeToDirPhoneDebug
+> Task :materialflags:bundleLibRuntimeToDirPhoneDebug
+> Task :brailleime:bundleLibRuntimeToJarPhoneDebug
+> Task :brailledisplay:bundleLibRuntimeToJarPhoneDebug
+> Task :brailleimeanalytics:bundleLibRuntimeToJarPhoneDebug
+> Task :braillebrltty:bundleLibRuntimeToJarPhoneDebug
+> Task :brailledisplayanalytics:bundleLibRuntimeToJarPhoneDebug
+> Task :braillecommon:bundleLibRuntimeToJarPhoneDebug
+> Task :brailletranslate:bundleLibRuntimeToJarPhoneDebug
+> Task :brailleinterfaces:bundleLibRuntimeToJarPhoneDebug
+> Task :materialpreference:bundleLibRuntimeToJarPhoneDebug
+> Task :utils:bundleLibRuntimeToJarPhoneDebug
+> Task :materialpreferencecompose:bundleLibRuntimeToJarPhoneDebug
+> Task :materialflags:bundleLibRuntimeToJarPhoneDebug
+> Task :braillebrltty:processPhoneDebugJavaRes
+> Task :braillecommon:processPhoneDebugJavaRes
+> Task :brailledisplay:processPhoneDebugJavaRes
+> Task :brailledisplayanalytics:processPhoneDebugJavaRes
+> Task :brailleime:processPhoneDebugJavaRes
+> Task :brailleimeanalytics:processPhoneDebugJavaRes
+> Task :brailleinterfaces:processPhoneDebugJavaRes
+> Task :brailletranslate:processPhoneDebugJavaRes
+> Task :materialflags:processPhoneDebugJavaRes
+> Task :materialpreference:processPhoneDebugJavaRes
+> Task :materialpreferencecompose:processPhoneDebugJavaRes
+> Task :utils:processPhoneDebugJavaRes
+> Task :mergePhoneDebugJniLibFolders
+> Task :braillebrltty:preWearDebugBuild UP-TO-DATE
+> Task :braillebrltty:configureNdkBuildDebug[x86_64]
+> Task :talkback:bundleLibCompileToJarPhoneDebug
+> Task :compilePhoneDebugJavaWithJavac
+
+> Task :braillebrltty:buildNdkBuildDebug[x86_64]
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/BrlttyWrapper.c:339:27: warning: passing 'jbyte *' (aka 'signed char *') to parameter of type 'unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+C/C++:   if (!brltty_writeWindow(bytes, patternLen)) {
+C/C++:                           ^~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/libbrltty.h:89:35: note: passing argument to parameter 'dotPattern' here
+C/C++: brltty_writeWindow(unsigned char *dotPattern, size_t size);
+C/C++:                                   ^
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/BrlttyWrapper.c:399:9: warning: initializing 'char *' with an expression of type 'jbyte *' (aka 'signed char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+C/C++:   char *writeptr = b;
+C/C++:         ^          ~
+C/C++: 2 warnings generated.
+C/C++: In file included from D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/libbrltty.c:46:
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/config.h:534:9: warning: 'WRITABLE_DIRECTORY' macro redefined [-Wmacro-redefined]
+C/C++: #define WRITABLE_DIRECTORY "/run/brltty"
+C/C++:         ^
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers\prologue.h:409:9: note: previous definition is here
+C/C++: #define WRITABLE_DIRECTORY ""
+C/C++:         ^
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/libbrltty.c:331:52: warning: passing 'char [1]' to parameter of type 'const unsigned char *' converts between pointers to integer types with different sign [-Wpointer-sign]
+C/C++:       setLogKeyEventsFlag(brailleDisplay.keyTable, "");
+C/C++:                                                    ^~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/ktb.h:65:72: note: passing argument to parameter 'flag' here
+C/C++: extern void setLogKeyEventsFlag (KeyTable *table, const unsigned char *flag);
+C/C++:                                                                        ^
+C/C++: 2 warnings generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/hid_android.c:60:66: warning: passing 'unsigned char []' to parameter of type 'jbyte *' (aka 'signed char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+C/C++:       (*env)->GetByteArrayRegion(env, reportDescriptor, 0, size, items->bytes);
+C/C++:                                                                  ^~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/hid_android.c:113:60: warning: passing 'unsigned char *' to parameter of type 'jbyte *' (aka 'signed char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+C/C++:       (*env)->GetByteArrayRegion(env, bytes, 0, inputSize, buffer);
+C/C++:                                                            ^~~~~~
+C/C++: 2 warnings generated.
+
+> Task :talkback:bundleLibRuntimeToDirPhoneDebug
+
+> Task :braillebrltty:buildNdkBuildDebug[x86_64]
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/gio_hid.c:98:10: warning: returning 'const HidItemsDescriptor *' from a function with result type 'HidItemsDescriptor *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+C/C++:   return hidGetItems(handle->device);
+C/C++:          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: 1 warning generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/usb.c:235:22: warning: taking address of packed member 'wValue' of class or structure 'UsbSetupPacket' may result in an unaligned pointer value [-Waddress-of-packed-member]
+C/C++:   putLittleEndian16(&setup->wValue, value);
+C/C++:                      ^~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/usb.c:236:22: warning: taking address of packed member 'wIndex' of class or structure 'UsbSetupPacket' may result in an unaligned pointer value [-Waddress-of-packed-member]
+C/C++:   putLittleEndian16(&setup->wIndex, index);
+C/C++:                      ^~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/usb.c:237:22: warning: taking address of packed member 'wLength' of class or structure 'UsbSetupPacket' may result in an unaligned pointer value [-Waddress-of-packed-member]
+C/C++:   putLittleEndian16(&setup->wLength, length);
+C/C++:                      ^~~~~~~~~~~~~~
+C/C++: 3 warnings generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/usb_cp2101.c:260:22: warning: taking address of packed member 'handshakeOptions' of class or structure 'USB_CP2101_FlowControl' may result in an unaligned pointer value [-Waddress-of-packed-member]
+C/C++:   putLittleEndian32(&newSettings.handshakeOptions, newSettings.handshakeOptions);
+C/C++:                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/usb_cp2101.c:261:22: warning: taking address of packed member 'dataFlowOptions' of class or structure 'USB_CP2101_FlowControl' may result in an unaligned pointer value [-Waddress-of-packed-member]
+C/C++:   putLittleEndian32(&newSettings.dataFlowOptions, newSettings.dataFlowOptions);
+C/C++:                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/usb_cp2110.c:84:21: warning: taking address of packed member 'baudRate' of class or structure 'USB_CP2110_UartConfigurationReport' may result in an unaligned pointer value [-Waddress-of-packed-member]
+C/C++:     putBigEndian32(&report.baudRate, baud);
+C/C++:                     ^~~~~~~~~~~~~~~
+C/C++: 1 warning generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/usb_cdc_acm.c:139:22: warning: taking address of packed member 'dwDTERate' of class or structure 'USB_CDC_ACM_LineCoding' may result in an unaligned pointer value [-Waddress-of-packed-member]
+C/C++:   putLittleEndian32(&lineCoding.dwDTERate, baud);
+C/C++:                      ^~~~~~~~~~~~~~~~~~~~
+C/C++: 1 warning generated.
+
+> Task :mergeLibDexPhoneDebug
+> Task :talkback:bundleLibRuntimeToJarPhoneDebug
+
+> Task :braillebrltty:buildNdkBuildDebug[x86_64]
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Programs/menu.c:42:2: warning: file globbing support not available on this platform [-W#warnings]
+C/C++: #warning file globbing support not available on this platform
+C/C++:  ^
+C/C++: 1 warning generated.
+
+> Task :dexBuilderPhoneDebug
+> Task :mergePhoneDebugGlobalSynthetics
+> Task :processPhoneDebugJavaRes
+> Task :talkback:processPhoneDebugJavaRes
+
+> Task :braillebrltty:buildNdkBuildDebug[x86_64]
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/FreedomScientific/braille.c:651:13: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .baud = 57600
+C/C++:             ^~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/FreedomScientific/braille.c:650:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:73:11: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .baud = SERIAL_DEFAULT_BAUD, \
+C/C++:           ^~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:66:29: note: expanded from macro 'SERIAL_DEFAULT_BAUD'
+C/C++: #define SERIAL_DEFAULT_BAUD 9600
+C/C++:                             ^~~~
+C/C++: 1 warning generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HumanWare/braille.c:965:13: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .baud = 115200,
+C/C++:             ^~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HumanWare/braille.c:964:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:73:11: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .baud = SERIAL_DEFAULT_BAUD, \
+C/C++:           ^~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:66:29: note: expanded from macro 'SERIAL_DEFAULT_BAUD'
+C/C++: #define SERIAL_DEFAULT_BAUD 9600
+C/C++:                             ^~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HumanWare/braille.c:966:15: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .parity = SERIAL_PARITY_EVEN
+C/C++:               ^~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HumanWare/braille.c:964:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:76:13: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .parity = SERIAL_DEFAULT_PARITY, \
+C/C++:             ^~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:69:31: note: expanded from macro 'SERIAL_DEFAULT_PARITY'
+C/C++: #define SERIAL_DEFAULT_PARITY SERIAL_PARITY_NONE
+C/C++:                               ^~~~~~~~~~~~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/Baum/braille.c:3337:21: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:             .baud = brl->data->protocol->serialBaud,
+C/C++:                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/Baum/braille.c:3336:13: note: previous initialization is here
+C/C++:             SERIAL_DEFAULT_PARAMETERS,
+C/C++:             ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:73:11: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .baud = SERIAL_DEFAULT_BAUD, \
+C/C++:           ^~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:66:29: note: expanded from macro 'SERIAL_DEFAULT_BAUD'
+C/C++: #define SERIAL_DEFAULT_BAUD 9600
+C/C++:                             ^~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/Baum/braille.c:3338:23: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:             .parity = brl->data->protocol->serialParity
+C/C++:                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/Baum/braille.c:3336:13: note: previous initialization is here
+C/C++:             SERIAL_DEFAULT_PARAMETERS,
+C/C++:             ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:76:13: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .parity = SERIAL_DEFAULT_PARITY, \
+C/C++:             ^~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:69:31: note: expanded from macro 'SERIAL_DEFAULT_PARITY'
+C/C++: #define SERIAL_DEFAULT_PARITY SERIAL_PARITY_NONE
+C/C++:                               ^~~~~~~~~~~~~~~~~~
+C/C++: 2 warnings generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/BrailleMemo/braille.c:302:13: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .baud = 9600
+C/C++:             ^~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/BrailleMemo/braille.c:301:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:73:11: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .baud = SERIAL_DEFAULT_BAUD, \
+C/C++:           ^~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:66:29: note: expanded from macro 'SERIAL_DEFAULT_BAUD'
+C/C++: #define SERIAL_DEFAULT_BAUD 9600
+C/C++:                             ^~~~
+C/C++: 1 warning generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HIMS/braille.c:900:13: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .baud = 115200
+C/C++:             ^~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HIMS/braille.c:899:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:73:11: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .baud = SERIAL_DEFAULT_BAUD, \
+C/C++:           ^~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:66:29: note: expanded from macro 'SERIAL_DEFAULT_BAUD'
+C/C++: #define SERIAL_DEFAULT_BAUD 9600
+C/C++:                             ^~~~
+C/C++: 1 warning generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/Alva/braille.c:1872:13: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .baud = 9600
+C/C++:             ^~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/Alva/braille.c:1871:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:73:11: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .baud = SERIAL_DEFAULT_BAUD, \
+C/C++:           ^~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:66:29: note: expanded from macro 'SERIAL_DEFAULT_BAUD'
+C/C++: #define SERIAL_DEFAULT_BAUD 9600
+C/C++:                             ^~~~
+C/C++: 1 warning generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/Seika/braille.c:676:13: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .baud = 9600
+C/C++:             ^~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/Seika/braille.c:675:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:73:11: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .baud = SERIAL_DEFAULT_BAUD, \
+C/C++:           ^~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:66:29: note: expanded from macro 'SERIAL_DEFAULT_BAUD'
+C/C++: #define SERIAL_DEFAULT_BAUD 9600
+C/C++:                             ^~~~
+C/C++: 1 warning generated.
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HandyTech/braille.c:1227:24: warning: taking address of packed member 'year' of class or structure 'HT_DateTime' may result in an unaligned pointer value [-Waddress-of-packed-member]
+C/C++:     putLittleEndian16(&payload.year, components.year);
+C/C++:                        ^~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HandyTech/braille.c:1281:13: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .baud = 19200,
+C/C++:             ^~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HandyTech/braille.c:1280:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:73:11: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .baud = SERIAL_DEFAULT_BAUD, \
+C/C++:           ^~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:66:29: note: expanded from macro 'SERIAL_DEFAULT_BAUD'
+C/C++: #define SERIAL_DEFAULT_BAUD 9600
+C/C++:                             ^~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HandyTech/braille.c:1282:15: warning: initializer overrides prior initialization of this subobject [-Winitializer-overrides]
+C/C++:     .parity = SERIAL_PARITY_ODD
+C/C++:               ^~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Drivers/Braille/HandyTech/braille.c:1280:5: note: previous initialization is here
+C/C++:     SERIAL_DEFAULT_PARAMETERS,
+C/C++:     ^~~~~~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:76:13: note: expanded from macro 'SERIAL_DEFAULT_PARAMETERS'
+C/C++:   .parity = SERIAL_DEFAULT_PARITY, \
+C/C++:             ^~~~~~~~~~~~~~~~~~~~~
+C/C++: D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/braille/brltty/src/phone/jni/brlttywrapper/third_party/brltty/Headers/serial_types.h:69:31: note: expanded from macro 'SERIAL_DEFAULT_PARITY'
+C/C++: #define SERIAL_DEFAULT_PARITY SERIAL_PARITY_NONE
+C/C++:                               ^~~~~~~~~~~~~~~~~~
+C/C++: 3 warnings generated.
+
+> Task :mergePhoneDebugJavaResource
+> Task :braillebrltty:mergePhoneDebugJniLibFolders
+> Task :braillebrltty:mergePhoneDebugNativeLibs
+> Task :mergeProjectDexPhoneDebug
+> Task :braillecommon:mergePhoneDebugJniLibFolders
+> Task :braillecommon:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :braillecommon:copyPhoneDebugJniLibsProjectOnly
+> Task :braillebrltty:copyPhoneDebugJniLibsProjectOnly
+> Task :brailledisplay:mergePhoneDebugJniLibFolders
+> Task :brailledisplay:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :brailledisplayanalytics:mergePhoneDebugJniLibFolders
+> Task :brailledisplayanalytics:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :brailledisplay:copyPhoneDebugJniLibsProjectOnly
+> Task :brailledisplayanalytics:copyPhoneDebugJniLibsProjectOnly
+> Task :brailleime:mergePhoneDebugJniLibFolders
+> Task :brailleime:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :brailleimeanalytics:mergePhoneDebugJniLibFolders
+> Task :brailleimeanalytics:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :brailleime:copyPhoneDebugJniLibsProjectOnly
+> Task :brailleimeanalytics:copyPhoneDebugJniLibsProjectOnly
+> Task :brailletranslate:preWearDebugBuild UP-TO-DATE
+> Task :brailleinterfaces:mergePhoneDebugJniLibFolders
+> Task :brailleinterfaces:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :brailleinterfaces:copyPhoneDebugJniLibsProjectOnly
+> Task :materialflags:mergePhoneDebugJniLibFolders
+> Task :materialflags:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :materialflags:copyPhoneDebugJniLibsProjectOnly
+> Task :materialpreference:mergePhoneDebugJniLibFolders
+> Task :materialpreference:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :materialpreference:copyPhoneDebugJniLibsProjectOnly
+> Task :materialpreferencecompose:mergePhoneDebugJniLibFolders
+> Task :materialpreferencecompose:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :materialpreferencecompose:copyPhoneDebugJniLibsProjectOnly
+> Task :talkback:mergePhoneDebugJniLibFolders
+> Task :talkback:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :talkback:copyPhoneDebugJniLibsProjectOnly
+> Task :utils:mergePhoneDebugJniLibFolders
+> Task :utils:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :utils:copyPhoneDebugJniLibsProjectOnly
+> Task :validateSigningPhoneDebug
+> Task :writePhoneDebugAppMetadata
+> Task :writePhoneDebugSigningConfigVersions
+> Task :brailletranslate:configureNdkBuildDebug[x86_64]
+> Task :braillebrltty:stripPhoneDebugDebugSymbols
+> Task :braillebrltty:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :braillebrltty:extractDeepLinksForAarPhoneDebug
+> Task :brailletranslate:buildNdkBuildDebug[x86_64]
+> Task :brailletranslate:mergePhoneDebugJniLibFolders
+> Task :brailletranslate:mergePhoneDebugNativeLibs
+> Task :brailletranslate:copyPhoneDebugJniLibsProjectOnly
+> Task :mergePhoneDebugNativeLibs
+
+> Task :stripPhoneDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libbrlttywrap.so, libc++_shared.so, liblouis.so, liblouiswrap.so. Run with --info option to learn more.
+
+> Task :packagePhoneDebug
+> Task :createPhoneDebugApkListingFileRedirect
+> Task :assemblePhoneDebug
+> Task :braillecommon:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :braillecommon:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :braillecommon:extractDeepLinksForAarPhoneDebug
+> Task :braillebrltty:extractPhoneDebugAnnotations
+> Task :braillecommon:extractPhoneDebugAnnotations
+> Task :braillebrltty:mergePhoneDebugGeneratedProguardFiles
+> Task :braillebrltty:mergePhoneDebugConsumerProguardFiles
+> Task :braillebrltty:prepareLintJarForPublish
+> Task :braillebrltty:preparePhoneDebugArtProfile
+> Task :braillebrltty:mergePhoneDebugJavaResource
+> Task :braillecommon:mergePhoneDebugGeneratedProguardFiles
+> Task :braillecommon:mergePhoneDebugConsumerProguardFiles
+> Task :braillecommon:prepareLintJarForPublish
+> Task :braillecommon:preparePhoneDebugArtProfile
+> Task :braillecommon:mergePhoneDebugJavaResource
+> Task :braillebrltty:syncPhoneDebugLibJars
+> Task :braillebrltty:bundlePhoneDebugAar
+> Task :braillebrltty:assemblePhoneDebug
+> Task :brailledisplay:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :brailledisplay:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :brailledisplay:extractDeepLinksForAarPhoneDebug
+> Task :braillecommon:syncPhoneDebugLibJars
+> Task :brailledisplay:extractPhoneDebugAnnotations
+> Task :brailledisplay:mergePhoneDebugGeneratedProguardFiles
+> Task :brailledisplay:mergePhoneDebugConsumerProguardFiles
+> Task :brailledisplay:prepareLintJarForPublish
+> Task :brailledisplay:preparePhoneDebugArtProfile
+> Task :brailledisplay:mergePhoneDebugJavaResource
+> Task :braillecommon:bundlePhoneDebugAar
+> Task :braillecommon:assemblePhoneDebug
+> Task :brailledisplayanalytics:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :brailledisplayanalytics:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :brailledisplayanalytics:extractDeepLinksForAarPhoneDebug
+> Task :brailledisplayanalytics:extractPhoneDebugAnnotations
+> Task :brailledisplayanalytics:mergePhoneDebugGeneratedProguardFiles
+> Task :brailledisplayanalytics:mergePhoneDebugConsumerProguardFiles
+> Task :brailledisplayanalytics:prepareLintJarForPublish
+> Task :brailledisplayanalytics:preparePhoneDebugArtProfile
+> Task :brailledisplayanalytics:mergePhoneDebugJavaResource
+> Task :brailledisplayanalytics:syncPhoneDebugLibJars
+> Task :brailledisplayanalytics:bundlePhoneDebugAar
+> Task :brailledisplayanalytics:assemblePhoneDebug
+> Task :brailleime:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :brailleime:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :brailleime:extractDeepLinksForAarPhoneDebug
+> Task :brailledisplay:syncPhoneDebugLibJars
+> Task :brailledisplay:bundlePhoneDebugAar
+> Task :brailledisplay:assemblePhoneDebug
+> Task :brailleime:mergePhoneDebugGeneratedProguardFiles
+> Task :brailleime:mergePhoneDebugConsumerProguardFiles
+> Task :brailleime:prepareLintJarForPublish
+> Task :brailleime:preparePhoneDebugArtProfile
+> Task :brailleime:mergePhoneDebugJavaResource
+> Task :brailleimeanalytics:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :brailleimeanalytics:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :brailleimeanalytics:extractDeepLinksForAarPhoneDebug
+> Task :brailleimeanalytics:extractPhoneDebugAnnotations
+> Task :brailleimeanalytics:mergePhoneDebugGeneratedProguardFiles
+> Task :brailleimeanalytics:mergePhoneDebugConsumerProguardFiles
+> Task :brailleimeanalytics:prepareLintJarForPublish
+> Task :brailleimeanalytics:preparePhoneDebugArtProfile
+> Task :brailleimeanalytics:mergePhoneDebugJavaResource
+> Task :brailleimeanalytics:syncPhoneDebugLibJars
+> Task :brailleimeanalytics:bundlePhoneDebugAar
+> Task :brailleimeanalytics:assemblePhoneDebug
+> Task :brailleinterfaces:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :brailleinterfaces:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :brailleinterfaces:extractDeepLinksForAarPhoneDebug
+> Task :brailleinterfaces:extractPhoneDebugAnnotations
+> Task :brailleinterfaces:mergePhoneDebugGeneratedProguardFiles
+> Task :brailleinterfaces:mergePhoneDebugConsumerProguardFiles
+> Task :brailleinterfaces:prepareLintJarForPublish
+> Task :brailleinterfaces:preparePhoneDebugArtProfile
+> Task :brailleinterfaces:mergePhoneDebugJavaResource
+> Task :brailleinterfaces:syncPhoneDebugLibJars
+> Task :brailleinterfaces:bundlePhoneDebugAar
+> Task :brailleinterfaces:assemblePhoneDebug
+> Task :brailletranslate:stripPhoneDebugDebugSymbols
+> Task :brailletranslate:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :brailletranslate:extractDeepLinksForAarPhoneDebug
+> Task :brailletranslate:extractPhoneDebugAnnotations
+> Task :brailletranslate:mergePhoneDebugGeneratedProguardFiles
+> Task :brailletranslate:mergePhoneDebugConsumerProguardFiles
+> Task :brailletranslate:prepareLintJarForPublish
+> Task :brailletranslate:preparePhoneDebugArtProfile
+> Task :brailletranslate:mergePhoneDebugJavaResource
+> Task :brailletranslate:syncPhoneDebugLibJars
+> Task :brailletranslate:bundlePhoneDebugAar
+> Task :brailletranslate:assemblePhoneDebug
+> Task :materialflags:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :materialflags:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :materialflags:extractDeepLinksForAarPhoneDebug
+> Task :materialflags:extractPhoneDebugAnnotations
+> Task :materialflags:mergePhoneDebugGeneratedProguardFiles
+> Task :materialflags:mergePhoneDebugConsumerProguardFiles
+> Task :materialflags:prepareLintJarForPublish
+> Task :materialflags:preparePhoneDebugArtProfile
+> Task :materialflags:mergePhoneDebugJavaResource
+> Task :materialflags:syncPhoneDebugLibJars
+> Task :materialflags:bundlePhoneDebugAar
+> Task :materialflags:assemblePhoneDebug
+> Task :materialpreference:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :materialpreference:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :materialpreference:extractDeepLinksForAarPhoneDebug
+> Task :materialpreference:extractPhoneDebugAnnotations
+> Task :materialpreference:mergePhoneDebugGeneratedProguardFiles
+> Task :materialpreference:mergePhoneDebugConsumerProguardFiles
+> Task :materialpreference:prepareLintJarForPublish
+> Task :materialpreference:preparePhoneDebugArtProfile
+> Task :materialpreference:mergePhoneDebugJavaResource
+> Task :materialpreference:syncPhoneDebugLibJars
+> Task :materialpreference:bundlePhoneDebugAar
+> Task :materialpreference:assemblePhoneDebug
+> Task :materialpreferencecompose:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :materialpreferencecompose:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :materialpreferencecompose:extractDeepLinksForAarPhoneDebug
+> Task :materialpreferencecompose:extractPhoneDebugAnnotations
+> Task :materialpreferencecompose:mergePhoneDebugGeneratedProguardFiles
+> Task :materialpreferencecompose:mergePhoneDebugConsumerProguardFiles
+> Task :materialpreferencecompose:prepareLintJarForPublish
+> Task :materialpreferencecompose:preparePhoneDebugArtProfile
+> Task :materialpreferencecompose:mergePhoneDebugJavaResource
+> Task :materialpreferencecompose:syncPhoneDebugLibJars
+> Task :materialpreferencecompose:bundlePhoneDebugAar
+> Task :materialpreferencecompose:assemblePhoneDebug
+> Task :materialtheme:preBuild UP-TO-DATE
+> Task :materialtheme:prePhoneDebugBuild UP-TO-DATE
+> Task :materialtheme:mergePhoneDebugJniLibFolders
+> Task :materialtheme:mergePhoneDebugNativeLibs NO-SOURCE
+> Task :materialtheme:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :materialtheme:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :materialtheme:generatePhoneDebugResValues
+> Task :materialtheme:extractDeepLinksForAarPhoneDebug
+> Task :materialtheme:checkKotlinGradlePluginConfigurationErrors
+> Task :materialtheme:generatePhoneDebugBuildConfig
+> Task :materialtheme:generatePhoneDebugResources
+> Task :materialtheme:packagePhoneDebugResources
+> Task :materialtheme:parsePhoneDebugLocalResources
+> Task :materialtheme:generatePhoneDebugRFile
+> Task :materialtheme:compilePhoneDebugKotlin NO-SOURCE
+> Task :materialtheme:extractPhoneDebugAnnotations
+> Task :materialtheme:mergePhoneDebugShaders
+> Task :materialtheme:compilePhoneDebugShaders NO-SOURCE
+> Task :materialtheme:generatePhoneDebugAssets UP-TO-DATE
+> Task :materialtheme:mergePhoneDebugAssets
+> Task :brailleime:extractPhoneDebugAnnotations
+> Task :materialtheme:javaPreCompilePhoneDebug
+> Task :materialtheme:compilePhoneDebugJavaWithJavac
+> Task :materialtheme:mergePhoneDebugGeneratedProguardFiles
+> Task :materialtheme:mergePhoneDebugConsumerProguardFiles
+> Task :materialtheme:prepareLintJarForPublish
+> Task :materialtheme:preparePhoneDebugArtProfile
+
+> Task :materialtheme:processPhoneDebugManifest
+package="com.google.android.accessibility.material.theme" found in source AndroidManifest.xml: D:\Apps\Android\cloud-epub-spike\tools\talkback-229212fdf5842191d0a93fc95d9ca1423b346866\material\theme\src\main\AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.google.android.accessibility.material.theme" from the source AndroidManifest.xml: D:\Apps\Android\cloud-epub-spike\tools\talkback-229212fdf5842191d0a93fc95d9ca1423b346866\material\theme\src\main\AndroidManifest.xml.
+D:\Apps\Android\cloud-epub-spike\tools\talkback-229212fdf5842191d0a93fc95d9ca1423b346866\material\theme\src\main\AndroidManifest.xml:4:3-6:39 Warning:
+	uses-sdk:targetSdkVersion value (34) specified in the manifest file is ignored. It is overridden by the value declared in the DSL or the variant API, or 1 if not declared/present. Current value is (26).
+
+> Task :materialtheme:processPhoneDebugJavaRes
+> Task :materialtheme:mergePhoneDebugJavaResource
+> Task :materialtheme:syncPhoneDebugLibJars
+> Task :materialtheme:writePhoneDebugAarMetadata
+> Task :materialtheme:bundlePhoneDebugAar
+> Task :materialtheme:assemblePhoneDebug
+> Task :talkback:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :talkback:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :talkback:extractDeepLinksForAarPhoneDebug
+> Task :brailleime:syncPhoneDebugLibJars
+> Task :brailleime:bundlePhoneDebugAar
+> Task :brailleime:assemblePhoneDebug
+> Task :talkback:mergePhoneDebugGeneratedProguardFiles
+> Task :talkback:mergePhoneDebugConsumerProguardFiles
+> Task :talkback:prepareLintJarForPublish
+> Task :talkback:preparePhoneDebugArtProfile
+> Task :talkback:mergePhoneDebugJavaResource
+> Task :utils:stripPhoneDebugDebugSymbols NO-SOURCE
+> Task :utils:copyPhoneDebugJniLibsProjectAndLocalJars
+> Task :utils:extractDeepLinksForAarPhoneDebug
+
+> Task :utils:extractPhoneDebugAnnotations
+Warning: com.google.android.accessibility.utils.material.ButtonIconType.IconType: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.utils.monitor.InputModeTracker.InputMode: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.utils.Performance.StageId: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.utils.Performance.EventTypeId: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.utils.Performance.TalkBackHint: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.utils.Performance.ChangeLocaleAction: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.utils.volumebutton.VolumeButtonPatternDetector.ButtonSequence: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.utils.volumebutton.VolumeButtonPatternDetector.ButtonsUsed: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+
+> Task :utils:mergePhoneDebugGeneratedProguardFiles
+> Task :utils:mergePhoneDebugConsumerProguardFiles
+> Task :utils:prepareLintJarForPublish
+> Task :utils:preparePhoneDebugArtProfile
+> Task :utils:mergePhoneDebugJavaResource
+
+> Task :talkback:extractPhoneDebugAnnotations
+Warning: com.google.android.accessibility.talkback.focusmanagement.FocusProcessorForTapAndTouchExploration.TypingMethod: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.talkback.imagecaption.Request.ErrorCode: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.talkback.preference.base.KeyboardShortcutDialogPreference.SequenceKeyModeState: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+
+> Task :utils:syncPhoneDebugLibJars
+
+> Task :talkback:extractPhoneDebugAnnotations
+Warning: com.google.android.accessibility.talkback.selector.SelectorController.GranularityType: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+Warning: com.google.android.accessibility.talkback.trainingcommon.NavigationButtonBar.ButtonType: The typedef annotation should have @Retention(RetentionPolicy.SOURCE)
+
+> Task :talkback:syncPhoneDebugLibJars
+> Task :utils:bundlePhoneDebugAar
+> Task :utils:assemblePhoneDebug
+> Task :talkback:bundlePhoneDebugAar
+> Task :talkback:assemblePhoneDebug
+
+[Incubating] Problems report is available at: file:///D:/Apps/Android/cloud-epub-spike/tools/talkback-229212fdf5842191d0a93fc95d9ca1423b346866/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 8m 47s
+469 actionable tasks: 318 executed, 151 up-to-date

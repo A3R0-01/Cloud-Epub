@@ -1,0 +1,59 @@
+ACCESSIBILITY MANAGER (dumpsys accessibility)
+
+currentUserId=0
+hasMagnificationConnection=true
+Magnifier on display#0
+    MagnificationConfig[mode: 1, activated: false, scale: 1.0, centerX: 540.0, centerY: 897.0]
+    Magnification region=SkRegion((0,0,1080,1794))
+    IdOfLastServiceToMagnify=-1
+    SupportWindowMagnification=true
+    WindowMagnificationConnectionState=CONNECTED
+User state[
+     attributes:{id=0, touchExplorationEnabled=true, serviceHandlesDoubleTap=true, requestMultiFingerGestures=true, requestTwoFingerPassthrough=true, sendMotionEventsEnabledfalse, displayMagnificationEnabled=false, autoclickEnabled=false, nonInteractiveUiTimeout=0, interactiveUiTimeout=10000, installedServiceCount=3, magnificationModes={0=1}, magnificationCapabilities=3, audioDescriptionByDefaultEnabled=false, magnificationFollowTypingEnabled=true, alwaysOnMagnificationEnabled=true}
+     shortcut key:{}
+     button:{}
+     button target:{null}
+     qs shortcut targets:{}
+     a11y tiles in QS panel:{}
+     Bound services:{Service[label=Backtalk, feedbackType[FEEDBACK_SPOKEN, FEEDBACK_HAPTIC, FEEDBACK_AUDIBLE], capabilities=251, eventTypes=TYPES_ALL_MASK, notificationTimeout=0, requestA11yBtn=false]}
+     Enabled services:{{fyi.quin.backtalk/com.google.android.marvin.talkback.TalkBackService}}
+     Binding services:{}
+     Crashed services:{}
+     Client list info:{
+          Client list callbacks: 6
+          Client list killed: false
+          Client list broadcasts count: -1
+          Registered clients:{
+[com.android.inputmethod.latin][com.reecedunn.espeak][com.android.launcher3][dev.cloudepub.spike][fyi.quin.backtalk][fyi.quin.backtalk]}]
+Global Info [ Top focused display Id = 0
+     Active Window Id = 395
+     Top Focused Window Id = 395
+     Accessibility Focused Window Id = 395 ]
+
+Display[0] :
+A11yWindow[AccessibilityWindowInfo[title=Navigation bar, displayId=0, id=369, taskId=-1, type=TYPE_SYSTEM, layer=2, region=SkRegion((0,1794,1080,1920)), bounds=Rect(0, 1794 - 1080, 1920), focused=false, active=false, pictureInPicture=false, transitionTime=1019811, hasParent=false, isAnchored=false, hasChildren=false]]
+WindowInfo[WindowInfo[title=Navigation bar, displayId=0, taskId=-1, type=2019, layer=0, token=android.os.BinderProxy@25f4a6f, region=SkRegion((0,1794,1080,1920)), bounds=Rect(0, 1794 - 1080, 1920), parent=null, focused=false, children=null, accessibility anchor=9223372034707292159, pictureInPicture=false, watchOutsideTouch=false, mTransformMatrix=Matrix{[1.0, 0.0, 0.0][0.0, 1.0, 1794.0][0.0, 0.0, 1.0]}, mMagnificationSpec=<scale:1.0,offsetX:0.0,offsetY:0.0>, locales=[en_US]]]
+,
+A11yWindow[AccessibilityWindowInfo[title=null, displayId=0, id=363, taskId=-1, type=TYPE_SYSTEM, layer=1, region=SkRegion((0,0,1080,63)), bounds=Rect(0, 0 - 1080, 63), focused=false, active=false, pictureInPicture=false, transitionTime=1019811, hasParent=false, isAnchored=false, hasChildren=false]]
+WindowInfo[WindowInfo[title=null, displayId=0, taskId=-1, type=2000, layer=1, token=android.os.BinderProxy@ec0ada4, region=SkRegion((0,0,1080,63)), bounds=Rect(0, 0 - 1080, 63), parent=null, focused=false, children=null, accessibility anchor=9223372034707292159, pictureInPicture=false, watchOutsideTouch=false, mTransformMatrix=Matrix{[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]}, mMagnificationSpec=<scale:1.0,offsetX:0.0,offsetY:0.0>, locales=[en_US]]]
+,
+A11yWindow[AccessibilityWindowInfo[title=Cloud EPUB feasibility spike, displayId=0, id=395, taskId=47, type=TYPE_APPLICATION, layer=0, region=SkRegion((0,0,1080,1920)), bounds=Rect(0, 0 - 1080, 1920), focused=true, active=true, pictureInPicture=false, transitionTime=3806163, hasParent=false, isAnchored=false, hasChildren=false]]
+WindowInfo[WindowInfo[title=Cloud EPUB feasibility spike, displayId=0, taskId=47, type=1, layer=2, token=android.os.BinderProxy@9dd7d37, region=SkRegion((0,0,1080,1920)), bounds=Rect(0, 0 - 1080, 1920), parent=null, focused=true, children=null, accessibility anchor=9223372034707292159, pictureInPicture=false, watchOutsideTouch=false, mTransformMatrix=Matrix{[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]}, mMagnificationSpec=<scale:1.0,offsetX:0.0,offsetY:0.0>, locales=[en_US]]]
+
+
+Window attributes:[{361=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 362=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 363=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 364=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 365=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 366=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 367=AccessibilityWindowAttributes{mAccessibilityWindowTitle=eSpeakmLocales=[en_US]}, 368=AccessibilityWindowAttributes{mAccessibilityWindowTitle=HomemLocales=[en_US]}, 369=AccessibilityWindowAttributes{mAccessibilityWindowTitle=Navigation barmLocales=[en_US]}, 373=AccessibilityWindowAttributes{mAccessibilityWindowTitle=Welcome to BacktalkmLocales=[en_US]}, 395=AccessibilityWindowAttributes{mAccessibilityWindowTitle=Cloud EPUB feasibility spikemLocales=[en_US]}, 398=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 401=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 406=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 409=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 417=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}}]
+A11yInputFilter Info :
+Enabled features of Display [0] = [KeyboardInterceptor,MotionEventInjector,MagnificationGesture,TouchExplorer]
+Global client list info:{
+    Client list callbacks: 5
+    Client list killed: false
+    Client list broadcasts count: -1
+    Registered clients:{
+[com.android.keychain, com.android.providers.settings, com.android.settings, android, com.android.inputdevices, com.android.server.telecom, com.android.localtransport, com.android.dynsystem, com.android.emulator.multidisplay, com.android.DeviceAsWebcam, com.android.location.fused][com.android.permissioncontroller][com.android.systemui][com.android.keychain, com.android.providers.settings, com.android.settings, android, com.android.inputdevices, com.android.server.telecom, com.android.localtransport, com.android.dynsystem, com.android.emulator.multidisplay, com.android.DeviceAsWebcam, com.android.location.fused][com.android.documentsui]
+
+Proxy manager state:
+    Number of proxy connections: 0
+    Registered proxy connections:
+Accessibility Display Listener:
+    SystemUI uid: 10120
+    1 valid display: 0

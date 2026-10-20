@@ -6,9 +6,12 @@
       "href": "EPUB/two.xhtml",
       "controls": false,
       "dark": false,
-      "fontSize": 150,
+      "fontSize": 100,
       "viewer": "popup",
       "viewerDetails": {
+        "sourceWidth": 1200,
+        "sourceHeight": 800,
+        "centerPixel": -16,
         "zoomed": false,
         "imageBounds": [
           0.75,
@@ -45,15 +48,23 @@
             "id": 16908342
           },
           {
-            "id": 16908289,
+            "id": 2131231002,
             "label": "Zoom image in"
           }
         ],
         "stage": "popup",
         "metadataVisible": true,
+        "resolvedSrc": "",
         "fullScreenActionVisible": true,
         "exitActionVisible": false
       },
+      "titleWidth": 576,
+      "titleLeft": 252,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": true,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": 0,
       "readerBounds": [
         0,
         63,
@@ -65,16 +76,24 @@
       "reader": {
         "href": "/EPUB/two.xhtml",
         "scrollY": 0,
-        "height": 746,
+        "height": 944,
         "viewport": 660,
         "originalLength": 196,
         "canonicalUnchanged": true,
         "generatedLabelsInOriginal": false,
-        "images": 6,
-        "buttons": 5,
+        "images": 10,
+        "buttons": 9,
         "bodyPadding": "10px 31px 24px",
         "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
         "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
         "highlight": false
       }
     }
@@ -83,15 +102,18 @@
     "name": "Full screen fits the whole image without visible metadata",
     "pass": true,
     "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
       "zoomed": false,
       "imageBounds": [
         0,
-        537,
+        505.5,
         1080,
-        1257
+        1225.5
       ],
       "width": 1080,
-      "height": 1794,
+      "height": 1731,
       "description": "Map with river, north marker, and three named stations",
       "accessibilityActions": [
         {
@@ -119,12 +141,13 @@
           "id": 16908342
         },
         {
-          "id": 16908289,
+          "id": 2131231002,
           "label": "Zoom image in"
         }
       ],
       "stage": "full-screen",
       "metadataVisible": false,
+      "resolvedSrc": "",
       "fullScreenActionVisible": false,
       "exitActionVisible": true
     }
@@ -133,15 +156,18 @@
     "name": "Native double tap zooms in",
     "pass": true,
     "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
       "zoomed": true,
       "imageBounds": [
         -810,
-        -3,
+        -34.5,
         1890,
-        1797
+        1765.5
       ],
       "width": 1080,
-      "height": 1794,
+      "height": 1731,
       "description": "Map with river, north marker, and three named stations",
       "accessibilityActions": [
         {
@@ -169,28 +195,29 @@
           "id": 16908342
         },
         {
-          "id": 16908289,
+          "id": 2131231002,
           "label": "Fit whole image"
         },
         {
-          "id": 16908290,
+          "id": 2131230999,
           "label": "Pan left"
         },
         {
-          "id": 16908291,
+          "id": 2131231000,
           "label": "Pan right"
         },
         {
-          "id": 16908292,
+          "id": 2131231001,
           "label": "Pan up"
         },
         {
-          "id": 16908293,
+          "id": 2131230998,
           "label": "Pan down"
         }
       ],
       "stage": "full-screen",
       "metadataVisible": false,
+      "resolvedSrc": "",
       "fullScreenActionVisible": false,
       "exitActionVisible": true
     }
@@ -199,15 +226,18 @@
     "name": "Native drag pans the zoomed image",
     "pass": true,
     "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
       "zoomed": true,
       "imageBounds": [
-        -605.6006,
+        -602.0996,
         0,
-        2094.3994,
+        2097.9004,
         1800
       ],
       "width": 1080,
-      "height": 1794,
+      "height": 1731,
       "description": "Map with river, north marker, and three named stations",
       "accessibilityActions": [
         {
@@ -235,28 +265,29 @@
           "id": 16908342
         },
         {
-          "id": 16908289,
+          "id": 2131231002,
           "label": "Fit whole image"
         },
         {
-          "id": 16908290,
+          "id": 2131230999,
           "label": "Pan left"
         },
         {
-          "id": 16908291,
+          "id": 2131231000,
           "label": "Pan right"
         },
         {
-          "id": 16908292,
+          "id": 2131231001,
           "label": "Pan up"
         },
         {
-          "id": 16908293,
+          "id": 2131230998,
           "label": "Pan down"
         }
       ],
       "stage": "full-screen",
       "metadataVisible": false,
+      "resolvedSrc": "",
       "fullScreenActionVisible": false,
       "exitActionVisible": true
     }
@@ -265,15 +296,18 @@
     "name": "Second native double tap returns to whole-image fit",
     "pass": true,
     "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
       "zoomed": false,
       "imageBounds": [
         0,
-        537,
+        505.5,
         1080,
-        1257
+        1225.5
       ],
       "width": 1080,
-      "height": 1794,
+      "height": 1731,
       "description": "Map with river, north marker, and three named stations",
       "accessibilityActions": [
         {
@@ -301,12 +335,13 @@
           "id": 16908342
         },
         {
-          "id": 16908289,
+          "id": 2131231002,
           "label": "Zoom image in"
         }
       ],
       "stage": "full-screen",
       "metadataVisible": false,
+      "resolvedSrc": "",
       "fullScreenActionVisible": false,
       "exitActionVisible": true
     }
@@ -318,9 +353,12 @@
       "href": "EPUB/two.xhtml",
       "controls": false,
       "dark": false,
-      "fontSize": 150,
+      "fontSize": 100,
       "viewer": "popup",
       "viewerDetails": {
+        "sourceWidth": 1200,
+        "sourceHeight": 800,
+        "centerPixel": -16,
         "zoomed": false,
         "imageBounds": [
           0.75,
@@ -357,15 +395,23 @@
             "id": 16908342
           },
           {
-            "id": 16908289,
+            "id": 2131231002,
             "label": "Zoom image in"
           }
         ],
         "stage": "popup",
         "metadataVisible": true,
+        "resolvedSrc": "",
         "fullScreenActionVisible": true,
         "exitActionVisible": false
       },
+      "titleWidth": 576,
+      "titleLeft": 252,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": true,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": 0,
       "readerBounds": [
         0,
         63,
@@ -377,16 +423,24 @@
       "reader": {
         "href": "/EPUB/two.xhtml",
         "scrollY": 0,
-        "height": 746,
+        "height": 944,
         "viewport": 660,
         "originalLength": 196,
         "canonicalUnchanged": true,
         "generatedLabelsInOriginal": false,
-        "images": 6,
-        "buttons": 5,
+        "images": 10,
+        "buttons": 9,
         "bodyPadding": "10px 31px 24px",
         "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
         "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
         "highlight": false
       }
     }
@@ -398,8 +452,15 @@
       "href": "EPUB/two.xhtml",
       "controls": false,
       "dark": false,
-      "fontSize": 150,
+      "fontSize": 100,
       "viewer": "reading",
+      "titleWidth": 576,
+      "titleLeft": 252,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": true,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": 0,
       "readerBounds": [
         0,
         63,
@@ -411,16 +472,24 @@
       "reader": {
         "href": "/EPUB/two.xhtml",
         "scrollY": 0,
-        "height": 746,
+        "height": 944,
         "viewport": 660,
         "originalLength": 196,
         "canonicalUnchanged": true,
         "generatedLabelsInOriginal": false,
-        "images": 6,
-        "buttons": 5,
+        "images": 10,
+        "buttons": 9,
         "bodyPadding": "10px 31px 24px",
         "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
         "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
         "highlight": false
       }
     }
@@ -429,6 +498,9 @@
     "name": "Original image 2 maps to native viewer",
     "pass": true,
     "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
       "zoomed": false,
       "imageBounds": [
         0.75,
@@ -465,12 +537,13 @@
           "id": 16908342
         },
         {
-          "id": 16908289,
+          "id": 2131231002,
           "label": "Zoom image in"
         }
       ],
       "stage": "popup",
       "metadataVisible": true,
+      "resolvedSrc": "",
       "fullScreenActionVisible": true,
       "exitActionVisible": false
     }
@@ -479,6 +552,9 @@
     "name": "Original image 3 maps to native viewer",
     "pass": true,
     "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
       "zoomed": false,
       "imageBounds": [
         0.75,
@@ -515,12 +591,13 @@
           "id": 16908342
         },
         {
-          "id": 16908289,
+          "id": 2131231002,
           "label": "Zoom image in"
         }
       ],
       "stage": "popup",
       "metadataVisible": true,
+      "resolvedSrc": "",
       "fullScreenActionVisible": true,
       "exitActionVisible": false
     }
@@ -529,6 +606,9 @@
     "name": "Original image 4 maps to native viewer",
     "pass": true,
     "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
       "zoomed": false,
       "imageBounds": [
         0.75,
@@ -565,12 +645,13 @@
           "id": 16908342
         },
         {
-          "id": 16908289,
+          "id": 2131231002,
           "label": "Zoom image in"
         }
       ],
       "stage": "popup",
       "metadataVisible": true,
+      "resolvedSrc": "",
       "fullScreenActionVisible": true,
       "exitActionVisible": false
     }
@@ -579,6 +660,9 @@
     "name": "Original image 5 maps to native viewer",
     "pass": true,
     "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
       "zoomed": false,
       "imageBounds": [
         0.75,
@@ -615,12 +699,13 @@
           "id": 16908342
         },
         {
-          "id": 16908289,
+          "id": 2131231002,
           "label": "Zoom image in"
         }
       ],
       "stage": "popup",
       "metadataVisible": true,
+      "resolvedSrc": "",
       "fullScreenActionVisible": true,
       "exitActionVisible": false
     }
@@ -633,8 +718,8 @@
     }
   },
   {
-    "name": "Native long press selects the complete hyphenated word",
-    "pass": false,
+    "name": "Native long press resolves the complete original hyphenated word",
+    "pass": true,
     "observed": {
       "kind": "text",
       "start": {
@@ -643,9 +728,9 @@
       },
       "end": {
         "node": 1,
-        "offset": 13
+        "offset": 19
       },
-      "quote": "well"
+      "quote": "well-being"
     }
   },
   {
@@ -657,6 +742,13 @@
       "dark": false,
       "fontSize": 100,
       "viewer": "reading",
+      "titleWidth": 576,
+      "titleLeft": 252,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
       "readerBounds": [
         0,
         63,
@@ -667,8 +759,8 @@
       "nextEnabled": true,
       "reader": {
         "href": "/EPUB/one.xhtml",
-        "scrollY": 131.04762268066406,
-        "height": 9095,
+        "scrollY": 130.6666717529297,
+        "height": 8961,
         "viewport": 660,
         "originalLength": 16591,
         "canonicalUnchanged": true,
@@ -677,6 +769,12 @@
         "buttons": 0,
         "bodyPadding": "10px 31px 24px",
         "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
         "selected": {
           "kind": "text",
           "start": {
@@ -689,19 +787,39 @@
           },
           "quote": "well"
         },
+        "wordCandidate": {
+          "kind": "text",
+          "start": {
+            "node": 1,
+            "offset": 9
+          },
+          "end": {
+            "node": 1,
+            "offset": 19
+          },
+          "quote": "well-being"
+        },
+        "candidateHighlight": true,
         "highlight": false
       }
     }
   },
   {
     "name": "First native outside-text tap clears selection only",
-    "pass": false,
+    "pass": true,
     "observed": {
       "href": "EPUB/one.xhtml",
       "controls": false,
       "dark": false,
       "fontSize": 100,
       "viewer": "reading",
+      "titleWidth": 576,
+      "titleLeft": 252,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
       "readerBounds": [
         0,
         63,
@@ -712,8 +830,8 @@
       "nextEnabled": true,
       "reader": {
         "href": "/EPUB/one.xhtml",
-        "scrollY": 131.04762268066406,
-        "height": 9095,
+        "scrollY": 130.6666717529297,
+        "height": 8961,
         "viewport": 660,
         "originalLength": 16591,
         "canonicalUnchanged": true,
@@ -722,44 +840,48 @@
         "buttons": 0,
         "bodyPadding": "10px 31px 24px",
         "indicator": "",
-        "selected": {
-          "kind": "text",
-          "start": {
-            "node": 1,
-            "offset": 9
-          },
-          "end": {
-            "node": 1,
-            "offset": 13
-          },
-          "quote": "well"
-        },
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
         "highlight": false
       }
     }
   },
   {
     "name": "Second native tap shows reader controls",
-    "pass": false,
+    "pass": true,
     "observed": {
       "href": "EPUB/one.xhtml",
-      "controls": false,
+      "controls": true,
       "dark": false,
       "fontSize": 100,
       "viewer": "reading",
+      "titleWidth": 576,
+      "titleLeft": 252,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
       "readerBounds": [
         0,
-        63,
+        189,
         1080,
-        1794
+        1590
       ],
       "previousEnabled": false,
       "nextEnabled": true,
       "reader": {
         "href": "/EPUB/one.xhtml",
-        "scrollY": 131.04762268066406,
-        "height": 9095,
-        "viewport": 660,
+        "scrollY": 130.6666717529297,
+        "height": 8961,
+        "viewport": 534,
         "originalLength": 16591,
         "canonicalUnchanged": true,
         "generatedLabelsInOriginal": false,
@@ -767,18 +889,15 @@
         "buttons": 0,
         "bodyPadding": "10px 31px 24px",
         "indicator": "",
-        "selected": {
-          "kind": "text",
-          "start": {
-            "node": 1,
-            "offset": 9
-          },
-          "end": {
-            "node": 1,
-            "offset": 13
-          },
-          "quote": "well"
-        },
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
         "highlight": false
       }
     }
@@ -794,33 +913,33 @@
       },
       {
         "name": "Regular bookmark",
-        "width": 146,
+        "width": 162,
         "height": 126
       },
       {
         "name": "Bookmarks",
-        "width": 146,
+        "width": 162,
         "height": 126
       },
       {
         "name": "Previous chapter",
-        "width": 146,
-        "height": 134
+        "width": 162,
+        "height": 161
       },
       {
         "name": "Chapters",
-        "width": 146,
-        "height": 134
+        "width": 162,
+        "height": 161
       },
       {
         "name": "Next chapter",
-        "width": 146,
-        "height": 134
+        "width": 162,
+        "height": 161
       },
       {
         "name": "Toggle light/dark theme",
-        "width": 146,
-        "height": 134
+        "width": 162,
+        "height": 161
       }
     ]
   },
@@ -833,19 +952,26 @@
       "dark": true,
       "fontSize": 100,
       "viewer": "reading",
+      "titleWidth": 576,
+      "titleLeft": 252,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
       "readerBounds": [
         0,
         189,
         1080,
-        1617
+        1590
       ],
       "previousEnabled": false,
       "nextEnabled": true,
       "reader": {
         "href": "/EPUB/one.xhtml",
-        "scrollY": 131.04762268066406,
-        "height": 9095,
-        "viewport": 544,
+        "scrollY": 130.6666717529297,
+        "height": 8961,
+        "viewport": 534,
         "originalLength": 16591,
         "canonicalUnchanged": true,
         "generatedLabelsInOriginal": false,
@@ -853,7 +979,15 @@
         "buttons": 0,
         "bodyPadding": "10px 31px 24px",
         "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(24, 28, 33)",
+        "ink": "rgb(255, 255, 255)",
         "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
         "highlight": false
       }
     }
@@ -867,6 +1001,13 @@
       "dark": true,
       "fontSize": 100,
       "viewer": "reading",
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
       "readerBounds": [
         0,
         63,
@@ -877,8 +1018,8 @@
       "nextEnabled": true,
       "reader": {
         "href": "/EPUB/one.xhtml",
-        "scrollY": 131.04762268066406,
-        "height": 9095,
+        "scrollY": 130.6666717529297,
+        "height": 8961,
         "viewport": 660,
         "originalLength": 16591,
         "canonicalUnchanged": true,
@@ -887,7 +1028,15 @@
         "buttons": 0,
         "bodyPadding": "10px 31px 24px",
         "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(24, 28, 33)",
+        "ink": "rgb(255, 255, 255)",
         "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
         "highlight": false
       }
     }
@@ -921,8 +1070,8 @@
     "pass": true,
     "observed": {
       "href": "/EPUB/one.xhtml",
-      "scrollY": 332.5714416503906,
-      "height": 9095,
+      "scrollY": 966.09521484375,
+      "height": 8961,
       "viewport": 660,
       "originalLength": 16591,
       "canonicalUnchanged": true,
@@ -931,7 +1080,15 @@
       "buttons": 0,
       "bodyPadding": "10px 31px 24px",
       "indicator": "1",
+      "lastUserScroll": 1792499762517,
+      "indicatorHidden": 0,
+      "fontPixels": 16,
+      "fontFamily": "\"sans-serif\"",
+      "background": "rgb(24, 28, 33)",
+      "ink": "rgb(255, 255, 255)",
       "selected": null,
+      "wordCandidate": null,
+      "candidateHighlight": false,
       "highlight": false
     }
   },
@@ -940,8 +1097,8 @@
     "pass": true,
     "observed": {
       "href": "/EPUB/one.xhtml",
-      "scrollY": 332.5714416503906,
-      "height": 9095,
+      "scrollY": 4283.0478515625,
+      "height": 8961,
       "viewport": 660,
       "originalLength": 16591,
       "canonicalUnchanged": true,
@@ -950,7 +1107,15 @@
       "buttons": 0,
       "bodyPadding": "10px 31px 24px",
       "indicator": "0",
+      "lastUserScroll": 1792499764360,
+      "indicatorHidden": 1792499767361,
+      "fontPixels": 16,
+      "fontFamily": "\"sans-serif\"",
+      "background": "rgb(24, 28, 33)",
+      "ink": "rgb(255, 255, 255)",
       "selected": null,
+      "wordCandidate": null,
+      "candidateHighlight": false,
       "highlight": false
     }
   }

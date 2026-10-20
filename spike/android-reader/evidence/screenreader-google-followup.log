@@ -1,0 +1,16 @@
+Real touch exploration focuses the image control without opening it: True
+Screen-reader keyboard activation opens the exact original image: True
+Back restores actual accessibility focus to the same original-image control: True
+Screen-reader popup return preserves reading position: True
+Activation after return reopens the original image without another exploration gesture: True
+Screen-reader Close action returns to reading: True
+Screen-reader Full screen action hides visible metadata: True
+Screen-reader Actions menu executes Zoom image in: True
+Screen-reader Actions menu executes Pan left: True
+Screen-reader Actions menu executes Pan right: True
+Screen-reader Actions menu executes Pan up: True
+Screen-reader Actions menu executes Pan down: True
+Screen-reader Actions menu restores whole-image fit: True
+Back exits full screen to the popup with the service active: True
+Second Back restores the reading passage and original-image accessibility focus: True
+Screen-reader service remains bound throughout the run: True

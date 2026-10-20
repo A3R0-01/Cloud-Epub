@@ -1,0 +1,1065 @@
+Reader opens with hidden controls: True
+Injected margins survive Readium CSS: True
+Native vertical scroll at bottom does not advance: True
+Native horizontal next chapter lands at beginning: True
+Native horizontal previous chapter lands at beginning: True
+Requested font reflow changes computed size and family: True
+Programmatic exact duplicate occurrence survives font reflow: True
+Precise arrival highlight exists briefly: True
+Programmatic original-range round trip: don’t: True
+Programmatic original-range round trip: well-being: True
+Programmatic original-range round trip: café: True
+Programmatic original-range round trip: café: True
+Programmatic original-range round trip: lantern: True
+Programmatic original-range round trip: soft­hyphen: True
+Programmatic original-range round trip: non breaking: True
+Programmatic original-range round trip: ofﬁce: True
+Programmatic original-range round trip: well-being: True
+Ten original images become nine meaningful-image buttons: True
+Generated labels excluded from original text: True
+Original caption range restores: True
+Programmatic image button opens native popup: True
+Native full-screen presentation opens: True
+First native Back returns to popup: True
+Second native Back returns to unchanged reading viewport: True
+Popup returns DOM focus to opening image control: True
+Image Regular bookmark restores original image destination: True
+Native outward swipe at final chapter does not wrap: True
+[
+  {
+    "name": "Reader opens with hidden controls",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 100,
+      "viewer": "reading",
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 0,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Injected margins survive Readium CSS",
+    "pass": true,
+    "observed": {
+      "href": "/EPUB/one.xhtml",
+      "scrollY": 0,
+      "height": 9095,
+      "viewport": 660,
+      "originalLength": 16591,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 0,
+      "buttons": 0,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "lastUserScroll": 0,
+      "indicatorHidden": 0,
+      "fontPixels": 16,
+      "fontFamily": "\"serif\"",
+      "background": "rgb(250, 247, 240)",
+      "ink": "rgb(17, 17, 17)",
+      "selected": null,
+      "wordCandidate": null,
+      "candidateHighlight": false,
+      "highlight": false
+    }
+  },
+  {
+    "name": "Native vertical scroll at bottom does not advance",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 100,
+      "viewer": "reading",
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 8435.0478515625,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Native horizontal next chapter lands at beginning",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 100,
+      "viewer": "reading",
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 0,
+        "height": 944,
+        "viewport": 660,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 10,
+        "buttons": 9,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Native horizontal previous chapter lands at beginning",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 100,
+      "viewer": "reading",
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 0,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "1",
+        "lastUserScroll": 1792499402958,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Requested font reflow changes computed size and family",
+    "pass": true,
+    "observed": {
+      "after": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 72,
+        "height": 19325,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "0",
+        "lastUserScroll": 1792499402958,
+        "indicatorHidden": 1792499405958,
+        "fontPixels": 24,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      },
+      "before": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 0,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "1",
+        "lastUserScroll": 1792499402958,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Programmatic exact duplicate occurrence survives font reflow",
+    "pass": true,
+    "observed": {
+      "target": {
+        "anchor": {
+          "kind": "text",
+          "start": {
+            "node": 185,
+            "offset": 40
+          },
+          "end": {
+            "node": 185,
+            "offset": 47
+          },
+          "quote": "lantern"
+        },
+        "top": 501.15478515625,
+        "bottom": 528.9642944335938,
+        "visible": true,
+        "scrollY": 18664.76171875,
+        "innerWidth": 412,
+        "innerHeight": 660
+      },
+      "parent": "duplicate-b",
+      "highlight": true
+    }
+  },
+  {
+    "name": "Precise arrival highlight exists briefly",
+    "pass": true,
+    "observed": {
+      "target": {
+        "anchor": {
+          "kind": "text",
+          "start": {
+            "node": 185,
+            "offset": 40
+          },
+          "end": {
+            "node": 185,
+            "offset": 47
+          },
+          "quote": "lantern"
+        },
+        "top": 501.15478515625,
+        "bottom": 528.9642944335938,
+        "visible": true,
+        "scrollY": 18664.76171875,
+        "innerWidth": 412,
+        "innerHeight": 660
+      },
+      "parent": "duplicate-b",
+      "highlight": true
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: don’t",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 1
+        },
+        "end": {
+          "node": 1,
+          "offset": 6
+        },
+        "quote": "don’t"
+      },
+      "top": 10,
+      "bottom": 37.80952453613281,
+      "visible": true,
+      "scrollY": 195.8095245361328,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: well-being",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 9
+        },
+        "end": {
+          "node": 1,
+          "offset": 19
+        },
+        "quote": "well-being"
+      },
+      "top": 10,
+      "bottom": 37.80952453613281,
+      "visible": true,
+      "scrollY": 195.8095245361328,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: café",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 20
+        },
+        "end": {
+          "node": 1,
+          "offset": 24
+        },
+        "quote": "café"
+      },
+      "top": 10,
+      "bottom": 37.80952453613281,
+      "visible": true,
+      "scrollY": 195.8095245361328,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: café",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 25
+        },
+        "end": {
+          "node": 1,
+          "offset": 30
+        },
+        "quote": "café"
+      },
+      "top": 10,
+      "bottom": 37.80952453613281,
+      "visible": true,
+      "scrollY": 195.8095245361328,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: lantern",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 34
+        },
+        "end": {
+          "node": 1,
+          "offset": 41
+        },
+        "quote": "lantern"
+      },
+      "top": 10.25,
+      "bottom": 38.05952453613281,
+      "visible": true,
+      "scrollY": 230.09524536132812,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: soft­hyphen",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 42
+        },
+        "end": {
+          "node": 1,
+          "offset": 53
+        },
+        "quote": "soft­hyphen"
+      },
+      "top": 10.25,
+      "bottom": 38.05952453613281,
+      "visible": true,
+      "scrollY": 230.09524536132812,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: non breaking",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 54
+        },
+        "end": {
+          "node": 1,
+          "offset": 66
+        },
+        "quote": "non breaking"
+      },
+      "top": 10.25,
+      "bottom": 38.05952453613281,
+      "visible": true,
+      "scrollY": 230.09524536132812,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: ofﬁce",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 67
+        },
+        "end": {
+          "node": 1,
+          "offset": 72
+        },
+        "quote": "ofﬁce"
+      },
+      "top": 10.119048118591309,
+      "bottom": 37.92857265472412,
+      "visible": true,
+      "scrollY": 264.76190185546875,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Programmatic original-range round trip: well-being",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 3,
+          "offset": 0
+        },
+        "end": {
+          "node": 4,
+          "offset": 6
+        },
+        "quote": "well-being"
+      },
+      "top": 10.369048118591309,
+      "bottom": 38.17857265472412,
+      "visible": true,
+      "scrollY": 299.047607421875,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Ten original images become nine meaningful-image buttons",
+    "pass": true,
+    "observed": {
+      "href": "/EPUB/two.xhtml",
+      "scrollY": 0,
+      "height": 1142,
+      "viewport": 309,
+      "originalLength": 196,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 10,
+      "buttons": 9,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "lastUserScroll": 0,
+      "indicatorHidden": 0,
+      "fontPixels": 24,
+      "fontFamily": "\"sans-serif\"",
+      "background": "rgb(250, 247, 240)",
+      "ink": "rgb(17, 17, 17)",
+      "selected": null,
+      "wordCandidate": null,
+      "candidateHighlight": false,
+      "highlight": false
+    }
+  },
+  {
+    "name": "Generated labels excluded from original text",
+    "pass": true,
+    "observed": {
+      "href": "/EPUB/two.xhtml",
+      "scrollY": 0,
+      "height": 1142,
+      "viewport": 309,
+      "originalLength": 196,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 10,
+      "buttons": 9,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "lastUserScroll": 0,
+      "indicatorHidden": 0,
+      "fontPixels": 24,
+      "fontFamily": "\"sans-serif\"",
+      "background": "rgb(250, 247, 240)",
+      "ink": "rgb(17, 17, 17)",
+      "selected": null,
+      "wordCandidate": null,
+      "candidateHighlight": false,
+      "highlight": false
+    }
+  },
+  {
+    "name": "Original caption range restores",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 2,
+          "offset": 8
+        },
+        "end": {
+          "node": 2,
+          "offset": 15
+        },
+        "quote": "lantern"
+      },
+      "top": 10.202381134033203,
+      "bottom": 38.011905670166016,
+      "visible": true,
+      "scrollY": 229.7142791748047,
+      "innerWidth": 412,
+      "innerHeight": 309
+    }
+  },
+  {
+    "name": "Programmatic image button opens native popup",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 150,
+      "viewer": "popup",
+      "viewerDetails": {
+        "sourceWidth": 1200,
+        "sourceHeight": 800,
+        "centerPixel": -16,
+        "zoomed": false,
+        "imageBounds": [
+          0.75,
+          0,
+          992.25,
+          661
+        ],
+        "width": 993,
+        "height": 661,
+        "description": "Map with river, north marker, and three named stations",
+        "accessibilityActions": [
+          {
+            "id": 4
+          },
+          {
+            "id": 8
+          },
+          {
+            "id": 1
+          },
+          {
+            "id": 64
+          },
+          {
+            "id": 131072
+          },
+          {
+            "id": 256
+          },
+          {
+            "id": 512
+          },
+          {
+            "id": 16908342
+          },
+          {
+            "id": 2131231002,
+            "label": "Zoom image in"
+          }
+        ],
+        "stage": "popup",
+        "metadataVisible": true,
+        "resolvedSrc": "",
+        "fullScreenActionVisible": true,
+        "exitActionVisible": false
+      },
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": true,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": 0,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        874
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 172.57142639160156,
+        "height": 1142,
+        "viewport": 309,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 10,
+        "buttons": 9,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 24,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Native full-screen presentation opens",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 150,
+      "viewer": "full-screen",
+      "viewerDetails": {
+        "sourceWidth": 1200,
+        "sourceHeight": 800,
+        "centerPixel": -16,
+        "zoomed": false,
+        "imageBounds": [
+          0,
+          45.5,
+          1080,
+          765.5
+        ],
+        "width": 1080,
+        "height": 811,
+        "description": "Map with river, north marker, and three named stations",
+        "accessibilityActions": [
+          {
+            "id": 4
+          },
+          {
+            "id": 8
+          },
+          {
+            "id": 1
+          },
+          {
+            "id": 64
+          },
+          {
+            "id": 131072
+          },
+          {
+            "id": 256
+          },
+          {
+            "id": 512
+          },
+          {
+            "id": 16908342
+          },
+          {
+            "id": 2131231002,
+            "label": "Zoom image in"
+          }
+        ],
+        "stage": "full-screen",
+        "metadataVisible": false,
+        "resolvedSrc": "",
+        "fullScreenActionVisible": false,
+        "exitActionVisible": true
+      },
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": true,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": 0,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        874
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 172.57142639160156,
+        "height": 1142,
+        "viewport": 309,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 10,
+        "buttons": 9,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 24,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "First native Back returns to popup",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 150,
+      "viewer": "popup",
+      "viewerDetails": {
+        "sourceWidth": 1200,
+        "sourceHeight": 800,
+        "centerPixel": -16,
+        "zoomed": false,
+        "imageBounds": [
+          0.75,
+          0,
+          992.25,
+          661
+        ],
+        "width": 993,
+        "height": 661,
+        "description": "Map with river, north marker, and three named stations",
+        "accessibilityActions": [
+          {
+            "id": 4
+          },
+          {
+            "id": 8
+          },
+          {
+            "id": 1
+          },
+          {
+            "id": 64
+          },
+          {
+            "id": 131072
+          },
+          {
+            "id": 256
+          },
+          {
+            "id": 512
+          },
+          {
+            "id": 16908342
+          },
+          {
+            "id": 2131231002,
+            "label": "Zoom image in"
+          }
+        ],
+        "stage": "popup",
+        "metadataVisible": true,
+        "resolvedSrc": "",
+        "fullScreenActionVisible": true,
+        "exitActionVisible": false
+      },
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": true,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": 0,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        874
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 172.57142639160156,
+        "height": 1142,
+        "viewport": 309,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 10,
+        "buttons": 9,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 24,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Second native Back returns to unchanged reading viewport",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 150,
+      "viewer": "reading",
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": true,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": 0,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        874
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 172.57142639160156,
+        "height": 1142,
+        "viewport": 309,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 10,
+        "buttons": 9,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 24,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Popup returns DOM focus to opening image control",
+    "pass": true,
+    "observed": {
+      "kind": "image",
+      "tag": "button"
+    }
+  },
+  {
+    "name": "Image Regular bookmark restores original image destination",
+    "pass": true,
+    "observed": {
+      "kind": "image",
+      "image": 0
+    }
+  },
+  {
+    "name": "Native outward swipe at final chapter does not wrap",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/three.xhtml",
+      "controls": false,
+      "dark": false,
+      "fontSize": 150,
+      "viewer": "reading",
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": true,
+      "nextEnabled": false,
+      "reader": {
+        "href": "/EPUB/three.xhtml",
+        "scrollY": 0,
+        "height": 4523,
+        "viewport": 660,
+        "originalLength": 3245,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 24,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  }
+]

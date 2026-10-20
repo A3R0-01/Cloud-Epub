@@ -1,0 +1,19 @@
+  Window #6 Window{79724d5 u0 PopupWindow:748979f}:
+    mDisplayId=0 rootTaskId=68 mSession=Session{3520ea6 2465:u0a10148} mClient=android.os.BinderProxy@dd5b58c
+    mOwnerUid=10148 showForAllUsers=false package=dev.cloudepub.spike appop=NONE
+    mAttrs={(0,136)(610x168) gr=TOP START CENTER sim={state=unchanged adjust=pan} ty=APPLICATION_ABOVE_SUB_PANEL fmt=TRANSPARENT surfaceInsets=Rect(0, 0 - 0, 0) (manual)
+      fl=NOT_FOCUSABLE LAYOUT_NO_LIMITS SPLIT_TOUCH HARDWARE_ACCELERATED FLAG_LAYOUT_ATTACHED_IN_DECOR
+      pfl=LAYOUT_CHILD_WINDOW_IN_PARENT_FRAME INSET_PARENT_FRAME_BY_IME
+      bhv=DEFAULT
+      fitTypes=STATUS_BARS NAVIGATION_BARS CAPTION_BAR
+      frameRateBoostOnTouch=true
+      dvrrWindowFrameRateHint=true}
+    Requested w=610 h=168 mLayoutSeq=444
+    mParentWindow=Window{9d86b3d u0 dev.cloudepub.spike/dev.cloudepub.spike.MainActivity} mLayoutAttached=true
+    mHasSurface=true isReadyForDisplay()=true mWindowRemovalAllowed=false
+    WindowStateAnimator{b103e3e PopupWindow:748979f}:
+      Surface: shown=true    mForceSeamlesslyRotate=false seamlesslyRotate: pending=null
+    isOnScreen=true
+    isVisible=true
+    keepClearAreas: restricted=[], unrestricted=[]
+    mPrepareSyncSeqId=0

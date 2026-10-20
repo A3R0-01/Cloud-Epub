@@ -1,0 +1,278 @@
+[
+  {
+    "name": "Native selection resolves original word: unicode don’t",
+    "pass": true,
+    "observed": {
+      "resolved": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 1
+        },
+        "end": {
+          "node": 1,
+          "offset": 6
+        },
+        "quote": "don’t"
+      },
+      "native": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 1
+        },
+        "end": {
+          "node": 1,
+          "offset": 6
+        },
+        "quote": "don’t"
+      }
+    }
+  },
+  {
+    "name": "Native selection resolves original word: unicode well-being",
+    "pass": true,
+    "observed": {
+      "resolved": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 9
+        },
+        "end": {
+          "node": 1,
+          "offset": 19
+        },
+        "quote": "well-being"
+      },
+      "native": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 9
+        },
+        "end": {
+          "node": 1,
+          "offset": 13
+        },
+        "quote": "well"
+      }
+    }
+  },
+  {
+    "name": "Native selection resolves original word: unicode café",
+    "pass": true,
+    "observed": {
+      "resolved": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 20
+        },
+        "end": {
+          "node": 1,
+          "offset": 24
+        },
+        "quote": "café"
+      },
+      "native": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 20
+        },
+        "end": {
+          "node": 1,
+          "offset": 24
+        },
+        "quote": "café"
+      }
+    }
+  },
+  {
+    "name": "Native selection resolves original word: unicode café",
+    "pass": true,
+    "observed": {
+      "resolved": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 25
+        },
+        "end": {
+          "node": 1,
+          "offset": 30
+        },
+        "quote": "café"
+      },
+      "native": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 25
+        },
+        "end": {
+          "node": 1,
+          "offset": 30
+        },
+        "quote": "café"
+      }
+    }
+  },
+  {
+    "name": "Native selection resolves original word: unicode lantern",
+    "pass": true,
+    "observed": {
+      "resolved": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 34
+        },
+        "end": {
+          "node": 1,
+          "offset": 41
+        },
+        "quote": "lantern"
+      },
+      "native": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 34
+        },
+        "end": {
+          "node": 1,
+          "offset": 41
+        },
+        "quote": "lantern"
+      }
+    }
+  },
+  {
+    "name": "Native selection resolves original word: unicode soft­hyphen",
+    "pass": true,
+    "observed": {
+      "resolved": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 42
+        },
+        "end": {
+          "node": 1,
+          "offset": 53
+        },
+        "quote": "soft­hyphen"
+      },
+      "native": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 42
+        },
+        "end": {
+          "node": 1,
+          "offset": 53
+        },
+        "quote": "soft­hyphen"
+      }
+    }
+  },
+  {
+    "name": "Native selection resolves original word: unicode ofﬁce",
+    "pass": true,
+    "observed": {
+      "resolved": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 67
+        },
+        "end": {
+          "node": 1,
+          "offset": 72
+        },
+        "quote": "ofﬁce"
+      },
+      "native": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 67
+        },
+        "end": {
+          "node": 1,
+          "offset": 72
+        },
+        "quote": "ofﬁce"
+      }
+    }
+  },
+  {
+    "name": "Native selection resolves original word: split well-being",
+    "pass": true,
+    "observed": {
+      "resolved": {
+        "kind": "text",
+        "start": {
+          "node": 3,
+          "offset": 0
+        },
+        "end": {
+          "node": 4,
+          "offset": 6
+        },
+        "quote": "well-being"
+      },
+      "native": {
+        "kind": "text",
+        "start": {
+          "node": 3,
+          "offset": 0
+        },
+        "end": {
+          "node": 3,
+          "offset": 4
+        },
+        "quote": "well"
+      }
+    }
+  },
+  {
+    "name": "Native confirmation and correction before save retain the original occurrence",
+    "pass": true,
+    "observed": {
+      "saved": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 20
+        },
+        "end": {
+          "node": 1,
+          "offset": 24
+        },
+        "quote": "café"
+      },
+      "corrected": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 20
+        },
+        "end": {
+          "node": 1,
+          "offset": 24
+        },
+        "quote": "café"
+      },
+      "toolbar": {
+        "y": 136,
+        "x": 0,
+        "height": 168,
+        "width": 610
+      }
+    }
+  }
+]

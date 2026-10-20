@@ -1,0 +1,11 @@
+allprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin('com.android.library') || project.plugins.hasPlugin('com.android.application')) {
+            project.android.defaultConfig.ndk.abiFilters.clear()
+            project.android.defaultConfig.ndk.abiFilters.add('x86_64')
+        }
+        project.tasks.matching { it.name.startsWith('compile') && it.name.endsWith('Kotlin') }.configureEach {
+            kotlinOptions.jvmTarget = '17'
+        }
+    }
+}

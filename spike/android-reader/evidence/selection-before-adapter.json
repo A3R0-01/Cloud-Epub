@@ -1,0 +1,99 @@
+{
+  "nativeWholeWord": false,
+  "firstTapClearsOnly": false,
+  "secondTapShowsControls": false,
+  "selected": {
+    "kind": "text",
+    "start": {
+      "node": 1,
+      "offset": 9
+    },
+    "end": {
+      "node": 1,
+      "offset": 13
+    },
+    "quote": "well"
+  },
+  "first": {
+    "href": "EPUB/one.xhtml",
+    "controls": false,
+    "dark": true,
+    "fontSize": 100,
+    "viewer": "reading",
+    "readerBounds": [
+      0,
+      63,
+      1080,
+      1794
+    ],
+    "previousEnabled": false,
+    "nextEnabled": true,
+    "reader": {
+      "href": "/EPUB/one.xhtml",
+      "scrollY": 130.6666717529297,
+      "height": 8961,
+      "viewport": 660,
+      "originalLength": 16591,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 0,
+      "buttons": 0,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "selected": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 9
+        },
+        "end": {
+          "node": 1,
+          "offset": 13
+        },
+        "quote": "well"
+      },
+      "highlight": false
+    }
+  },
+  "second": {
+    "href": "EPUB/one.xhtml",
+    "controls": false,
+    "dark": true,
+    "fontSize": 100,
+    "viewer": "reading",
+    "readerBounds": [
+      0,
+      63,
+      1080,
+      1794
+    ],
+    "previousEnabled": false,
+    "nextEnabled": true,
+    "reader": {
+      "href": "/EPUB/one.xhtml",
+      "scrollY": 130.6666717529297,
+      "height": 8961,
+      "viewport": 660,
+      "originalLength": 16591,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 0,
+      "buttons": 0,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "selected": {
+        "kind": "text",
+        "start": {
+          "node": 1,
+          "offset": 9
+        },
+        "end": {
+          "node": 1,
+          "offset": 13
+        },
+        "quote": "well"
+      },
+      "highlight": false
+    }
+  }
+}

@@ -1,0 +1,24 @@
+Native image 3 opens viewer before navigation: True
+Explicit native image link navigates to its fragment: True
+Native image 6 opens viewer before navigation: True
+Rasterized image 6 retains source dimensions: True
+Native image 7 opens viewer before navigation: True
+Rasterized image 7 retains source dimensions: True
+Picture uses the matching source rather than the fallback image: True
+Native image 8 opens viewer before navigation: True
+Rasterized image 8 retains source dimensions: True
+Native image 9 opens viewer before navigation: True
+Rasterized image 9 retains source dimensions: True
+Backdrop tap retains the image popup: True
+Full screen at chapter bottom keeps the mounted reader dimensions and offset: True
+Close from full screen at chapter bottom preserves reading position: True
+Vertical drag starting on the returned native image control scrolls the book: True
+Horizontal swipe starting on the native image control changes chapter without opening an image: True
+Uninterrupted fling remains classified beyond the former 500ms cutoff: True
+Indicator hides three seconds after the last inertial scroll: True
+Background save and process restart restore the same original passage: True
+Long title stays centered and truncates between symmetric action reserves: True
+Exact accepted reader palette: dark=True: True
+Exact accepted reader palette: dark=False: True
+Reader reflow during image inspection restores the original passage on Close: True
+Unavailable same-resource bookmark explains the failure without moving to another occurrence: True

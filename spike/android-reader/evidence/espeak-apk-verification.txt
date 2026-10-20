@@ -1,0 +1,5 @@
+Signer #1 certificate DN: CN=FDroid, OU=FDroid, O=fdroid.org, L=ORG, ST=ORG, C=UK
+Signer #1 certificate SHA-256 digest: acdee0a53d94886b9824ad748ceae1d7c8d3e15e1de694dc684dfaae62231ea7
+Signer #1 certificate SHA-1 digest: 0ccb52a5bb1264c316753e318d216a9940c3df0b
+Signer #1 certificate MD5 digest: 12018b011d4ee0b3556e196c1c2b181b
+WARNING: META-INF/com/android/build/gradle/app-metadata.properties not protected by signature. Unauthorized modifications to this JAR entry will not be detected. Delete or move the entry outside of META-INF/.

@@ -1,0 +1,1924 @@
+[
+  {
+    "name": "Native image 3 opens viewer before navigation",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Linked map",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Explicit native image link navigates to its fragment",
+    "pass": true,
+    "observed": {
+      "fragment": {
+        "visible": true,
+        "scrollY": 1702.09521484375
+      },
+      "state": {
+        "href": "EPUB/three.xhtml",
+        "controls": false,
+        "dark": true,
+        "fontSize": 100,
+        "viewer": "reading",
+        "titleWidth": 0,
+        "titleLeft": 0,
+        "titleText": "Original-content anchor probes",
+        "titleEllipsized": false,
+        "nativeImageControl": false,
+        "nativeImageControlFocused": false,
+        "nativeImageIndex": null,
+        "readerBounds": [
+          0,
+          63,
+          1080,
+          1794
+        ],
+        "previousEnabled": true,
+        "nextEnabled": false,
+        "reader": {
+          "href": "/EPUB/three.xhtml",
+          "scrollY": 1702.09521484375,
+          "height": 2362,
+          "viewport": 660,
+          "originalLength": 3245,
+          "canonicalUnchanged": true,
+          "generatedLabelsInOriginal": false,
+          "images": 0,
+          "buttons": 0,
+          "bodyPadding": "10px 31px 24px",
+          "indicator": "",
+          "lastUserScroll": 0,
+          "indicatorHidden": 0,
+          "fontPixels": 16,
+          "fontFamily": "\"sans-serif\"",
+          "background": "rgba(0, 0, 0, 0)",
+          "ink": "rgb(254, 254, 254)",
+          "selected": null,
+          "wordCandidate": null,
+          "candidateHighlight": false,
+          "highlight": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Native image 6 opens viewer before navigation",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Vector equation",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "https://readium_package/EPUB/vector.svg",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Rasterized image 6 retains source dimensions",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Vector equation",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "https://readium_package/EPUB/vector.svg",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Native image 7 opens viewer before navigation",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Responsive equation",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "https://readium_package/EPUB/equation.png",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Rasterized image 7 retains source dimensions",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Responsive equation",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "https://readium_package/EPUB/equation.png",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Picture uses the matching source rather than the fallback image",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Responsive equation",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "https://readium_package/EPUB/equation.png",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Native image 8 opens viewer before navigation",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Meaningful background map",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "div",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Rasterized image 8 retains source dimensions",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Meaningful background map",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "div",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Native image 9 opens viewer before navigation",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16776961,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Inline vector diagram",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "svg",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Rasterized image 9 retains source dimensions",
+    "pass": true,
+    "observed": {
+      "sourceWidth": 1200,
+      "sourceHeight": 800,
+      "centerPixel": -16776961,
+      "zoomed": false,
+      "imageBounds": [
+        0.75,
+        0,
+        992.25,
+        661
+      ],
+      "width": 993,
+      "height": 661,
+      "description": "Inline vector diagram",
+      "accessibilityActions": [
+        {
+          "id": 4
+        },
+        {
+          "id": 8
+        },
+        {
+          "id": 1
+        },
+        {
+          "id": 64
+        },
+        {
+          "id": 131072
+        },
+        {
+          "id": 256
+        },
+        {
+          "id": 512
+        },
+        {
+          "id": 16908342
+        },
+        {
+          "id": 2131231002,
+          "label": "Zoom image in"
+        }
+      ],
+      "stage": "popup",
+      "metadataVisible": true,
+      "resolvedSrc": "svg",
+      "fullScreenActionVisible": true,
+      "exitActionVisible": false
+    }
+  },
+  {
+    "name": "Backdrop tap retains the image popup",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/two.xhtml",
+      "controls": false,
+      "dark": true,
+      "fontSize": 100,
+      "viewer": "popup",
+      "viewerDetails": {
+        "sourceWidth": 1200,
+        "sourceHeight": 800,
+        "centerPixel": -16776961,
+        "zoomed": false,
+        "imageBounds": [
+          0.75,
+          0,
+          992.25,
+          661
+        ],
+        "width": 993,
+        "height": 661,
+        "description": "Inline vector diagram",
+        "accessibilityActions": [
+          {
+            "id": 4
+          },
+          {
+            "id": 8
+          },
+          {
+            "id": 1
+          },
+          {
+            "id": 64
+          },
+          {
+            "id": 131072
+          },
+          {
+            "id": 256
+          },
+          {
+            "id": 512
+          },
+          {
+            "id": 16908342
+          },
+          {
+            "id": 2131231002,
+            "label": "Zoom image in"
+          }
+        ],
+        "stage": "popup",
+        "metadataVisible": true,
+        "resolvedSrc": "svg",
+        "fullScreenActionVisible": true,
+        "exitActionVisible": false
+      },
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": true,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": 9,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        874
+      ],
+      "previousEnabled": true,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 633.5238037109375,
+        "height": 943,
+        "viewport": 309,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 10,
+        "buttons": 9,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(24, 28, 33)",
+        "ink": "rgb(255, 255, 255)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Full screen at chapter bottom keeps the mounted reader dimensions and offset",
+    "pass": true,
+    "observed": {
+      "full": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 633.5238037109375,
+        "height": 943,
+        "viewport": 309,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 10,
+        "buttons": 9,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(24, 28, 33)",
+        "ink": "rgb(255, 255, 255)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      },
+      "before": {
+        "href": "/EPUB/two.xhtml",
+        "scrollY": 633.5238037109375,
+        "height": 943,
+        "viewport": 309,
+        "originalLength": 196,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 10,
+        "buttons": 9,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(24, 28, 33)",
+        "ink": "rgb(255, 255, 255)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Close from full screen at chapter bottom preserves reading position",
+    "pass": true,
+    "observed": {
+      "href": "/EPUB/two.xhtml",
+      "scrollY": 633.5238037109375,
+      "height": 943,
+      "viewport": 309,
+      "originalLength": 196,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 10,
+      "buttons": 9,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "lastUserScroll": 0,
+      "indicatorHidden": 0,
+      "fontPixels": 16,
+      "fontFamily": "\"sans-serif\"",
+      "background": "rgb(24, 28, 33)",
+      "ink": "rgb(255, 255, 255)",
+      "selected": null,
+      "wordCandidate": null,
+      "candidateHighlight": false,
+      "highlight": false
+    }
+  },
+  {
+    "name": "Vertical drag starting on the returned native image control scrolls the book",
+    "pass": true,
+    "observed": {
+      "after": {
+        "href": "EPUB/two.xhtml",
+        "controls": false,
+        "dark": true,
+        "fontSize": 100,
+        "viewer": "reading",
+        "titleWidth": 0,
+        "titleLeft": 0,
+        "titleText": "Original-content anchor probes",
+        "titleEllipsized": false,
+        "nativeImageControl": false,
+        "nativeImageControlFocused": false,
+        "nativeImageIndex": null,
+        "readerBounds": [
+          0,
+          63,
+          1080,
+          1794
+        ],
+        "previousEnabled": true,
+        "nextEnabled": true,
+        "reader": {
+          "href": "/EPUB/two.xhtml",
+          "scrollY": 111.61904907226562,
+          "height": 944,
+          "viewport": 660,
+          "originalLength": 196,
+          "canonicalUnchanged": true,
+          "generatedLabelsInOriginal": false,
+          "images": 10,
+          "buttons": 9,
+          "bodyPadding": "10px 31px 24px",
+          "indicator": "1",
+          "lastUserScroll": 1792499501112,
+          "indicatorHidden": 0,
+          "fontPixels": 16,
+          "fontFamily": "\"serif\"",
+          "background": "rgb(24, 28, 33)",
+          "ink": "rgb(255, 255, 255)",
+          "selected": null,
+          "wordCandidate": null,
+          "candidateHighlight": false,
+          "highlight": false
+        }
+      },
+      "before": {
+        "href": "EPUB/two.xhtml",
+        "controls": false,
+        "dark": true,
+        "fontSize": 100,
+        "viewer": "reading",
+        "titleWidth": 0,
+        "titleLeft": 0,
+        "titleText": "Original-content anchor probes",
+        "titleEllipsized": false,
+        "nativeImageControl": true,
+        "nativeImageControlFocused": false,
+        "nativeImageIndex": 0,
+        "readerBounds": [
+          0,
+          63,
+          1080,
+          1794
+        ],
+        "previousEnabled": true,
+        "nextEnabled": true,
+        "reader": {
+          "href": "/EPUB/two.xhtml",
+          "scrollY": 0,
+          "height": 944,
+          "viewport": 660,
+          "originalLength": 196,
+          "canonicalUnchanged": true,
+          "generatedLabelsInOriginal": false,
+          "images": 10,
+          "buttons": 9,
+          "bodyPadding": "10px 31px 24px",
+          "indicator": "",
+          "lastUserScroll": 0,
+          "indicatorHidden": 0,
+          "fontPixels": 16,
+          "fontFamily": "\"serif\"",
+          "background": "rgb(24, 28, 33)",
+          "ink": "rgb(255, 255, 255)",
+          "selected": null,
+          "wordCandidate": null,
+          "candidateHighlight": false,
+          "highlight": false
+        }
+      }
+    }
+  },
+  {
+    "name": "Horizontal swipe starting on the native image control changes chapter without opening an image",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": false,
+      "dark": true,
+      "fontSize": 100,
+      "viewer": "reading",
+      "titleWidth": 0,
+      "titleLeft": 0,
+      "titleText": "Original-content anchor probes",
+      "titleEllipsized": false,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
+      "readerBounds": [
+        0,
+        63,
+        1080,
+        1794
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 0,
+        "height": 8961,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"sans-serif\"",
+        "background": "rgb(24, 28, 33)",
+        "ink": "rgb(255, 255, 255)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Uninterrupted fling remains classified beyond the former 500ms cutoff",
+    "pass": true,
+    "observed": {
+      "events": 97,
+      "durationMs": 1970
+    }
+  },
+  {
+    "name": "Indicator hides three seconds after the last inertial scroll",
+    "pass": true,
+    "observed": {
+      "events": [
+        {
+          "time": 1792499509968,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499509968
+          }
+        },
+        {
+          "time": 1792499510013,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499509998
+          }
+        },
+        {
+          "time": 1792499510076,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510055
+          }
+        },
+        {
+          "time": 1792499510098,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510058
+          }
+        },
+        {
+          "time": 1792499510099,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510079
+          }
+        },
+        {
+          "time": 1792499510118,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510102
+          }
+        },
+        {
+          "time": 1792499510138,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510121
+          }
+        },
+        {
+          "time": 1792499510178,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510141
+          }
+        },
+        {
+          "time": 1792499510202,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510160
+          }
+        },
+        {
+          "time": 1792499510202,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510181
+          }
+        },
+        {
+          "time": 1792499510222,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510205
+          }
+        },
+        {
+          "time": 1792499510266,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510226
+          }
+        },
+        {
+          "time": 1792499510267,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510247
+          }
+        },
+        {
+          "time": 1792499510287,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510270
+          }
+        },
+        {
+          "time": 1792499510308,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510290
+          }
+        },
+        {
+          "time": 1792499510327,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510311
+          }
+        },
+        {
+          "time": 1792499510348,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510329
+          }
+        },
+        {
+          "time": 1792499510368,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510351
+          }
+        },
+        {
+          "time": 1792499510391,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510371
+          }
+        },
+        {
+          "time": 1792499510411,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510394
+          }
+        },
+        {
+          "time": 1792499510438,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510414
+          }
+        },
+        {
+          "time": 1792499510486,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510442
+          }
+        },
+        {
+          "time": 1792499510487,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510466
+          }
+        },
+        {
+          "time": 1792499510538,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510490
+          }
+        },
+        {
+          "time": 1792499510538,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510520
+          }
+        },
+        {
+          "time": 1792499510576,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510541
+          }
+        },
+        {
+          "time": 1792499510577,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510560
+          }
+        },
+        {
+          "time": 1792499510599,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510579
+          }
+        },
+        {
+          "time": 1792499510616,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510601
+          }
+        },
+        {
+          "time": 1792499510636,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510619
+          }
+        },
+        {
+          "time": 1792499510655,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510639
+          }
+        },
+        {
+          "time": 1792499510692,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510657
+          }
+        },
+        {
+          "time": 1792499510711,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510676
+          }
+        },
+        {
+          "time": 1792499510711,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510695
+          }
+        },
+        {
+          "time": 1792499510732,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510714
+          }
+        },
+        {
+          "time": 1792499510750,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510735
+          }
+        },
+        {
+          "time": 1792499510768,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510752
+          }
+        },
+        {
+          "time": 1792499510788,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510771
+          }
+        },
+        {
+          "time": 1792499510826,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510791
+          }
+        },
+        {
+          "time": 1792499510852,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510810
+          }
+        },
+        {
+          "time": 1792499510853,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510829
+          }
+        },
+        {
+          "time": 1792499510873,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510856
+          }
+        },
+        {
+          "time": 1792499510916,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510879
+          }
+        },
+        {
+          "time": 1792499510917,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510895
+          }
+        },
+        {
+          "time": 1792499510935,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510919
+          }
+        },
+        {
+          "time": 1792499510954,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510937
+          }
+        },
+        {
+          "time": 1792499510991,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510958
+          }
+        },
+        {
+          "time": 1792499511011,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510975
+          }
+        },
+        {
+          "time": 1792499511034,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499510994
+          }
+        },
+        {
+          "time": 1792499511034,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511015
+          }
+        },
+        {
+          "time": 1792499511051,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511037
+          }
+        },
+        {
+          "time": 1792499511070,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511055
+          }
+        },
+        {
+          "time": 1792499511087,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511072
+          }
+        },
+        {
+          "time": 1792499511108,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511090
+          }
+        },
+        {
+          "time": 1792499511126,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511110
+          }
+        },
+        {
+          "time": 1792499511149,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511129
+          }
+        },
+        {
+          "time": 1792499511167,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511152
+          }
+        },
+        {
+          "time": 1792499511185,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511170
+          }
+        },
+        {
+          "time": 1792499511204,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511188
+          }
+        },
+        {
+          "time": 1792499511222,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511206
+          }
+        },
+        {
+          "time": 1792499511259,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511224
+          }
+        },
+        {
+          "time": 1792499511283,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511243
+          }
+        },
+        {
+          "time": 1792499511283,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511261
+          }
+        },
+        {
+          "time": 1792499511302,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511287
+          }
+        },
+        {
+          "time": 1792499511322,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511305
+          }
+        },
+        {
+          "time": 1792499511361,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511326
+          }
+        },
+        {
+          "time": 1792499511361,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511344
+          }
+        },
+        {
+          "time": 1792499511381,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511364
+          }
+        },
+        {
+          "time": 1792499511399,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511383
+          }
+        },
+        {
+          "time": 1792499511419,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511403
+          }
+        },
+        {
+          "time": 1792499511439,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511422
+          }
+        },
+        {
+          "time": 1792499511480,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511443
+          }
+        },
+        {
+          "time": 1792499511481,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511462
+          }
+        },
+        {
+          "time": 1792499511500,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511483
+          }
+        },
+        {
+          "time": 1792499511520,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511502
+          }
+        },
+        {
+          "time": 1792499511539,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511523
+          }
+        },
+        {
+          "time": 1792499511579,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511542
+          }
+        },
+        {
+          "time": 1792499511579,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511561
+          }
+        },
+        {
+          "time": 1792499511599,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511582
+          }
+        },
+        {
+          "time": 1792499511618,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511602
+          }
+        },
+        {
+          "time": 1792499511637,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511622
+          }
+        },
+        {
+          "time": 1792499511654,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511639
+          }
+        },
+        {
+          "time": 1792499511696,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511657
+          }
+        },
+        {
+          "time": 1792499511696,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511677
+          }
+        },
+        {
+          "time": 1792499511715,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511699
+          }
+        },
+        {
+          "time": 1792499511734,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511718
+          }
+        },
+        {
+          "time": 1792499511752,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511737
+          }
+        },
+        {
+          "time": 1792499511775,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511755
+          }
+        },
+        {
+          "time": 1792499511795,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511778
+          }
+        },
+        {
+          "time": 1792499511820,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511804
+          }
+        },
+        {
+          "time": 1792499511839,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511822
+          }
+        },
+        {
+          "time": 1792499511881,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511842
+          }
+        },
+        {
+          "time": 1792499511882,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511862
+          }
+        },
+        {
+          "time": 1792499511899,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511885
+          }
+        },
+        {
+          "time": 1792499511918,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511903
+          }
+        },
+        {
+          "time": 1792499511936,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511921
+          }
+        },
+        {
+          "time": 1792499511953,
+          "type": "bridge",
+          "data": {
+            "type": "user-scroll",
+            "data": 1792499511938
+          }
+        },
+        {
+          "time": 1792499514940,
+          "type": "bridge",
+          "data": {
+            "type": "indicator-hidden",
+            "data": 1792499514939
+          }
+        }
+      ],
+      "hideDelayMs": 3001
+    }
+  },
+  {
+    "name": "Background save and process restart restore the same original passage",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 88,
+          "offset": 133
+        },
+        "end": {
+          "node": 88,
+          "offset": 134
+        },
+        "quote": "a"
+      },
+      "top": 10.023809432983398,
+      "bottom": 28.69047737121582,
+      "visible": true,
+      "scrollY": 4294.85693359375,
+      "innerWidth": 412,
+      "innerHeight": 660
+    }
+  },
+  {
+    "name": "Long title stays centered and truncates between symmetric action reserves",
+    "pass": true,
+    "observed": {
+      "href": "EPUB/one.xhtml",
+      "controls": true,
+      "dark": true,
+      "fontSize": 100,
+      "viewer": "reading",
+      "titleWidth": 576,
+      "titleLeft": 252,
+      "titleText": "A very long original publication title that must truncate symmetrically while retaining its complete accessible name",
+      "titleEllipsized": true,
+      "nativeImageControl": false,
+      "nativeImageControlFocused": false,
+      "nativeImageIndex": null,
+      "readerBounds": [
+        0,
+        189,
+        1080,
+        1590
+      ],
+      "previousEnabled": false,
+      "nextEnabled": true,
+      "reader": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 4294.85693359375,
+        "height": 9095,
+        "viewport": 534,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(24, 28, 33)",
+        "ink": "rgb(255, 255, 255)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  },
+  {
+    "name": "Exact accepted reader palette: dark=True",
+    "pass": true,
+    "observed": {
+      "href": "/EPUB/one.xhtml",
+      "scrollY": 4294.85693359375,
+      "height": 9095,
+      "viewport": 534,
+      "originalLength": 16591,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 0,
+      "buttons": 0,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "lastUserScroll": 0,
+      "indicatorHidden": 0,
+      "fontPixels": 16,
+      "fontFamily": "\"serif\"",
+      "background": "rgb(24, 28, 33)",
+      "ink": "rgb(255, 255, 255)",
+      "selected": null,
+      "wordCandidate": null,
+      "candidateHighlight": false,
+      "highlight": false
+    }
+  },
+  {
+    "name": "Exact accepted reader palette: dark=False",
+    "pass": true,
+    "observed": {
+      "href": "/EPUB/one.xhtml",
+      "scrollY": 4294.85693359375,
+      "height": 9095,
+      "viewport": 534,
+      "originalLength": 16591,
+      "canonicalUnchanged": true,
+      "generatedLabelsInOriginal": false,
+      "images": 0,
+      "buttons": 0,
+      "bodyPadding": "10px 31px 24px",
+      "indicator": "",
+      "lastUserScroll": 0,
+      "indicatorHidden": 0,
+      "fontPixels": 16,
+      "fontFamily": "\"serif\"",
+      "background": "rgb(250, 247, 240)",
+      "ink": "rgb(17, 17, 17)",
+      "selected": null,
+      "wordCandidate": null,
+      "candidateHighlight": false,
+      "highlight": false
+    }
+  },
+  {
+    "name": "Reader reflow during image inspection restores the original passage on Close",
+    "pass": true,
+    "observed": {
+      "anchor": {
+        "kind": "text",
+        "start": {
+          "node": 3,
+          "offset": 0
+        },
+        "end": {
+          "node": 3,
+          "offset": 1
+        },
+        "quote": "A"
+      },
+      "top": 10.297618865966797,
+      "bottom": 28.96428680419922,
+      "visible": true,
+      "scrollY": 215.23809814453125,
+      "innerWidth": 732,
+      "innerHeight": 340
+    }
+  },
+  {
+    "name": "Unavailable same-resource bookmark explains the failure without moving to another occurrence",
+    "pass": true,
+    "observed": {
+      "after": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 400,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      },
+      "before": {
+        "href": "/EPUB/one.xhtml",
+        "scrollY": 400,
+        "height": 9095,
+        "viewport": 660,
+        "originalLength": 16591,
+        "canonicalUnchanged": true,
+        "generatedLabelsInOriginal": false,
+        "images": 0,
+        "buttons": 0,
+        "bodyPadding": "10px 31px 24px",
+        "indicator": "",
+        "lastUserScroll": 0,
+        "indicatorHidden": 0,
+        "fontPixels": 16,
+        "fontFamily": "\"serif\"",
+        "background": "rgb(250, 247, 240)",
+        "ink": "rgb(17, 17, 17)",
+        "selected": null,
+        "wordCandidate": null,
+        "candidateHighlight": false,
+        "highlight": false
+      }
+    }
+  }
+]

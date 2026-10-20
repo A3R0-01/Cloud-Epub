@@ -37,7 +37,10 @@ Start-Sleep -Milliseconds 500
 $anchor = Command eval "spike.select('duplicate-b','lantern',1)"
 Command save-precise | Out-Null
 Command eval '(getSelection().removeAllRanges(),scrollTo(0,0),null)' | Out-Null
+$fontBefore = Command eval 'spike.state()'
 Command font 150 | Out-Null
+$fontAfter = Command eval 'spike.state()'
+Check 'Requested font reflow changes computed size and family' ($fontAfter.fontPixels -gt $fontBefore.fontPixels*1.4 -and $fontAfter.fontPixels -lt $fontBefore.fontPixels*1.6 -and $fontAfter.fontFamily -ne $fontBefore.fontFamily) @{before=$fontBefore;after=$fontAfter}
 Command restore precise | Out-Null
 $restored = Command eval "({target:spike.snapshot($($anchor | ConvertTo-Json -Depth 10 -Compress)),parent:spike.nodes[$($anchor.start.node)].parentElement.id,highlight:spike.state().highlight})"
 Check 'Programmatic exact duplicate occurrence survives font reflow' ($restored.target.visible -and $restored.parent -eq 'duplicate-b' -and $restored.target.anchor.start.offset -eq $anchor.start.offset) $restored
@@ -53,12 +56,15 @@ Start-Sleep -Milliseconds 600
 & $Adb -s emulator-5554 shell wm size 1080x1000
 Start-Sleep -Milliseconds 600
 $images = Command eval 'spike.state()'
-Check 'Six original images become five meaningful-image buttons' ($images.images -eq 6 -and $images.buttons -eq 5) $images
+Check 'Ten original images become nine meaningful-image buttons' ($images.images -eq 10 -and $images.buttons -eq 9) $images
 Check 'Generated labels excluded from original text' ($images.canonicalUnchanged -and !$images.generatedLabelsInOriginal) $images
 $caption = Command eval "spike.select('caption','lantern')"
 $captionResult = Command eval "spike.restore($($caption | ConvertTo-Json -Depth 10 -Compress),true)"
 Check 'Original caption range restores' $captionResult.visible $captionResult
 Command eval '(getSelection().removeAllRanges(),spike.controls.get(0).scrollIntoView(),null)' | Out-Null
+Start-Sleep -Milliseconds 1000
+$setup=Command eval '(spike.controls.get(0).scrollIntoView(),spike.firstVisible())'
+if ($setup.kind -ne 'image' -or $setup.image -ne 0) { throw 'Image-first-visible setup did not settle after resize.' }
 Command save-regular | Out-Null
 $before = Command state
 Command eval '(spike.controls.get(0).click(),null)' | Out-Null

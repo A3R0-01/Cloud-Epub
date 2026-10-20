@@ -1,0 +1,7 @@
+<resources>
+    <item name="spike_zoom_image" type="id" />
+    <item name="spike_pan_left" type="id" />
+    <item name="spike_pan_right" type="id" />
+    <item name="spike_pan_up" type="id" />
+    <item name="spike_pan_down" type="id" />
+</resources>

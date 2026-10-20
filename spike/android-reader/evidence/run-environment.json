@@ -1,36 +1,107 @@
 {
-  "date": "2026-10-16",
+  "date": "2026-10-20",
   "engine": "Readium Kotlin 3.4.0 Fragment",
+  "candidateAdopted": false,
   "toolchain": {
     "agp": "9.3.1",
     "kotlin": "2.4.20",
+    "gradle": "9.7.0",
     "buildTools": "36.0.0",
     "compileSdk": "37.0",
-    "gradle": "9.7.0",
     "desugaring": "2.1.5",
     "java": "JBR 25.0.3"
   },
-  "fixtureSha256": "57a3bdad153ef14c2389e003abddb06a2c58fea01328e1d5cda6e9d21e273203",
-  "localApkSha256": "7bec3669c76bc2387f78770b44ce2469548e8e774759e53ee7781c747e473326",
+  "fixtureSha256": "9581c6fec750cf7dfa3b66359f045c3bca51def21832096eafb5666846e2af05",
+  "adapterSha256": "68576e5dd3811944a6aba951b7d0c93e0f50d4b488e12c77a17942bcd5c65696",
+  "localApkSha256": "60d3191eea9cc7432760827fcb99cb44a54899101b17992087bc3f64d132b08f",
+  "packagedAssetsMatchSource": true,
   "offlineAssembleVerified": true,
   "primary": {
-    "focusedTotal": 26,
-    "density": 420,
     "api": 35,
+    "abi": "x86_64",
+    "systemImage": "AOSP API 35 default r2",
     "webview": "124.0.6367.219",
-    "extendedPassed": 19,
     "resolution": "1080x1920",
-    "extendedTotal": 22,
-    "focusedPassed": 26
+    "density": 420,
+    "fontScale": 1.0,
+    "emulator": "37.2.12",
+    "acceleration": "WHPX",
+    "cores": 4,
+    "ramMb": 2560,
+    "gpu": "host",
+    "renderer": "Android Emulator OpenGL ES Translator (NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2), OpenGL ES 3.1 (4.5.0 NVIDIA 610.60)"
   },
-  "secondary": {
-    "webview": "83.0.4103.120",
-    "talkback": "2021-04-23",
-    "activationIntoPopup": true,
-    "api": 30,
-    "serviceBoundVerified": true,
-    "activationAfterReturn": false
+  "harnessSupportSettings": {
+    "minSdk": 24,
+    "targetSdk": 35,
+    "diagnosticVirtualNodeQueryMinApi": 34,
+    "productionSupportPolicyChosen": false
   },
-  "emulator": "37.2.12 WHPX",
-  "candidateAdopted": false
+  "observedFontReflow": {
+    "beforePixels": 16,
+    "afterPixels": 24,
+    "beforeFamily": "serif",
+    "afterFamily": "sans-serif",
+    "readiumScaleFactors": [
+      1.0,
+      1.5
+    ]
+  },
+  "checks": {
+    "focused": {
+      "passed": 27,
+      "total": 27,
+      "artifact": "probes.json"
+    },
+    "extended": {
+      "passed": 22,
+      "total": 22,
+      "artifact": "extended-probes.json"
+    },
+    "gaps": {
+      "passed": 24,
+      "total": 24,
+      "artifact": "gap-followup.json"
+    },
+    "words": {
+      "passed": 9,
+      "total": 9,
+      "artifact": "word-followup.json"
+    },
+    "screenReader": {
+      "passed": 16,
+      "total": 16,
+      "artifact": "screenreader-google-talkback-api35.json"
+    }
+  },
+  "passed": 98,
+  "total": 98,
+  "screenReader": {
+    "provider": "Google public TalkBack source debug build",
+    "sourceCommit": "229212fdf5842191d0a93fc95d9ca1423b346866",
+    "package": "com.android.talkback",
+    "service": "com.google.android.marvin.talkback.TalkBackService",
+    "versionName": "TfPu_release_16_2-2026_10_20_1256",
+    "versionCode": 0,
+    "apkSha256": "30d5a6ce3daac8fc06eef086bf5768ba59062d689736a545c8e0bb40b444e86c",
+    "googlePlayBinary": false,
+    "physicalDeviceQualified": false,
+    "tts": "eSpeak 1.52.0 (code 22)",
+    "ttsApkSha256": "0a7822fec54d7f7ae759ffedc9afeaa77f809587b171fb2101998787821ec790",
+    "phonePermission": "denied; not required by these probes",
+    "activation": "raw hardware exploration + service Meta+Space; custom Actions via Meta+Ctrl+A"
+  },
+  "additionalEarlierCapture": {
+    "provider": "Backtalk 16.2",
+    "artifact": "screenreader-backtalk-api35.json",
+    "passed": 16,
+    "total": 16,
+    "includedInFinal98": false,
+    "runtime": "API 35, 2 cores, SwiftShader, earlier development APK",
+    "apkSha256": "1405d5e759a4e47373f902858d99daf4184f751fd8345ef0d0c281d14386a99e"
+  },
+  "historicalApi30Capture": {
+    "certifiesScreenReaderActivation": false,
+    "reason": "Bound-service plus synthetic-tap captures lacked raw exploration/activation calibration."
+  }
 }

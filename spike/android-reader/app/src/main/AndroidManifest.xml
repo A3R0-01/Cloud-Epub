@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
     <application android:theme="@style/SpikeTheme" android:label="Cloud EPUB feasibility spike" android:allowBackup="false" android:enableOnBackInvokedCallback="false">
-        <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTop"
+        <activity android:name=".AccessibilityControlActivity" android:exported="true" />
+        <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTask"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|fontScale|density">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

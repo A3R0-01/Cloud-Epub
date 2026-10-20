@@ -1,0 +1,59 @@
+ACCESSIBILITY MANAGER (dumpsys accessibility)
+
+currentUserId=0
+hasMagnificationConnection=true
+Magnifier on display#0
+    MagnificationConfig[mode: 1, activated: false, scale: 1.0, centerX: 540.0, centerY: 897.0]
+    Magnification region=SkRegion((0,0,1080,1794))
+    IdOfLastServiceToMagnify=-1
+    SupportWindowMagnification=true
+    WindowMagnificationConnectionState=CONNECTED
+User state[
+     attributes:{id=0, touchExplorationEnabled=true, serviceHandlesDoubleTap=true, requestMultiFingerGestures=true, requestTwoFingerPassthrough=true, sendMotionEventsEnabledfalse, displayMagnificationEnabled=false, autoclickEnabled=false, nonInteractiveUiTimeout=0, interactiveUiTimeout=10000, installedServiceCount=3, magnificationModes={0=1}, magnificationCapabilities=3, audioDescriptionByDefaultEnabled=false, magnificationFollowTypingEnabled=true, alwaysOnMagnificationEnabled=true}
+     shortcut key:{}
+     button:{}
+     button target:{null}
+     qs shortcut targets:{}
+     a11y tiles in QS panel:{}
+     Bound services:{Service[label=TalkBack_TfP, feedbackType[FEEDBACK_SPOKEN, FEEDBACK_HAPTIC, FEEDBACK_AUDIBLE], capabilities=251, eventTypes=TYPES_ALL_MASK, notificationTimeout=0, requestA11yBtn=false]}
+     Enabled services:{{com.android.talkback/com.google.android.marvin.talkback.TalkBackService}}
+     Binding services:{}
+     Crashed services:{}
+     Client list info:{
+          Client list callbacks: 5
+          Client list killed: false
+          Client list broadcasts count: -1
+          Registered clients:{
+[com.android.talkback][dev.cloudepub.spike][com.android.launcher3][com.android.talkback][com.android.inputmethod.latin]}]
+Global Info [ Top focused display Id = 0
+     Active Window Id = 250
+     Top Focused Window Id = 250
+     Accessibility Focused Window Id = 264 ]
+
+Display[0] :
+A11yWindow[AccessibilityWindowInfo[title=Navigation bar, displayId=0, id=252, taskId=-1, type=TYPE_SYSTEM, layer=2, region=SkRegion((0,1794,1080,1920)), bounds=Rect(0, 1794 - 1080, 1920), focused=false, active=false, pictureInPicture=false, transitionTime=1242486, hasParent=false, isAnchored=false, hasChildren=false]]
+WindowInfo[WindowInfo[title=Navigation bar, displayId=0, taskId=-1, type=2019, layer=0, token=android.os.BinderProxy@c3072c8, region=SkRegion((0,1794,1080,1920)), bounds=Rect(0, 1794 - 1080, 1920), parent=null, focused=false, children=null, accessibility anchor=9223372034707292159, pictureInPicture=false, watchOutsideTouch=false, mTransformMatrix=Matrix{[1.0, 0.0, 0.0][0.0, 1.0, 1794.0][0.0, 0.0, 1.0]}, mMagnificationSpec=<scale:1.0,offsetX:0.0,offsetY:0.0>, locales=[en_US]]]
+,
+A11yWindow[AccessibilityWindowInfo[title=null, displayId=0, id=258, taskId=-1, type=TYPE_SYSTEM, layer=1, region=SkRegion((0,0,1080,63)), bounds=Rect(0, 0 - 1080, 63), focused=false, active=false, pictureInPicture=false, transitionTime=1242486, hasParent=false, isAnchored=false, hasChildren=false]]
+WindowInfo[WindowInfo[title=null, displayId=0, taskId=-1, type=2000, layer=1, token=android.os.BinderProxy@b1436cd, region=SkRegion((0,0,1080,63)), bounds=Rect(0, 0 - 1080, 63), parent=null, focused=false, children=null, accessibility anchor=9223372034707292159, pictureInPicture=false, watchOutsideTouch=false, mTransformMatrix=Matrix{[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]}, mMagnificationSpec=<scale:1.0,offsetX:0.0,offsetY:0.0>, locales=[en_US]]]
+,
+A11yWindow[AccessibilityWindowInfo[title=Cloud EPUB feasibility spike, displayId=0, id=250, taskId=74, type=TYPE_APPLICATION, layer=0, region=SkRegion((0,0,1080,1920)), bounds=Rect(0, 0 - 1080, 1920), focused=true, active=true, pictureInPicture=false, transitionTime=1293510, hasParent=false, isAnchored=false, hasChildren=false]]
+WindowInfo[WindowInfo[title=Cloud EPUB feasibility spike, displayId=0, taskId=74, type=1, layer=2, token=android.os.BinderProxy@40c78ed, region=SkRegion((0,0,1080,1920)), bounds=Rect(0, 0 - 1080, 1920), parent=null, focused=true, children=null, accessibility anchor=9223372034707292159, pictureInPicture=false, watchOutsideTouch=false, mTransformMatrix=Matrix{[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]}, mMagnificationSpec=<scale:1.0,offsetX:0.0,offsetY:0.0>, locales=[en_US]]]
+
+
+Window attributes:[{250=AccessibilityWindowAttributes{mAccessibilityWindowTitle=Cloud EPUB feasibility spikemLocales=[en_US]}, 251=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 252=AccessibilityWindowAttributes{mAccessibilityWindowTitle=Navigation barmLocales=[en_US]}, 253=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 254=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 255=AccessibilityWindowAttributes{mAccessibilityWindowTitle=HomemLocales=[en_US]}, 256=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 257=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}, 258=AccessibilityWindowAttributes{mAccessibilityWindowTitle=nullmLocales=[en_US]}}]
+A11yInputFilter Info :
+Enabled features of Display [0] = [KeyboardInterceptor,MotionEventInjector,MagnificationGesture,TouchExplorer]
+Global client list info:{
+    Client list callbacks: 5
+    Client list killed: false
+    Client list broadcasts count: -1
+    Registered clients:{
+[com.android.documentsui][com.android.dynsystem, com.android.providers.settings, com.android.inputdevices, com.android.DeviceAsWebcam, android, com.android.server.telecom, com.android.localtransport, com.android.settings, com.android.emulator.multidisplay, com.android.keychain, com.android.location.fused][com.android.permissioncontroller][com.android.systemui][com.android.dynsystem, com.android.providers.settings, com.android.inputdevices, com.android.DeviceAsWebcam, android, com.android.server.telecom, com.android.localtransport, com.android.settings, com.android.emulator.multidisplay, com.android.keychain, com.android.location.fused]
+
+Proxy manager state:
+    Number of proxy connections: 0
+    Registered proxy connections:
+Accessibility Display Listener:
+    SystemUI uid: 10120
+    1 valid display: 0
