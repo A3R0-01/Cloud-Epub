@@ -10,6 +10,15 @@ A user's private collection of books stored through the application and availabl
 **Cloud session**:
 A device's authorized access to a user's cloud account. Revoking a Cloud session ends that cloud access while downloaded books may remain readable locally.
 
+**Administrator**:
+The single owner authorized to manage Cloud EPUB user accounts, their Storage limits, and system settings.
+
+**Admin panel**:
+The web interface through which the Administrator manages user accounts, Storage limits, and system settings.
+
+**Storage limit**:
+The maximum cloud-storage allowance assigned to a user account.
+
 **Collection**:
 A named grouping of books created by the user within their cloud library.
 
@@ -40,6 +49,9 @@ An external file service from which a user can import books, initially Google Dr
 **Import**:
 Adding a copy of a book from a device or cloud provider to the cloud library. Later changes to the source do not change the imported copy.
 
+**Duplicate file**:
+An EPUB whose file contents are identical to a book already in the same user's library, regardless of its filename or import source.
+
 **Regular bookmark**:
 A bookmark for the first visible content position at the top of the reading screen, preserved when font or screen changes alter the layout.
 
@@ -68,6 +80,9 @@ Successful sign-in or recovery, authenticated foreground app use, or synchroniza
 
 **Account expiration**:
 The suspension of a cloud account after its inactivity period, while recovery remains possible during the grace period.
+
+**Administrative suspension**:
+A restriction imposed by the Administrator that blocks an account's cloud-library access until the Administrator lifts it. It is separate from Account expiration and preserves access to downloaded books.
 
 **Grace period**:
 The interval after account expiration in which successful authentication can restore the cloud account before permanent deletion.
